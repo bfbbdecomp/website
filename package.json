@@ -21,7 +21,8 @@
   "dependencies": {
     "bulma": "^0.9.1",
     "vue": "^2.6.12",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-router": "^3.4.7"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",

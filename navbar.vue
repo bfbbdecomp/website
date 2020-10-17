@@ -11,9 +11,9 @@
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
         <div class="navbar-start">
-        <a class="navbar-item" href="./">
-            Home
-        </a>
+            <!--<router-link class="navbar-item" to="/">Home</router-link>-->
+            <router-link class="navbar-item" to="/progress">Progress</router-link>
+            <router-link class="navbar-item" to="/faq">FAQ</router-link>
         </div>
 
         <div class="navbar-end">

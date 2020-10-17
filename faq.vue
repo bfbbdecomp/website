@@ -1,7 +1,7 @@
 <template>
-    <div id="main">
-        <Navbar></Navbar>
-        <router-view></router-view>
+    <div id="faq">
+        <h1>FAQ</h1>
+        <p>Questions/answers go here</p>
     </div>
 </template>
 
@@ -13,12 +13,10 @@ export default {
         Navbar
     },
     data() {
-        return {
-        };
+        return {};
     }
 }
 </script>
 
 <style lang="scss">
-
 </style>
