@@ -3,3 +3,4 @@ dist/
 .cache/
 package-lock.json
 data/*.js
+__pycache__
