@@ -46,7 +46,7 @@ export function getChart(divID) {
             enabled: true
         },
         title: {
-            text: 'BFBB Decompilation Progress History'
+            text: 'BFBB Decompilation Progress'
         },
         yAxis: {
             title: {
@@ -87,31 +87,6 @@ export function getChart(divID) {
                         const commit = this.commit.substring(0, 10);
                         const done = this.done.toLocaleString();
                         const total = this.lines.toLocaleString();
-                        const totalSocks = 80;
-                        const socks = Math.round(this.y / 100 * totalSocks);
-                        return `${done}/${total} functions (${this.y}%).<br>
-                                ${socks}/${totalSocks} of Patrick's Socks <br>
-                                Commit: ${commit} </br>`;
-                    }
-                },
-                type: "line",
-                //visible: false,
-                color: "#ed7f8c",
-                /*
-                lineColor: "#BD6570",
-                marker: {
-                    fillColor: "#BD6570"
-                },*/
-                name: 'Decompiled Functions',
-                data: getFunctionSeries()
-            },
-            {
-                tooltip: {
-                    // "this" in this context is the data point object
-                    pointFormatter: function() {
-                        const commit = this.commit.substring(0, 10);
-                        const done = this.done.toLocaleString();
-                        const total = this.lines.toLocaleString();
                         const totalSpats = 75
                         const spats = Math.round(this.y / 100 * totalSpats);
                         return `${done}/${total} lines (${this.y}%).<br>
@@ -127,11 +102,36 @@ export function getChart(divID) {
                 name: 'Decompiled Lines of Assembly',
                 data: getLineSeries()
             },
+            {
+                tooltip: {
+                    // "this" in this context is the data point object
+                    pointFormatter: function() {
+                        const commit = this.commit.substring(0, 10);
+                        const done = this.done.toLocaleString();
+                        const total = this.lines.toLocaleString();
+                        const totalSocks = 80;
+                        const socks = Math.round(this.y / 100 * totalSocks);
+                        return `${done}/${total} functions (${this.y}%).<br>
+                                ${socks}/${totalSocks} of Patrick's Socks <br>
+                                Commit: ${commit} </br>`;
+                    }
+                },
+                type: "line",
+                visible: false,
+                color: "#ed7f8c",
+                /*
+                lineColor: "#BD6570",
+                marker: {
+                    fillColor: "#BD6570"
+                },*/
+                name: 'Decompiled Functions',
+                data: getFunctionSeries()
+            },
         ],
         responsive: {
             rules: [{
                 condition: {
-                    maxWidth: 500
+                    //maxWidth: 500
                 },
                 chartOptions: {
                     legend: {

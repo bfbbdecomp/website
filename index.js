@@ -6,6 +6,7 @@ import VueRouter from "vue-router";
 import App from "./app.vue";
 import Faq from "./faq.vue";
 import Progress from "./progress.vue";
+import NotFound from "./404.vue";
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,7 @@ const routes = [
     { path: "/", component: Progress },
     { path: "/progress", component: Progress },
     { path: "/faq", component: Faq },
+    { path: "*", component: NotFound },
 ];
 
 const router = new VueRouter({
