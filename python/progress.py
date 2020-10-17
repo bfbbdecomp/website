@@ -79,7 +79,7 @@ for c in commits:
 
         # save current function info to giant ass file
         funcData = formatFuncDict(funcDict)
-        open("../src/functions/data.js", "w").writelines([
+        open("../data/functions.js", "w").writelines([
             "export default ",
             json.dumps(funcData, indent=4)
         ])
@@ -110,7 +110,7 @@ for c in commits:
         heatmapData = formatHeatmapData(fileDict)
 
         # print the shit to the file
-        heatchart = open("../src/heatchart/data.js", "w")
+        heatchart = open("../data/heatchart.js", "w")
         heatchart.write("export const commit = ")
         heatchart.write(json.dumps(lastCommit, indent=4))
         heatchart.write("\n")
@@ -121,9 +121,9 @@ for c in commits:
 
 #open("progressCache.json", "w").write(json.dumps(graphData, indent=4))
 graphData = formatGraphData(graphData)
-timechart = open("../src/timechart/data.js", "w")
+timechart = open("../data/timechart.js", "w")
 timechart.write("export const timeSeries = ")
 timechart.write(json.dumps(graphData, indent=4))
 
 
-open("../src/info.js", "w").writelines(["export default ", json.dumps(info, indent=4)])
+open("../data/info.js", "w").writelines(["export default ", json.dumps(info, indent=4)])
