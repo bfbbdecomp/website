@@ -30,7 +30,7 @@
                         </a>
                     </p>
                     <p class="control">
-                        <a target="_blank" class="button is-link" href="https://discord.gg/Dvu2UAS">
+                        <a target="_blank" class="button is-discord" href="https://discord.gg/Dvu2UAS">
                         <span class="icon">
                             <i class="fab fa-discord"></i>
                         </span>
@@ -56,6 +56,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+
 
 </style>
