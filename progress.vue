@@ -1,16 +1,20 @@
 <template>
     <div id="progress">
-        <h1>Progress</h1>
-        <p>Progress</p>
+        <div class="container">
+            <div class="tile">
+                <Timeline id="0"></Timeline>
+                <Timeline id="1"></Timeline>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-import Navbar from "./navbar.vue";
+import Timeline from "./timeline/timeline.vue";
 
 export default {
     components: {
-        Navbar
+        Timeline
     },
     data() {
         return {};

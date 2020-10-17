@@ -20,6 +20,7 @@
   "homepage": "https://github.com/mattbruv/bfbbdecomp-website#readme",
   "dependencies": {
     "bulma": "^0.9.1",
+    "highcharts": "^8.2.0",
     "vue": "^2.6.12",
     "vue-hot-reload-api": "^2.3.4",
     "vue-router": "^3.4.7"
