@@ -21,9 +21,10 @@ info = {
 
 commitNum = 1
 
-cacheText = open("progressCache.json").read()
+cacheText = open("./progressCache.json").read()
 cache = {}
 for point in json.loads(cacheText):
+    print("cached", point["commit"])
     cache[point["commit"]] = point
 
 # process assembly files from each commit
