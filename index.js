@@ -17,8 +17,15 @@ const routes = [
     { path: "*", component: NotFound },
 ];
 
+let base = "/";
+
+if (process.env.NODE_ENV === 'production') { 
+    base = "bfbbdecomp/";
+}
+
 const router = new VueRouter({
     mode: "history",
+    base,
     routes
 });
 
