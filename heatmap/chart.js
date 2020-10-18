@@ -40,6 +40,7 @@ export function getChart(id) {
     Highcharts.chart(id, {
         chart: {
             type: "heatmap",
+            //height: "70%",
         },
         credits: {
             enabled: false // am I an asshole?

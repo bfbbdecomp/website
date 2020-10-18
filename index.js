@@ -4,7 +4,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./app.vue";
-import Faq from "./faq.vue";
+import Faq from "./faq/faq.vue";
 import Progress from "./progress.vue";
 import NotFound from "./404.vue";
 

@@ -40,7 +40,8 @@ export function getChart(divID) {
     // console.log(divID);
     return Highcharts.chart(divID, {
         chart: {
-            type: 'area'
+            type: 'area',
+            //height: "70%"
         },
         exporting: {
             enabled: true

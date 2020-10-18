@@ -25,8 +25,8 @@ export function getEstimate() {
     if (!then) {
         then = getLastChange(latest);
     }
-    console.log(then);
-    console.log(latest);
+    //console.log(then);
+    //console.log(latest);
     const diff = latest.linesDone - then.linesDone;
     const daysPassed = differenceInDays(
         Date.now(),
