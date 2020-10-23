@@ -88,7 +88,7 @@ export function getChart(divID) {
                         const commit = this.commit.substring(0, 10);
                         const done = this.done.toLocaleString();
                         const total = this.lines.toLocaleString();
-                        const totalSpats = 75
+                        const totalSpats = 100
                         const spats = Math.round(this.y / 100 * totalSpats);
                         return `${done}/${total} lines (${this.y}%).<br>
                                 ${spats}/${totalSpats} Golden Spatulas <br>
