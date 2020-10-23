@@ -3,9 +3,10 @@ export default [
         "link": "what-is-this",
         "question": "What is this?",
         "answer": `
-        TODO: Fill out this FAQ taking longer than 3 minutes...
-        BFBB Decomp is a reverse engineering project where we are
-        attempting to make a 1:1 recreation of the game's original source code.
+        BFBB Decomp is a reverse engineering project where we are attempting to
+		make a 1:1 recreation of the game's original source code. This will 
+		allow us to better understand the game and make the game's code easier 
+		to modify.
         `
     },
     {
@@ -14,22 +15,22 @@ export default [
         "answer": `
         Check the <a href="progress">progress page</a>
         to see a detailed breakdown of the project's status.
-        Decompilations tend to take a very long time.
-        
+		Decomp projects tend to take an extremely long time.
         `
     },
     {
         "link": "pc-port",
         "question": "When will there be a PC port?",
         "answer": `
-        blah blah blah blah
+		Some time after we get 100% of the game decompiled.
         `
     },
     {
         "link": "how-to-contribute",
         "question": "How can I contribute?",
         "answer": `
-        blah blah`
+		Join the <a href="https://discord.gg/Dvu2UAS">BFBB modding discord</a>.
+		All discussion takes place in #decomp-discussion.`
     },
     {
         "link": "useful-for-modding",
@@ -44,11 +45,6 @@ export default [
     {
         "link": "make-a-mod",
         "question": "Will you make X mod with this?",
-        "answer": `no sir`
-    },
-    {
-        "link": "foo",
-        "question": "Question?",
-        "answer": `answer`
+        "answer": `No.`
     },
 ];
