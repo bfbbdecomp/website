@@ -10,7 +10,7 @@ def symbolLineToObject(line):
     data = {}
     data["symbol_number"] = int(info[0].replace(':', ''))
     data["address"] = info[1].upper()
-    data["size"] = parseDecOrHex(info[2])
+    data["size"] = parseDecOrHex(info[2]) // 4 # total bytes / 4 bytes per instruction line
     data["type"] = info[3] # one of {'SECTION', 'NOTYPE', 'OBJECT', 'FILE', 'FUNC'}
     data["scope"] = info[4]
     # data["??"] = info[5] # this is DEFAULT for every label

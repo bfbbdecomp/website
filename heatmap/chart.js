@@ -61,7 +61,7 @@ export function getChart(id) {
         colorAxis: {
             min: 0,
             max: 100,
-            minColor: '#e63731',
+            minColor: '#ff534d',
             maxColor: '#31e649',
             labels: {
                 enabled: true,
@@ -94,8 +94,8 @@ export function getChart(id) {
         },
         series: [{
             name: 'Sales per employee',
-            borderWidth: 0.25,
-            borderColor: "#666666",
+            borderWidth: 0.15,
+            borderColor: "#444444",
             //boostThreshold: 0,
             data: generateData()
         }],

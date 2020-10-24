@@ -17,16 +17,16 @@ def formatFuncDict(funcDict):
 
     return data
 
-def formatGraphData(graphData):
+def formatTimechartData(timechartData):
 
     # remove commits before 9-15-2020 because
     # the repo was still stabilizing before that point
     before = datetime(2020, 9, 15)
-    graphData = list(filter(lambda x: datetime.fromtimestamp(x["time"]) >= before, graphData))
+    timechartData = list(filter(lambda x: datetime.fromtimestamp(x["time"]) >= before, timechartData))
 
     newData = []
     previous = None
-    for point in graphData:
+    for point in timechartData:
         if previous == None:
             newData.append(point)
             previous = point
