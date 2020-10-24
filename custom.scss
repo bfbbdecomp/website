@@ -3,4 +3,13 @@
 // $discord: #7289DA;
 $custom-colors: ("discord": #7289DA);
 
+@font-face {
+    font-family: "spongebob";
+    src: url("fonts/spongebob.ttf")
+}
+
+.bob-text {
+    font-family: "spongebob";
+}
+
 @import "node_modules/bulma/";
