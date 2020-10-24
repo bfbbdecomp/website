@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel *.html",
+    "dev": "parcel index.html",
     "build": "parcel build *.html",
     "build-pages": "parcel build *.html --no-source-maps --public-url /bfbbdecomp/"
   },
