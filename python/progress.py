@@ -1,7 +1,7 @@
 import json
 from git import Repo
 from pathlib import Path
-from chart import exportTimeChart
+from chart import exportInfo, exportTimeChart
 
 from helpers import getAsmAddresses, getGameFunctions
 
@@ -62,28 +62,24 @@ for c in commits:
     functionsDone = len(gameFuncs)
     linesDone = sum(map(lambda x: gameFuncs[x]["size"], gameFuncs))
 
-    timechartData.append({
+    timechartPoint = {
         "commit": str(c),
         "time": c.authored_date,
         "linesTotal": linesTotal,
         "linesDone": linesDone,
         "functionsTotal": functionsTotal,
         "functionsDone": functionsDone
-    })
+    }
+
+    timechartData.append(timechartPoint)
 
     # is this the most recent commit?
     # if so, generate file heatmap
     if commitNum == len(commits):
+        info["stats"] = timechartPoint
         print("TODO: generate heatmap file")
 
     commitNum += 1
 
+exportInfo(info)
 exportTimeChart(timechartData, cache=False)
-
-#open("dump.json", "w").write(json.dumps(timechartData, indent=4))
-#open("progressCache.json", "w").write(json.dumps(timechartData, indent=4))
-# timechartData = formattimechartData(timechartData)
-# timechart = open("../data/timechart.js", "w")
-# timechart.write("export const timeSeries = ")
-# timechart.write(json.dumps(timechartData, indent=4))
-# open("../data/info.js", "w").writelines(["export default ", json.dumps(info, indent=4)])
