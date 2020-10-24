@@ -7,11 +7,9 @@ import json
 decompPath = "../../bfbbdecomp"
 
 repo = Repo(decompPath)
-print(repo)
 
 commits = list(repo.iter_commits("master"))
 commits.reverse()
-print(commits)
 
 gameFuncSet = set(getGameFuncDict().keys())
 
