@@ -4,7 +4,10 @@ This repository contains the source code to build the progress tracking website.
 
 It uses [highcharts](https://www.highcharts.com/) to display progress.
 Vue.js is used as a templating/reactive library.
+
 The data for the entire website is processed by running the python script in the python folder, `python progress.py`.
+
+`pip install gitpython` to install the git library the script uses to traverse the bfbb repository:
 It requires that there exist a full `bfbbdecomp` repository in the same parent directory as the website.
 
 Make sure [parcel](https://parceljs.org/) is installed globaly.
