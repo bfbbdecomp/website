@@ -89,7 +89,7 @@ export function getChart(divID) {
                         const done = this.done.toLocaleString();
                         const total = this.lines.toLocaleString();
                         const totalSpats = 100
-                        const spats = Math.round(this.y / 100 * totalSpats);
+                        const spats = Math.floor(this.y / 100 * totalSpats);
                         return `${done}/${total} lines (${this.y}%).<br>
                                 ${spats}/${totalSpats} Golden Spatulas <br>
                                 Commit: ${commit} </br>`;
@@ -111,7 +111,7 @@ export function getChart(divID) {
                         const done = this.done.toLocaleString();
                         const total = this.lines.toLocaleString();
                         const totalSocks = 80;
-                        const socks = Math.round(this.y / 100 * totalSocks);
+                        const socks = Math.floor(this.y / 100 * totalSocks);
                         return `${done}/${total} functions (${this.y}%).<br>
                                 ${socks}/${totalSocks} of Patrick's Socks <br>
                                 Commit: ${commit} </br>`;
