@@ -30,7 +30,15 @@ export default [
         "question": "How can I contribute?",
         "answer": `
 		Join the <a href="https://discord.gg/Dvu2UAS">BFBB modding discord</a>.
-		All discussion takes place in #decomp-discussion.`
+        All discussion takes place in #decomp-discussion.
+        
+        <p>
+        If you have web development skills, you can help improve this website
+        by working on
+        <a href="https://github.com/mattbruv/bfbbdecomp-website/issues">
+        one of the many issues</a>.
+        </p>
+        `
     },
     {
         "link": "useful-for-modding",
@@ -47,4 +55,21 @@ export default [
         "question": "Will you make X mod with this?",
         "answer": `No.`
     },
+    {
+        "link": "website-info",
+        "question": "About this website",
+        "answer": `
+        Made with <a target="_blank" href="https://vuejs.org/">Vue.js</a>.
+        Each commit is processed by
+        <a target="_blank" href="https://www.python.org/">Python</a>
+        using 
+        <a target="_blank" href="https://gitpython.readthedocs.io/">GitPython</a>
+        and the resulting data is rendered using
+        <a target="_blank" href="https://www.highcharts.com/">Highcharts</a>.
+        The website is automatically built and deployed to 
+        <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
+        after every commit.
+        <a target="_blank" href="https://github.com/mattbruv/bfbbdecomp-website">View the source code</a>.
+        `
+    }
 ];
