@@ -1,4 +1,3 @@
-from threading import Condition
 from symbols import getSymbols
 from files import getFileInfo
 

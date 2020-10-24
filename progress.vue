@@ -37,7 +37,7 @@
             <div class="container">
                 <div class="tile">
                     <Timeline class="chart tile is-6" id="0"></Timeline>
-                    <!--<Heatmap class="chart tile is-6" id="0"></Heatmap>-->
+                    <Heatmap class="chart tile is-6" id="0"></Heatmap>
                 </div>
             </div>
         </section>
@@ -46,7 +46,7 @@
 
 <script>
 import Timeline from "./timeline/timeline.vue";
-//import Heatmap from "./heatmap/heatmap.vue";
+import Heatmap from "./heatmap/heatmap.vue";
 import Info from "./data/info.js";
 import { getEstimate } from "./estimate.js";
 
@@ -54,7 +54,7 @@ const est = getEstimate();
 
 export default {
     components: {
-        //Heatmap,
+        Heatmap,
         Timeline
     },
     data() {

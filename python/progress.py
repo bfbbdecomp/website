@@ -2,6 +2,8 @@ import json
 from git import Repo
 from pathlib import Path
 from chart import exportInfo, exportTimeChart
+from heatmap import genFileDict
+from heatmap import exportHeatmap
 
 from helpers import getAsmAddresses, getGameFunctions
 
@@ -74,10 +76,13 @@ for c in commits:
     timechartData.append(timechartPoint)
 
     # is this the most recent commit?
-    # if so, generate file heatmap
+    # if so, generate file heatmap and stats
     if commitNum == len(commits):
+
         info["stats"] = timechartPoint
-        print("TODO: generate heatmap file")
+
+        fileDict = genFileDict(gameFuncs, notDoneFuncs)
+        exportHeatmap(fileDict, c)
 
     commitNum += 1
 
