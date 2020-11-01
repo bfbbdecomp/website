@@ -1,5 +1,5 @@
 from random import randint
-from datetime import datetime
+from datetime import datetime, timezone, tzinfo
 
 # we're gonna format some js data objects in python
 # because python is 1,000,000% more enjoyable to
@@ -25,14 +25,21 @@ def formatTimechartData(timechartData):
     timechartData = list(filter(lambda x: datetime.fromtimestamp(x["time"]) >= before, timechartData))
 
     newData = []
+    plottedDays = set()
     previous = None
-    for point in timechartData:
+    for point in reversed(timechartData):
+        time = datetime.fromtimestamp(point["time"], timezone.utc)
+        timestr = str(time.year) + "-" + str(time.month) + "-" + str(time.day)
+        if timestr in plottedDays:
+            continue
         if previous == None:
             newData.append(point)
+            plottedDays.add(timestr)
             previous = point
             continue
         if point["functionsDone"] != previous["functionsDone"]:
             newData.append(point)
+            plottedDays.add(timestr)
         previous = point
 
     return newData
