@@ -1,10 +1,11 @@
 import { timeSeries } from "./data/timechart.js";
 import { formatDistanceToNow, add, format, differenceInDays } from "date-fns";
 
+export const dayThreshold = 90;
 
 function getComparePoint() {
     const since = new Date();
-    since.setDate(since.getDate() - 30);
+    since.setDate(since.getDate() - dayThreshold);
     const result = timeSeries.find((point) => {
         const pDate = new Date(point["time"] * 1000);
         return pDate >= since;
