@@ -69,7 +69,9 @@ export default [
         The website is automatically built and deployed to 
         <a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
         after every commit.
-        <a target="_blank" href="https://github.com/mattbruv/bfbbdecomp-website">View the source code</a>.
+        <a target="_blank" href="https://github.com/mattbruv/bfbbdecomp-website">View this website's source code</a>.
+        <br>
+        Progress tracking inspired by <a target="_blank" href="https://zelda64.dev/progress.html">Zelda 64 Reverse Engineering</a>.
         `
     }
 ];

@@ -68,12 +68,9 @@ export function getChart(divID) {
         legend: {
         },
         plotOptions: {
-            area: {
-                //stacking: "normal"
-            },
             series: {
                 marker: {
-                    enabled: true
+                    enabled: false
                 },
                 label: {
                     connectorAllowed: false
