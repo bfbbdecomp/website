@@ -7,6 +7,7 @@ from datetime import datetime, timezone, tzinfo
 # this entire codebase is ugly
 # but as long as it serves its purpose who cares
 
+
 def formatFuncDict(funcDict):
     data = []
     for func in funcDict:
@@ -17,12 +18,14 @@ def formatFuncDict(funcDict):
 
     return data
 
+
 def formatTimechartData(timechartData):
 
     # remove commits before 9-15-2020 because
     # the repo was still stabilizing before that point
     before = datetime(2020, 9, 15)
-    timechartData = list(filter(lambda x: datetime.fromtimestamp(x["time"]) >= before, timechartData))
+    timechartData = list(
+        filter(lambda x: datetime.fromtimestamp(x["time"]) >= before, timechartData))
 
     newData = []
     plottedDays = set()
@@ -42,16 +45,20 @@ def formatTimechartData(timechartData):
             plottedDays.add(timestr)
         previous = point
 
-    return newData
+    return list(reversed(newData))
+
 
 def formatHeatmapData(fileDict, columns=20):
     points = []
     for f in fileDict:
         point = fileDict[f]
-        point["file"] = f #.replace(".s", "")
-        point["funcPercent"] = round(point["doneFuncs"] / point["funcs"] * 100, 2)
-        point["linePercent"] = round(point["doneLines"] / point["lines"] * 100, 2)
-        point["value"] = point["funcPercent"] # maybe change this to linePercent
+        point["file"] = f  # .replace(".s", "")
+        point["funcPercent"] = round(
+            point["doneFuncs"] / point["funcs"] * 100, 2)
+        point["linePercent"] = round(
+            point["doneLines"] / point["lines"] * 100, 2)
+        # maybe change this to linePercent
+        point["value"] = point["funcPercent"]
         points.append(point)
     points.sort(key=lambda x: x["file"])
     col = 0
