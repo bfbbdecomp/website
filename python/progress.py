@@ -1,3 +1,4 @@
+import os
 import json
 from git import Repo
 from pathlib import Path
@@ -88,7 +89,8 @@ for c in commits:
             timechartPoint["linesDone"] / timechartPoint["linesTotal"] * 100,
             2)
         api = {"percentage": str(percent) + "%"}
-        open("../data/api.json", "w").write(json.dumps(api))
+        os.mkdir("../dist")
+        open("../dist/api.json", "w").write(json.dumps(api))
 
     commitNum += 1
 

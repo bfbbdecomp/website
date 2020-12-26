@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
         "python"
-    ]
+    ],
+    "python.formatting.provider": "yapf"
 }
