@@ -15,9 +15,7 @@ commits.reverse()
 
 timechartData = []
 
-info = {
-    "repo": repo.remotes[0].url.split('.git')[0]
-}
+info = {"repo": repo.remotes[0].url.split('.git')[0]}
 
 cacheText = open("cache/timeline.json").read()
 cache = {}
@@ -34,7 +32,8 @@ linesTotal = sum(map(lambda x: allFuncs[x]["size"], allFuncs))
 # process assembly files from each commit
 for c in commits:
 
-    print("Processing commit #", commitNum, c, str(round(commitNum / len(commits) * 100, 2)) + "%")
+    print("Processing commit #", commitNum, c,
+          str(round(commitNum / len(commits) * 100, 2)) + "%")
 
     commitHash = str(c)
     if commitHash in cache and commitNum != len(commits):
@@ -60,7 +59,7 @@ for c in commits:
             if addr in asmAddresses:
                 notDoneFuncs[addr] = gameFuncs[addr]
                 del gameFuncs[addr]
-    
+
     functionsDone = len(gameFuncs)
     linesDone = sum(map(lambda x: gameFuncs[x]["size"], gameFuncs))
 
@@ -83,6 +82,13 @@ for c in commits:
 
         fileDict = genFileDict(gameFuncs, notDoneFuncs)
         exportHeatmap(fileDict, c)
+
+        # write JSON endpoint for badges
+        percent = round(
+            timechartPoint["linesDone"] / timechartPoint["linesTotal"] * 100,
+            2)
+        api = {"percentage": str(percent) + "%"}
+        open("../data/api.json", "w").write(json.dumps(api))
 
     commitNum += 1
 
