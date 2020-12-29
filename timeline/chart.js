@@ -88,8 +88,8 @@ export function getChart(divID) {
                         const totalSpats = 100
                         const spats = Math.floor(this.y / 100 * totalSpats);
                         return `${done}/${total} lines (${this.y}%).<br>
-                                ${spats}/${totalSpats} Golden Spatulas <br>
-                                Commit: ${commit} </br>`;
+                                ${spats}/${totalSpats} golden spatulas <br>
+                                commit: ${commit} </br>`;
                     }
                 },
                 color: "#fff56c",
@@ -110,8 +110,8 @@ export function getChart(divID) {
                         const totalSocks = 80;
                         const socks = Math.floor(this.y / 100 * totalSocks);
                         return `${done}/${total} functions (${this.y}%).<br>
-                                ${socks}/${totalSocks} of Patrick's Socks <br>
-                                Commit: ${commit} </br>`;
+                                ${socks}/${totalSocks} of patrick's socks <br>
+                                commit: ${commit} </br>`;
                     }
                 },
                 type: "line",
