@@ -84,10 +84,10 @@ export function getChart(id) {
             formatter: function () {
                 //console.log(this.point)
                 return `<b>${this.point.file}</b><br>
-                ${this.point.doneFuncs}/${this.point.funcs.toLocaleString()} functions
+                ${this.point.doneFuncs.toLocaleString()}/${this.point.funcs.toLocaleString()} functions
                 (${this.point.funcPercent}%)
                 <br>
-                ${this.point.doneLines}/${this.point.lines.toLocaleString()} lines
+                ${this.point.doneLines.toLocaleString()}/${this.point.lines.toLocaleString()} lines
                 (${this.point.linePercent}%)
                 `;
             }
