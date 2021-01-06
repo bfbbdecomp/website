@@ -2,6 +2,7 @@ import Highcharts from "highcharts";
 import Heatmap from "highcharts/modules/heatmap";
 import Exporting from "highcharts/modules/exporting";
 import { commit, heatData } from "../data/heatchart.js";
+import Info from "../data/info.js";
 import { formatDistanceToNowStrict } from "date-fns";
 
 const commitDate = formatDistanceToNowStrict(commit.time * 1000, {
@@ -92,12 +93,27 @@ export function getChart(id) {
                 `;
             }
         },
+        plotOptions: {
+            heatmap: {
+                cursor: "pointer"
+            }
+        },
         series: [{
             name: 'Sales per employee',
-            borderWidth: 0.15,
+            borderWidth: 0.20,
             borderColor: "#555555",
             //boostThreshold: 0,
-            data: generateData()
+            data: generateData(),
+            point: {
+                events: {
+                    click: function() {
+                        const path = this.file;
+                        const url = Info.repo + "/blob/master/src/" + path;
+                        window.open(url, "_blank");
+                        //console.log(url);
+                    }
+                }
+            }
         }],
         responsive: {
             rules: [{
