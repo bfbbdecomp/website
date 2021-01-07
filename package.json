@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel index.html",
     "build": "parcel build *.html",
-    "build-pages": "parcel build *.html --no-source-maps --public-url /bfbbdecomp/"
+    "build-pages": "parcel build *.html --no-source-maps --public-url /bfbb/"
   },
   "repository": {
     "type": "git",
