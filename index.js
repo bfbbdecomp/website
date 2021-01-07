@@ -20,7 +20,7 @@ const routes = [
 let base = "/";
 
 if (process.env.NODE_ENV === 'production') { 
-    base = "bfbbdecomp/";
+    base = "bfbb/";
 }
 
 const router = new VueRouter({
