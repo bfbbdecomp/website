@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mattbruv/bfbbdecomp-website.git"
+    "url": "git+https://github.com/bfbbdecomp/bfbbdecomp-website.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mattbruv/bfbbdecomp-website/issues"
+    "url": "https://github.com/bfbbdecomp/bfbbdecomp-website/issues"
   },
-  "homepage": "https://github.com/mattbruv/bfbbdecomp-website#readme",
+  "homepage": "https://github.com/bfbbdecomp/bfbbdecomp-website#readme",
   "dependencies": {
     "bulma": "^0.9.1",
     "date-fns": "^2.16.1",
