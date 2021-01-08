@@ -1,0 +1,35 @@
+{
+  "name": "bfbbdecomp-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel html/*.html",
+    "prettier": "prettier --check js",
+    "lint": "eslint js/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfbbdecomp/bfbbdecomp-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bfbbdecomp/bfbbdecomp-website/issues"
+  },
+  "homepage": "https://github.com/bfbbdecomp/bfbbdecomp-website#readme",
+  "dependencies": {
+    "components": "^0.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "eslint": "^7.17.0",
+    "eslint-plugin-react": "^7.22.0",
+    "prettier": "^2.2.1"
+  }
+}
