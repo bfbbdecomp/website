@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/bfbbdecomp/bfbbdecomp-website#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "components": "^0.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
