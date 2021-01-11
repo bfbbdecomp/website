@@ -1,0 +1,28 @@
+.bubble {
+    width: 48px;
+    height: 48px;
+    background-image: 
+        radial-gradient(circle at 32px 32px, #ffffff4f, rgba(0, 0, 0, 0.623)),
+        url('../../images/bubble.png');
+        background-size: 100% 100%;
+    border-radius: 500px;
+    opacity: 65%;
+    margin-right: -6px;
+    animation: MoveUpDown 3s ease-in-out infinite;
+
+}
+
+.bubble:nth-child(1) { animation-delay: .5s }
+.bubble:nth-child(2) { animation-delay: 1s }
+.bubble:nth-child(3) { animation-delay: 1.5s }
+.bubble:nth-child(4) { animation-delay: 2s }
+.bubble:nth-child(5) { animation-delay: 2.5s }
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+  }
