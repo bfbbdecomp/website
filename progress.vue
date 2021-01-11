@@ -10,7 +10,6 @@
             Estimated completion date:
             <strong
               @click="showInfo = true"
-              @mouseover="showInfo = true"
               class="estimate-help"
             >
               {{ estimate.doneDateString }}</strong
