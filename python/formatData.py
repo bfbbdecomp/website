@@ -25,7 +25,8 @@ def formatTimechartData(timechartData):
     # the repo was still stabilizing before that point
     before = datetime(2020, 9, 15)
     timechartData = list(
-        filter(lambda x: datetime.fromtimestamp(x["time"]) >= before, timechartData))
+        filter(lambda x: datetime.fromtimestamp(x["time"]) >= before,
+               timechartData))
 
     newData = []
     plottedDays = set()
@@ -53,12 +54,13 @@ def formatHeatmapData(fileDict, columns=20):
     for f in fileDict:
         point = fileDict[f]
         point["file"] = f  # .replace(".s", "")
-        point["funcPercent"] = round(
-            point["doneFuncs"] / point["funcs"] * 100, 2)
-        point["linePercent"] = round(
-            point["doneLines"] / point["lines"] * 100, 2)
-        # maybe change this to linePercent
-        point["value"] = point["funcPercent"]
+        point["funcPercent"] = round(point["doneFuncs"] / point["funcs"] * 100,
+                                     2)
+        point["linePercent"] = round(point["doneLines"] / point["lines"] * 100,
+                                     2)
+        # changed from funcPercent to linePercent to better reflect real
+        # amount of the file which is decompiled.
+        point["value"] = point["linePercent"]
         points.append(point)
     points.sort(key=lambda x: x["file"])
     col = 0

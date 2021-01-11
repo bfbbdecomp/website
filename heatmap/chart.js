@@ -6,8 +6,8 @@ import Info from "../data/info.js";
 import { formatDistanceToNowStrict } from "date-fns";
 
 const commitDate = formatDistanceToNowStrict(commit.time * 1000, {
-    addSuffix: true
-})
+  addSuffix: true,
+});
 
 const tag = commit.commit.substring(0, 10);
 
@@ -23,8 +23,8 @@ Exporting(Highcharts);
 // every line of JS I write makes me want to cry a little more inside
 
 function normalize(n1, n2) {
-    const percentage = (n1 / n2) * 100;
-    return Math.round(percentage * 1000) / 1000;
+  const percentage = (n1 / n2) * 100;
+  return Math.round(percentage * 1000) / 1000;
 }
 
 /*
@@ -32,97 +32,100 @@ function normalize(n1, n2) {
     x, y, and value. Any other info is for the sake of info
 */
 function generateData() {
-    return heatData;
+  return heatData;
 }
 
 // point.x, point.y, point.value
 
 export function getChart(id) {
-    Highcharts.chart(id, {
-        chart: {
-            type: "heatmap",
-            //height: "70%",
+  Highcharts.chart(id, {
+    chart: {
+      type: "heatmap",
+      //height: "70%",
+    },
+    credits: {
+      enabled: false, // am I an asshole?
+    },
+    title: {
+      text: "Individual File Progress",
+    },
+    subtitle: {
+      text: `${commitDate} - Commit: ${tag}`,
+    },
+    xAxis: {
+      visible: false,
+    },
+    yAxis: {
+      visible: false,
+      reversed: true,
+    },
+    colorAxis: {
+      min: 0,
+      max: 100,
+      minColor: "#161b22",
+      maxColor: "#31e649",
+      labels: {
+        enabled: true,
+        step: 4,
+        formatter: (obj) => {
+          return obj.pos == 0 ? "Asm<br>(0%)" : "C++<br>(100%)";
         },
-        credits: {
-            enabled: false // am I an asshole?
-        },
-        title: {
-            text: 'Individual File Progress'
-        },
-        subtitle: {
-            text: `${commitDate} - Commit: ${tag}`
-        },
-        xAxis: {
-            visible: false
-        },
-        yAxis: {
-            visible: false,
-            reversed: true
-        },
-        colorAxis: {
-            min: 0,
-            max: 100,
-            minColor: '#222222',
-            maxColor: '#31e649',
-            labels: {
-                enabled: true,
-                step: 4,
-                formatter: (obj) => {
-                    return (obj.pos == 0) ? 'Asm<br>(0%)' : 'C++<br>(100%)'
-                }
-            },
-            reversed: false
-        },
-        legend: {
-            align: 'right',
-            layout: 'vertical',
-            margin: 0,
-            verticalAlign: 'top',
-            y: 25,
-            symbolHeight: 280
-        },
-        tooltip: {
-            formatter: function () {
-                //console.log(this.point)
-                return `<b>${this.point.file}</b><br>
+      },
+      reversed: false,
+    },
+    legend: {
+      align: "right",
+      layout: "vertical",
+      margin: 0,
+      verticalAlign: "top",
+      y: 25,
+      symbolHeight: 280,
+    },
+    tooltip: {
+      formatter: function () {
+        //console.log(this.point)
+        return `<b>${this.point.file}</b><br>
                 ${this.point.doneFuncs.toLocaleString()}/${this.point.funcs.toLocaleString()} functions
                 (${this.point.funcPercent}%)
                 <br>
                 ${this.point.doneLines.toLocaleString()}/${this.point.lines.toLocaleString()} lines
                 (${this.point.linePercent}%)
                 `;
-            }
+      },
+    },
+    plotOptions: {
+      heatmap: {
+        cursor: "pointer",
+      },
+    },
+    series: [
+      {
+        name: "Sales per employee",
+        borderWidth: 0.1,
+        borderColor: "#555555",
+        //boostThreshold: 0,
+        data: generateData(),
+        point: {
+          events: {
+            click: function () {
+              const path = this.file;
+              const url = Info.repo + "/blob/master/src/" + path;
+              window.open(url, "_blank");
+              //console.log(url);
+            },
+          },
         },
-        plotOptions: {
-            heatmap: {
-                cursor: "pointer"
-            }
+      },
+    ],
+    responsive: {
+      rules: [
+        {
+          condition: {
+            //maxWidth: 500
+          },
+          chartOptions: {},
         },
-        series: [{
-            name: 'Sales per employee',
-            borderWidth: 0.20,
-            borderColor: "#555555",
-            //boostThreshold: 0,
-            data: generateData(),
-            point: {
-                events: {
-                    click: function() {
-                        const path = this.file;
-                        const url = Info.repo + "/blob/master/src/" + path;
-                        window.open(url, "_blank");
-                        //console.log(url);
-                    }
-                }
-            }
-        }],
-        responsive: {
-            rules: [{
-                condition: {
-                    //maxWidth: 500
-                },
-                chartOptions: {
-                }
-            }]
-        }
-    });
+      ],
+    },
+  });
 }
