@@ -7,7 +7,7 @@ import ProgressBanner from "./banner";
 export default class Progress extends React.Component {
   render() {
     return (
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={12}>
           <ProgressBanner />
         </Grid>
