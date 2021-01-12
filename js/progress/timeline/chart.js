@@ -39,6 +39,10 @@ export function makeTimeline() {
       gapGridLineWidth: 0,
     },
 
+    scrollbar: {
+      //enabled: false,
+    },
+
     rangeSelector: {
       buttons: [
         {
