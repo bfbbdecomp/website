@@ -8,13 +8,13 @@ export default class Progress extends React.Component {
   render() {
     return (
       <Grid container>
-        <Grid item xs="12">
+        <Grid item xs={12}>
           <ProgressBanner />
         </Grid>
-        <Grid item xs="12" md="6">
+        <Grid item xs={12} md={6}>
           <Timeline />
         </Grid>
-        <Grid item xs="12" md="6">
+        <Grid item xs={12} md={6}>
           <Heatmap />
         </Grid>
       </Grid>

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./header";
-import { Container, Grid } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 
 export default class App extends React.Component {
   render() {
