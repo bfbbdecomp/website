@@ -9,11 +9,14 @@ export default class Menu extends React.Component {
       <div class="container">
         <div class="menu">
           <div class="bubbles">
-            <a><Bubble></Bubble></a>
-            <a><Bubble></Bubble></a>
-            <a><Bubble></Bubble></a>
-            <a><Bubble></Bubble></a>
-            <a><Bubble></Bubble></a>
+            <Bubble class="bubble"></Bubble>
+            <Bubble class="bubble"></Bubble>
+            <Bubble class="bubble"></Bubble>
+            <Bubble class="bubble"></Bubble>
+            <Bubble class="bubble"></Bubble>
+          </div>
+          <div class="test-text">
+            <a>Spongebob Squarepants</a>
           </div>
         </div>
         ;
