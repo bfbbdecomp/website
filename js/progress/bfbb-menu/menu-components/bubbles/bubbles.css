@@ -1,0 +1,35 @@
+.bubble {
+    width: 46px;
+    height: 48px;
+    background-image: 
+        radial-gradient(circle at 32px 32px, #ffffff4f, rgba(0, 0, 0, 0.623)),
+        url('../../images/bubble.png');
+        background-size: 100% 100%;
+    border-radius: 500px;
+    opacity: 65%;
+    margin-right: -6px;
+    animation: MoveUpDown 3s ease-in-out infinite;
+    display: flex;
+    cursor: pointer;
+}
+
+.profile-pic {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  transition: all 0.25s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 0.25s ease-in-out;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+  }

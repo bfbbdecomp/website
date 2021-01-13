@@ -1,0 +1,177 @@
+[
+   {
+      "level":"Bikini Bottom",
+      "spatulas":[
+         "On Top of the Pineapple",
+         "On Top of Shady Shoals",
+         "On Top of the Chum Bucket",
+         "SpongeBob's Closet",
+         "Annoy Squidward",
+         "Ambush at the Tree Dome",
+         "Infestation at the Krusty Krab",
+         "A Wall Jump in the Bucket"
+      ]
+   },
+   {
+      "level":"Jellyfish Fields",
+      "spatulas":[
+         "Top of the Hill",
+         "Cowa-Bungee!",
+         "Spelunking",
+         "Patrick's Dilemma",
+         "Navigate the Canyons and Mesas",
+         "Drain the Lake",
+         "Slide Leap",
+         "Defeat King Jellyfish"
+      ]
+   },
+   {
+      "level":"Downtown Bikini Bottom",
+      "spatulas":[
+         "End of the Road",
+         "Learn Sandy's Moves",
+         "Tikis Go Boom",
+         "Across the Rooftops",
+         "Swingin' Sandy",
+         "Ambush in the Lighthouse",
+         "Extreme Bungee",
+         "Come Back with the Cruise Bubble"
+      ]
+   },
+   {
+      "level":"Goo Lagoon",
+      "spatulas":[
+         "King of the Castle",
+         "Connect the Towers",
+         "Save the Children",
+         "Over the Moat",
+         "Through the Sea Caves",
+         "Clean Out the Bumper Boats",
+         "Slip and Slide Under the Pier",
+         "Tower Bungee"
+      ]
+   },
+   {
+      "level":"Poseidome",
+      "spatulas":[
+         "Rumble at the Poseidome"
+      ]
+   },
+   {
+      "level":"Rock Bottom",
+      "spatulas":[
+         "Get to the Museum",
+         "Slip Sliding Away",
+         "Return the Museum's Art",
+         "Swingalong Spatula",
+         "Plundering Robots in the Museum",
+         "Across the Trench of Darkness",
+         "Lasers are Fun and Good for You",
+         "How in Tarnation Do You Get There?"
+      ]
+   },
+   {
+      "level":"Mermalair",
+      "spatulas":[
+         "Top of the Entrance Area",
+         "Top of the Computer Area",
+         "Shut Down the Security System",
+         "The Funnel Machines",
+         "The Spinning Towers of Power",
+         "Top of the Security Tunnel",
+         "Complete the Rolling Ball Room",
+         "Defeat Prawn"
+      ]
+   },
+   {
+      "level":"Sand Mountain",
+      "spatulas":[
+         "Frosty Bungee",
+         "Top of the Lodge",
+         "Defeat Robots on Guppy Mound",
+         "Beat Mrs. Puff's Time",
+         "Defeat Robots on Flounder Hill",
+         "Beat Bubble Buddy's Time",
+         "Defeat Robots on Sand Mountain",
+         "Beat Larry's Time"
+      ]
+   },
+   {
+      "level":"Industrial Park",
+      "spatulas":[
+         "Robo-Patrick Ahoy!"
+      ]
+   },
+   {
+      "level":"Kelp Forest",
+      "spatulas":[
+         "Through the Woods",
+         "Find all the Lost Campers",
+         "Tiki Roundup",
+         "Down in the Swamp",
+         "Through the Kelp Caves",
+         "Power Crystal Crisis",
+         "Kelp Vine Slide",
+         "Beat Mermaid Man's Time"
+      ]
+   },
+   {
+      "level":"Flying Dutchman's Graveyard",
+      "spatulas":[
+         "Top of the Entrance Area",
+         "A Path through the Goo",
+         "Goo Tanker Ahoy!",
+         "Top of the Stack of Ships",
+         "Shipwreck Bungee",
+         "Destroy the Robot Ship",
+         "Get Aloft There, Matey!",
+         "Defeat the Flying Dutchman"
+      ]
+   },
+   {
+      "level":"SpongeBob's Dream",
+      "spatulas":[
+         "Across the Dreamscape",
+         "Follow the Bouncing Ball",
+         "Slidin' Texas Style",
+         "Swingers Ahoy",
+         "Music is in the Ear of the Beholder",
+         "Krabby Patty Platforms",
+         "Super Bounce",
+         "Here You Go"
+      ]
+   },
+   {
+      "level":"Chum Bucket Lab",
+      "spatulas":[
+         "Kah - Rah - Tae!",
+         "The Small Shall Rule... or Not"
+      ]
+   },
+   {
+      "level":"Patrick",
+      "spatulas":[
+         "Return 10 Socks to Patrick",
+         "Return 10 Socks to Patrick",
+         "Return 10 Socks to Patrick",
+         "Return 10 Socks to Patrick",
+         "Return 10 Socks to Patrick",
+         "Return 10 Socks to Patrick",
+         "Return 10 Socks to Patrick",
+         "Return 10 Socks to Patrick"
+      ]
+   },
+   {
+      "level":"Mr. Krabs",
+      "spatulas":[
+         "Pay Mr. Krabs 3,000 Shiny Objects",
+         "Pay Mr. Krabs 3,500 Shiny Objects",
+         "Pay Mr. Krabs 4,000 Shiny Objects",
+         "Pay Mr. Krabs 4,500 Shiny Objects",
+         "Pay Mr. Krabs 5,000 Shiny Objects",
+         "Pay Mr. Krabs 5,500 Shiny Objects",
+         "Pay Mr. Krabs 6,500 Shiny Objects",
+         "Pay Mr. Krabs 7,500 Shiny Objects"
+      ]
+   }
+]

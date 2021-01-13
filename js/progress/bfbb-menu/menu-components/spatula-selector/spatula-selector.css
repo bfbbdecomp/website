@@ -1,0 +1,78 @@
+.spatula-selector {
+    width: 100%;
+    margin-top: 42px;
+}
+
+.spatula-selector p {
+    font-family: 'spongeboytt1regular';
+    color: rgb(35, 61, 94);
+    text-transform: uppercase;
+    font-size: 14pt;
+    margin: 0;
+}
+
+.spatula-container {
+    height: 64px;
+    width: 100%;
+    display: flex;
+}
+
+#area-title {
+    font-size: 16pt;
+}
+
+#spatula-name {
+    font-size: 12pt;
+    margin-top: 10px;
+}
+
+.area-selector {
+    height: 100%;
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-selector {
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    height: 100%;
+}
+
+.jellyfish {
+    height: 36px;
+    width: 36px;
+    background-image: url('../../images/jellyfish.gif');
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+#jellyfish-up {
+    margin-bottom: auto;
+}
+
+#jellyfish-down {
+    margin-top: auto;
+    transform: scaleY(-1);
+}
+
+.area-bubble {
+    height: 12px;
+    width: 12px;
+    background-image: url('../../images/area_bubble.png');
+    background-size: 300% 300%;
+    background-position: -12px -12px; 
+    margin: auto;
+    cursor: pointer;
+}
+
+#area-bubble-selected {
+    filter: grayscale(100%)
+    brightness(2.5)
+    drop-shadow(0px 0px 4px rgba(255, 255, 255, 1))
+    drop-shadow(0px 0px 4px rgba(255, 255, 255, 1))
+    drop-shadow(0px 0px 4px rgba(255, 255, 255, 1));
+}

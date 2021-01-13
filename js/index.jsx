@@ -5,12 +5,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import App from "./app";
 import Progress from "./progress/progress";
 import FAQ from "./faq/faq";
+import Menu from "./progress/bfbb-menu/menu"
 
 // Router Switch renders the first page which matches
 // the current url, therefore the default page must be last.
 const page = (
   <Router>
     <Switch>
+      {/* <Route path="/menu">
+        <App page={Menu} />
+      </Route> */}
       <Route path="/progress">
         <App page={Progress} />
       </Route>

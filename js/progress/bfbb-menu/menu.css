@@ -1,0 +1,119 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    font-family: 'spongeboytt1regular';
+    text-transform: uppercase;
+    user-select: none;
+}
+
+.menu {
+    background-image: url('./images/menu_bg_with_bamboo.png');
+    background-size: 100% 100%;
+    height: 480px;
+    width: 640px;
+    display: flex;
+    margin: auto;
+}
+
+.inner-content {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 55px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    z-index: 2;
+}
+
+.bubbles {
+    display: flex;
+    margin-right: 35px;
+}
+
+.test-text {
+    font-family: 'spongeboytt1regular';
+    position: relative;
+    top: 345px;
+    left: 75px;
+    font-size: 14pt;
+    color: rgb(45, 95, 129);
+}
+
+.spatula-count {
+    margin-right: auto;
+}
+
+.shiny-count {
+    margin-left: auto;
+    text-overflow: ellipsis;
+    width: auto;
+}
+
+.sock-count {
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.collectable-count {
+    margin-right: auto;
+}
+
+.menu-body {
+    height: 275px;
+    display: flex;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    width: 100%;
+    height: auto;
+
+}
+
+.caustics {
+    position: absolute;
+    height: 480px;
+    width: 640px;
+    z-index: 1; 
+    background-image: url('./images/caustics.gif');
+    background-size: 256px 256px;
+    mix-blend-mode: screen;
+}
+
+.info-texts #commits {
+    position: relative;
+    top: -100;
+    left: 285;
+    width: 250px;
+}
+
+.info-texts #contribs {
+    position: relative;
+    top: -100;
+    left: 235;
+    width: 250px;
+}
+
+.info-texts #pullreqs {
+    position: relative;
+    top: -100;
+    left: 200;
+    width: 250px;
+}
+
+.bubbles div:nth-child(1) { animation-delay: 0.25s }
+.bubbles div:nth-child(2) { animation-delay: 0.50s }
+.bubbles div:nth-child(3) { animation-delay: 0.75s }
+.bubbles div:nth-child(4) { animation-delay: 1.00s }
+.bubbles div:nth-child(5) { animation-delay: 1.25s }
+
+@font-face {
+    font-family: 'spongeboytt1regular';
+    src: url('spongeboytt1-0n1v-webfont.woff2') format('woff2'),
+         url('spongeboytt1-0n1v-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
