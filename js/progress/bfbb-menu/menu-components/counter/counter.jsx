@@ -10,10 +10,10 @@ export default class Counter extends React.Component {
     const countText = total ? `${count}/${total}` : count;
 
     return (
-    <div className='counter'>
+      <div className="counter">
         <div className={`${type}-img`}></div>
-        <a className='count'>{countText}</a>
-    </div>
-    )
+        <a className="count">{countText}</a>
+      </div>
+    );
   }
 }

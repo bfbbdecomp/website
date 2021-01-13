@@ -3,6 +3,8 @@
     height: 100%;
     display: flex;
     margin: auto;
+    font-family: 'spongeboytt1regular';
+    text-transform: uppercase;
 }
 
 .menu {

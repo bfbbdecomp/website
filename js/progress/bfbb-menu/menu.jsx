@@ -1,4 +1,5 @@
 import React from "react";
+import ReactTooltip from 'react-tooltip';
 import "./menu.css";
 
 import Bubble from "./menu-components/bubbles/bubble";
@@ -71,6 +72,7 @@ export default class Menu extends React.Component {
 
     return (
       <div className="container">
+        <ReactTooltip />
         <div className="menu">
           <div className="caustics"></div>
           <div className="inner-content">
@@ -85,10 +87,10 @@ export default class Menu extends React.Component {
                   ></Bubble>
                 ))}
               </div>
-              <div className="spatula-count">
+              <div className="spatula-count" data-tip="Percent Decompiled">
                 <Counter type="spatula" count={spatulaCount}></Counter>
               </div>
-              <div className="shiny-count">
+              <div className="shiny-count" data-tip="Lines of Assembly Decompiled">
                 <Counter type="shiny" count={shinyCount}></Counter>
               </div>
             </div>
@@ -96,10 +98,10 @@ export default class Menu extends React.Component {
               <SpatulaSelector spatulaCount={spatulaCount}></SpatulaSelector>
             </div>
             <div className="bottom-row">
-              <div className="collectable-count">
+              <div className="collectable-count" data-tip="Files Decompiled">
                 <Counter type="collectable" count={collectableCount} total={collectableTotal}></Counter>
               </div>
-              <div className="sock-count">
+              <div className="sock-count" data-tip="Function Count">
                 <Counter type="sock" count={sockCount}></Counter>
               </div>
             </div>
