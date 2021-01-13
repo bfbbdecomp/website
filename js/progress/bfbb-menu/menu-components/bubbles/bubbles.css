@@ -10,13 +10,19 @@
     margin-right: -6px;
     animation: MoveUpDown 3s ease-in-out infinite;
     display: flex;
-
+    cursor: pointer;
 }
 
 .profile-pic {
   width: 24px;
   height: 24px;
   margin: auto;
+  transition: all 0.25s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 0.25s ease-in-out;
 }
 
 @keyframes MoveUpDown {
