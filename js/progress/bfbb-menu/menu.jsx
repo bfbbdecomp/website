@@ -6,7 +6,16 @@ import Counter from "./menu-components/counter/counter";
 import SpatulaSelector from "./menu-components/spatula-selector/spatula-selector";
 import InfoText from "./menu-components/info-text/info-text";
 
+import tank_amb from "./sounds/menu_tank_amb.wav"
+
 export default class Menu extends React.Component {
+
+  componentDidMount() {
+    const ambience = new Audio(tank_amb);
+    ambience.volume = 0.2;
+    ambience.loop = true;
+    ambience.play();
+  }
 
   render() {
     const contributors = [
