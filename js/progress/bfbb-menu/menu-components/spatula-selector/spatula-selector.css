@@ -36,13 +36,13 @@
 .inner-selector {
     display: flex;
     flex-direction: column;
-    margin: 6px;
+    margin: 4px;
     height: 100%;
 }
 
 .jellyfish {
-    height: 48px;
-    width: 24px;
+    height: 36px;
+    width: 18px;
     background-image: url('../../images/golden_spatula.png');
     background-size: 100% 100%;
     margin-left: auto;
