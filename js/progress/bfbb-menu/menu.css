@@ -5,6 +5,7 @@
     margin: auto;
     font-family: 'spongeboytt1regular';
     text-transform: uppercase;
+    user-select: none;
 }
 
 .menu {
@@ -31,7 +32,7 @@
     /* position: relative;
     left: 58px;
     top: 50px; */
-    margin-right: 45px;
+    margin-right: 35px;
 }
 
 .test-text {

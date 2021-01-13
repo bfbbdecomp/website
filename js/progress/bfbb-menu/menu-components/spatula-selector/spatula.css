@@ -12,17 +12,17 @@
 }
 
 .gold-spatula {
-    height: 48px;
-    width: 24px;
-    background-image: url('../../images/golden_spatula.png');
+    height: 52px;
+    width: 52px;
+    background-image: url('../../images/golden_spatula.gif');
     background-size: 100% 100%;
     margin: auto;
 }
 
 .silver-spatula {
-    height: 48px;
-    width: 24px;
-    background-image: url('../../images/silver_spatula.png');
+    height: 52px;
+    width: 52px;
+    background-image: url('../../images/silver_spatula.gif');
     background-size: 100% 100%;
     margin: auto;
 }

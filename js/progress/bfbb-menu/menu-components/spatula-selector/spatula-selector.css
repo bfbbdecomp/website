@@ -42,11 +42,12 @@
 
 .jellyfish {
     height: 36px;
-    width: 18px;
-    background-image: url('../../images/golden_spatula.png');
+    width: 36px;
+    background-image: url('../../images/jellyfish.gif');
     background-size: 100% 100%;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 #jellyfish-up {
@@ -65,6 +66,7 @@
     background-size: 300% 300%;
     background-position: -12px -12px; 
     margin: auto;
+    cursor: pointer;
 }
 
 #area-bubble-selected {

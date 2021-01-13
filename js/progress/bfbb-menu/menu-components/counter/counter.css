@@ -5,30 +5,31 @@
 
 .spatula-img {
     height: 48px;
-    width: 24px;
-    background-image: url('../../images/golden_spatula.png');
+    width: 48px;
+    background-image: url('../../images/golden_spatula.gif');
     background-size: 100% 100%;
+    margin-right: -4px;
 }
 
 .shiny-img {
     height: 48px;
-    width: 24px;
-    background-image: url('../../images/golden_spatula.png');
+    width: 48px;
+    background-image: url('../../images/shiny.gif');
     background-size: 100% 100%;
 }
 
 .sock-img {
     height: 48px;
-    width: 24px;
-    background-image: url('../../images/golden_spatula.png');
+    width: 48px;
+    background-image: url('../../images/sock.gif');
     background-size: 100% 100%;
 }
 
 .collectable-img {
     height: 48px;
     width: 24px;
-    background-image: url('../../images/golden_spatula.png');
-    background-size: 100% 100%;
+    /* background-image: url('../../images/golden_spatula.png');
+    background-size: 100% 100%; */
 }
 
 
