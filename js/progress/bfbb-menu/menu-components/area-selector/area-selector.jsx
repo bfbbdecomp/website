@@ -6,24 +6,24 @@ export default class AreaSelector extends React.Component {
     const selectedArea = this.props.selectedArea;
 
     return (
-    <div class='area-selector'>
-        <div class='inner-selector'>
-            <div class='jellyfish' id='jellyfish-up'></div>
-            <div class='area-bubble' id='area-bubble-selected'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='area-bubble'></div>
-            <div class='jellyfish' id='jellyfish-down'></div>
+    <div className='area-selector'>
+        <div className='inner-selector'>
+            <div className='jellyfish' id='jellyfish-up'></div>
+            <div className='area-bubble' id='area-bubble-selected'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='area-bubble'></div>
+            <div className='jellyfish' id='jellyfish-down'></div>
         </div>
     </div>
     )

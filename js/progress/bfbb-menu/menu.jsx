@@ -8,6 +8,7 @@ import SpatulaSelector from "./menu-components/spatula-selector/spatula-selector
 import InfoText from "./menu-components/info-text/info-text";
 
 export default class Menu extends React.Component {
+
   render() {
     const contributors = [
       {
@@ -41,53 +42,73 @@ export default class Menu extends React.Component {
       },
     ];
 
+    // const spatulaCount = this.props.spatulaCount;
+    // const shinyCount = this.props.shinyCount;
+    // const sockCount = this.props.sockCount;
+    // const collectableCount = this.props.collectableCount;
+    // const collectableTotal = this.props.collectableTotal;
+
+    // const commitCount = this.props.commitCount;
+    // const contributorCount = this.props.contributorCount;
+    // const pullRequestCount = this.props.pullRequestCount;
+
+    const spatulaCount = 5;
+    const shinyCount = 20274;
+    const sockCount = 2;
+    const collectableCount = 25;
+    const collectableTotal = 121;
+    const commitCount = 174;
+    const contributorCount = 8;
+    const pullRequestCount = 1;
+
     return (
-      <div class="container">
-        <div class="menu">
-          <div class="caustics"></div>
-          <div class="inner-content">
-            <div class="top-row">
-              <div class="bubbles">
-                {contributors.map((contributor) => (
+      <div className="container">
+        <div className="menu">
+          <div className="caustics"></div>
+          <div className="inner-content">
+            <div className="top-row">
+              <div className="bubbles">
+                {contributors.map((contributor, index) => (
                   <Bubble
                     profileImg={contributor.profileImg}
                     alt={contributor.name}
                     profileUrl={contributor.profileUrl}
+                    key={index}
                   ></Bubble>
                 ))}
               </div>
-              <div class="spatula-count">
-                <Counter type="spatula" count={5}></Counter>
+              <div className="spatula-count">
+                <Counter type="spatula" count={spatulaCount}></Counter>
               </div>
-              <div class="shiny-count">
-                <Counter type="shiny" count={20274}></Counter>
+              <div className="shiny-count">
+                <Counter type="shiny" count={shinyCount}></Counter>
               </div>
             </div>
-            <div class="menu-body">
+            <div className="menu-body">
               <AreaSelector></AreaSelector>
               <SpatulaSelector></SpatulaSelector>
             </div>
-            <div class="bottom-row">
-              <div class="collectable-count">
-                <Counter type="collectable" count={25} total={121}></Counter>
+            <div className="bottom-row">
+              <div className="collectable-count">
+                <Counter type="collectable" count={collectableCount} total={collectableTotal}></Counter>
               </div>
-              <div class="sock-count">
-                <Counter type="sock" count={2}></Counter>
+              <div className="sock-count">
+                <Counter type="sock" count={sockCount}></Counter>
               </div>
             </div>
-            <div class="info-texts">
+            <div className="info-texts">
               <div id="commits">
-                <InfoText amount={174} color="#ba2c2f">
+                <InfoText amount={commitCount} color="#ba2c2f">
                   total commits
                 </InfoText>
               </div>
               <div id="contribs">
-                <InfoText amount={8} color="#118ed2">
+                <InfoText amount={contributorCount} color="#118ed2">
                   total contributors
                 </InfoText>
               </div>
               <div id="pullreqs">
-                <InfoText amount={1} color="#1c911f">
+                <InfoText amount={pullRequestCount} color="#1c911f">
                   active pull requests
                 </InfoText>
               </div>

@@ -9,8 +9,8 @@ export default class InfoText extends React.Component {
     const style = {'color': numberColor}
 
     return (
-    <div class='info-text'>
-        <a style={style} class='info-number'>{amount} </a>
+    <div className='info-text'>
+        <a style={style} className='info-number'>{amount} </a>
         <a>{text}</a>
     </div>
     )

@@ -8,9 +8,9 @@ export default class SpatulaSelector extends React.Component {
     const selectedSpatula = this.props.selectedSpatula;
 
     return (
-    <div class='spatula-selector'>
+    <div className='spatula-selector'>
         <p id='area-title'>Bikini Bottom</p>
-        <div class='spatula-container'>
+        <div className='spatula-container'>
             <Spatula gold={true}></Spatula>
             <Spatula gold={true}></Spatula>
             <Spatula></Spatula>
