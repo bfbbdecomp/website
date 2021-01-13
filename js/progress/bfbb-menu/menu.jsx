@@ -51,24 +51,24 @@ export default class Menu extends React.Component {
       },
     ];
 
-    // const spatulaCount = this.props.spatulaCount;
-    // const shinyCount = this.props.shinyCount;
-    // const sockCount = this.props.sockCount;
-    // const collectableCount = this.props.collectableCount;
-    // const collectableTotal = this.props.collectableTotal;
+    const spatulaCount = this.props.spatulaCount;
+    const shinyCount = this.props.shinyCount;
+    const sockCount = this.props.sockCount;
+    const collectableCount = this.props.collectableCount;
+    const collectableTotal = this.props.collectableTotal;
 
-    // const commitCount = this.props.commitCount;
-    // const contributorCount = this.props.contributorCount;
-    // const pullRequestCount = this.props.pullRequestCount;
+    const commitCount = this.props.commitCount;
+    const contributorCount = this.props.contributorCount;
+    const pullRequestCount = this.props.pullRequestCount;
 
-    const spatulaCount = 5;
-    const shinyCount = 20274;
-    const sockCount = 2;
-    const collectableCount = 25;
-    const collectableTotal = 121;
-    const commitCount = 174;
-    const contributorCount = 8;
-    const pullRequestCount = 1;
+    // const spatulaCount = 5;
+    // const shinyCount = 20274;
+    // const sockCount = 2;
+    // const collectableCount = 25;
+    // const collectableTotal = 121;
+    // const commitCount = 174;
+    // const contributorCount = 8;
+    // const pullRequestCount = 1;
 
     return (
       <div className="container">

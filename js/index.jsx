@@ -12,9 +12,9 @@ import Menu from "./progress/bfbb-menu/menu"
 const page = (
   <Router>
     <Switch>
-      <Route path="/menu">
+      {/* <Route path="/menu">
         <App page={Menu} />
-      </Route>
+      </Route> */}
       <Route path="/progress">
         <App page={Progress} />
       </Route>
