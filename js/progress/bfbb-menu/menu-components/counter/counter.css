@@ -24,6 +24,14 @@
     background-size: 100% 100%;
 }
 
+.collectable-img {
+    height: 48px;
+    width: 24px;
+    background-image: url('../../images/golden_spatula.png');
+    background-size: 100% 100%;
+}
+
+
 .count {
     font-size: 24pt;
     color: rgb(255, 238, 0);

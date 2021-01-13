@@ -58,6 +58,10 @@
     margin-right: 12px;
 }
 
+.collectable-count {
+    margin-right: auto;
+}
+
 .menu-body {
     height: 275px;
     display: flex;
@@ -79,6 +83,25 @@
     background-size: 256px 256px;
     mix-blend-mode: screen;
 }
+
+.info-texts #commits {
+    position: relative;
+    top: -100;
+    left: 325;
+}
+
+.info-texts #contribs {
+    position: relative;
+    top: -100;
+    left: 245;
+}
+
+.info-texts #pullreqs {
+    position: relative;
+    top: -100;
+    left: 210;
+}
+
 
 .bubbles div:nth-child(1) { animation-delay: 0.25s }
 .bubbles div:nth-child(2) { animation-delay: 0.50s }

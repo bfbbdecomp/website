@@ -1,0 +1,11 @@
+.info-text {
+    font-family: 'spongeboytt1regular';
+    text-transform: uppercase;
+    color: rgb(35, 61, 94);
+    font-size: 11pt;
+}
+
+.info-number {
+    font-size: 14pt;
+    margin-right: 4px;
+}

@@ -5,6 +5,7 @@ import Bubble from "./menu-components/bubbles/basebubble";
 import Counter from "./menu-components/counter/counter"
 import AreaSelector from "./menu-components/area-selector/area-selector"
 import SpatulaSelector from "./menu-components/spatula-selector/spatula-selector"
+import InfoText from "./menu-components/info-text/info-text"
 
 export default class Menu extends React.Component {
   render() {
@@ -33,8 +34,22 @@ export default class Menu extends React.Component {
               <SpatulaSelector></SpatulaSelector>
             </div>
             <div class="bottom-row">
+              <div class="collectable-count">
+                <Counter type='collectable' count={25} total={121}></Counter>
+              </div>
               <div class="sock-count">
                 <Counter type='sock' count={2}></Counter>
+              </div>
+            </div>
+            <div class="info-texts">
+              <div id='commits'>
+                <InfoText amount={174} color='#ba2c2f'>total commits</InfoText>
+              </div>
+              <div id='contribs'>
+                <InfoText  amount={8} color='#118ed2'>total contributors</InfoText>
+              </div>
+              <div id='pullreqs'>
+                <InfoText amount={1} color='#1c911f'>active pull requests</InfoText>
               </div>
             </div>
           </div>
