@@ -14,13 +14,6 @@ export default class Timeline extends React.Component {
     this.renderChart();
   }
 
-  componentDidUpdate(prevProps) {
-    // Check needed to prevent infinite update loop
-    if (this.props !== prevProps) {
-      this.renderChart();
-    }
-  }
-
   render() {
     return <div id="heatmap"></div>;
   }

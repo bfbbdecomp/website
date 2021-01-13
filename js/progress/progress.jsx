@@ -8,6 +8,11 @@ export default class Progress extends React.Component {
   state = {
     tab: 0,
   };
+
+  handleChange = (event, newValue) => {
+    this.setState({ tab: newValue });
+  };
+
   render() {
     return (
       <Grid container spacing={2}>
@@ -15,6 +20,7 @@ export default class Progress extends React.Component {
           <Tabs
             indicatorColor="primary"
             textColor="primary"
+            onChange={this.handleChange}
             value={this.state.tab}
           >
             <Tab tabIndex={0} label="Overview" />
