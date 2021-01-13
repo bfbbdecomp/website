@@ -29,9 +29,6 @@
 
 .bubbles {
     display: flex;
-    /* position: relative;
-    left: 58px;
-    top: 50px; */
     margin-right: 35px;
 }
 
@@ -46,8 +43,6 @@
 
 .spatula-count {
     margin-right: auto;
-    /* margin-left: 25px; */
-    /* left: 20px; */
 }
 
 .shiny-count {
@@ -107,7 +102,6 @@
     left: 200;
     width: 250px;
 }
-
 
 .bubbles div:nth-child(1) { animation-delay: 0.25s }
 .bubbles div:nth-child(2) { animation-delay: 0.50s }

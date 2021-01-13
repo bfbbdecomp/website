@@ -42,7 +42,7 @@ export default class Progress extends React.Component {
           contributors={contributors}
           spatulaCount={5}
           shinyCount={20274}
-          sockCount={2}
+          sockCount={10}
           collectableCount={25}
           collectableTotal={121}
           commitCount={174}
