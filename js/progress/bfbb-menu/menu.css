@@ -87,19 +87,19 @@
 .info-texts #commits {
     position: relative;
     top: -100;
-    left: 325;
+    left: 285;
 }
 
 .info-texts #contribs {
     position: relative;
     top: -100;
-    left: 245;
+    left: 235;
 }
 
 .info-texts #pullreqs {
     position: relative;
     top: -100;
-    left: 210;
+    left: 200;
 }
 
 

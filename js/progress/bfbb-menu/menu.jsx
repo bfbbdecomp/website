@@ -51,7 +51,7 @@ export default class Menu extends React.Component {
     // const contributorCount = this.props.contributorCount;
     // const pullRequestCount = this.props.pullRequestCount;
 
-    const spatulaCount = 50;
+    const spatulaCount = 5;
     const shinyCount = 20274;
     const sockCount = 2;
     const collectableCount = 25;
