@@ -3,7 +3,6 @@ import "./menu.css";
 
 import Bubble from "./menu-components/bubbles/bubble";
 import Counter from "./menu-components/counter/counter";
-import AreaSelector from "./menu-components/area-selector/area-selector";
 import SpatulaSelector from "./menu-components/spatula-selector/spatula-selector";
 import InfoText from "./menu-components/info-text/info-text";
 
@@ -85,7 +84,6 @@ export default class Menu extends React.Component {
               </div>
             </div>
             <div className="menu-body">
-              <AreaSelector></AreaSelector>
               <SpatulaSelector></SpatulaSelector>
             </div>
             <div className="bottom-row">
