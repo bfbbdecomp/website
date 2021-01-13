@@ -11,6 +11,7 @@ export default class Menu extends React.Component {
     return (
       <div class="container">
         <div class="menu">
+          <div class="caustics"></div>
           <div class="inner-content">
             <div class="top-row">
               <div class="bubbles">

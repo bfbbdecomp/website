@@ -21,6 +21,7 @@
     margin-left: 55px;
     margin-bottom: 50px;
     margin-right: 50px;
+    z-index: 2;
 }
 
 .bubbles {
@@ -67,6 +68,16 @@
     width: 100%;
     height: auto;
 
+}
+
+.caustics {
+    position: absolute;
+    height: 480px;
+    width: 640px;
+    z-index: 1; 
+    background-image: url('./images/caustics.gif');
+    background-size: 256px 256px;
+    mix-blend-mode: screen;
 }
 
 .bubbles div:nth-child(1) { animation-delay: 0.25s }
