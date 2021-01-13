@@ -1,0 +1,48 @@
+.area-selector {
+    height: 100%;
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-selector {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    height: 100%;
+}
+
+.jellyfish {
+    height: 48px;
+    width: 24px;
+    background-image: url('../../images/golden_spatula.png');
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#jellyfish-up {
+    margin-bottom: auto;
+}
+
+#jellyfish-down {
+    margin-top: auto;
+}
+
+.area-bubble {
+    height: 12px;
+    width: 12px;
+    background-image: url('../../images/area_bubble.png');
+    background-size: 300% 300%;
+    background-position: -12px -12px; 
+    margin: auto;
+}
+
+.area-bubble-selected {
+    height: 12px;
+    width: 12px;
+    background-image: url('../../images/area_bubble_selected.png');
+    background-size: 100% 100%;
+    background-position: -12px -12px; 
+    margin: auto;
+}

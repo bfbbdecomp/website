@@ -9,7 +9,14 @@
     opacity: 65%;
     margin-right: -6px;
     animation: MoveUpDown 3s ease-in-out infinite;
+    display: flex;
 
+}
+
+.profile-pic {
+  width: 24px;
+  height: 24px;
+  margin: auto;
 }
 
 @keyframes MoveUpDown {

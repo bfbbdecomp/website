@@ -14,11 +14,21 @@
     margin: auto;
 }
 
+.inner-content {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-left: 55px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+}
+
 .bubbles {
-    display:flex;
-    position: relative;
+    display: flex;
+    /* position: relative;
     left: 58px;
-    top: 50px;
+    top: 50px; */
+    margin-right: 45px;
 }
 
 .test-text {
@@ -31,9 +41,32 @@
 }
 
 .spatula-count {
-    position: relative;
-    top: 26px;
-    left: 40px;
+    margin-right: auto;
+    /* margin-left: 25px; */
+    /* left: 20px; */
+}
+
+.shiny-count {
+    margin-left: auto;
+    text-overflow: ellipsis;
+    width: auto;
+}
+
+.sock-count {
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.menu-body {
+    height: 275px;
+    display: flex;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    width: 100%;
+    height: auto;
+
 }
 
 .bubbles div:nth-child(1) { animation-delay: 0.25s }

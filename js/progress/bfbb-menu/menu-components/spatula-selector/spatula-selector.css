@@ -1,0 +1,27 @@
+.spatula-selector {
+    width: 100%;
+    margin-top: 42px;
+}
+
+.spatula-selector p {
+    font-family: 'spongeboytt1regular';
+    color: rgb(35, 61, 94);
+    text-transform: uppercase;
+    font-size: 14pt;
+    margin: 0;
+}
+
+.spatula-container {
+    height: 64px;
+    width: 100%;
+    display: flex;
+}
+
+#area-title {
+    font-size: 16pt;
+}
+
+#spatula-name {
+    font-size: 12pt;
+    margin-top: 10px;
+}

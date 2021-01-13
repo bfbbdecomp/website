@@ -1,0 +1,28 @@
+.spat-container {
+    width: 60px;
+    height: 64px;
+    display: flex;
+    margin-right: -4px;
+    margin-left: -4px;
+}
+
+.spat-container:hover {
+    background-image: url('../../images/spat_bubble.png');
+    background-size: 100% 100%;
+}
+
+.gold-spatula {
+    height: 48px;
+    width: 24px;
+    background-image: url('../../images/golden_spatula.png');
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+.silver-spatula {
+    height: 48px;
+    width: 24px;
+    background-image: url('../../images/silver_spatula.png');
+    background-size: 100% 100%;
+    margin: auto;
+}
