@@ -9,7 +9,7 @@ export default class AreaSelector extends React.Component {
     <div class='area-selector'>
         <div class='inner-selector'>
             <div class='jellyfish' id='jellyfish-up'></div>
-            <div class='area-bubble-selected'></div>
+            <div class='area-bubble' id='area-bubble-selected'></div>
             <div class='area-bubble'></div>
             <div class='area-bubble'></div>
             <div class='area-bubble'></div>

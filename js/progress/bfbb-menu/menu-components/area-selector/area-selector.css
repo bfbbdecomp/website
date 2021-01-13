@@ -27,6 +27,7 @@
 
 #jellyfish-down {
     margin-top: auto;
+    transform: scaleY(-1);
 }
 
 .area-bubble {
@@ -38,11 +39,10 @@
     margin: auto;
 }
 
-.area-bubble-selected {
-    height: 12px;
-    width: 12px;
-    background-image: url('../../images/area_bubble_selected.png');
-    background-size: 100% 100%;
-    background-position: -12px -12px; 
-    margin: auto;
+#area-bubble-selected {
+    filter: grayscale(100%)
+    brightness(2.5)
+    drop-shadow(0px 0px 4px rgba(255, 255, 255, 1))
+    drop-shadow(0px 0px 4px rgba(255, 255, 255, 1))
+    drop-shadow(0px 0px 4px rgba(255, 255, 255, 1));
 }
