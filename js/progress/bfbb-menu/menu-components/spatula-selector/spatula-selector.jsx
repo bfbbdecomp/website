@@ -17,31 +17,47 @@ export default class SpatulaSelector extends React.Component {
 
   upJellyfishClick = () => {
     this.setState((state, props) => ({
-      selectedArea: state.selectedArea > 0 ? state.selectedArea - 1 : spatulas.length - 1
+      selectedArea: state.selectedArea > 0 ? state.selectedArea - 1 : spatulas.length - 1,
+      selectedSpatula: 0,
     }))
   }
 
   downJellyfishClick = () => {
     this.setState((state, props) => ({
-      selectedArea: state.selectedArea < spatulas.length - 1 ? state.selectedArea + 1 : 0
+      selectedArea: state.selectedArea < spatulas.length - 1 ? state.selectedArea + 1 : 0,
+      selectedSpatula: 0,
+    }))
+  }
+
+  onAreaBubbleClick = (index) => {
+    this.setState((state, props) => ({
+      selectedArea: index,
+      selectedSpatula: 0,
     }))
   }
 
   onSpatulaHover = (index) => {
     this.setState((state, props) => ({
-      selectedSpatula: index
+      selectedSpatula: index,
     }))
   }
 
 
   render() {
+    const spatulaCount = this.props.spatulaCount;
+    const previousAreas = spatulas.slice(0, this.state.selectedArea)
+    let totalPreviousSpatulas = 0;
+    for (let area of previousAreas) {
+      totalPreviousSpatulas += area.spatulas.length
+    }
+
     return (
       <>
         <div className="area-selector">
           <div className="inner-selector">
             <div className="jellyfish" id="jellyfish-up" onClick={() => {this.upJellyfishClick()}}></div>
             {spatulas.map((area, index)=>(
-              <div className="area-bubble" id={this.state.selectedArea === index ? 'area-bubble-selected' : ''} key={index}></div>
+              <div className="area-bubble" id={this.state.selectedArea === index ? 'area-bubble-selected' : ''} key={index} onClick={() => {this.onAreaBubbleClick(index)}}></div>
             ))}
             <div className="jellyfish" id="jellyfish-down" onClick={() => {this.downJellyfishClick()}}></div>
           </div>
@@ -51,7 +67,7 @@ export default class SpatulaSelector extends React.Component {
           <div className="spatula-container">
             {spatulas[this.state.selectedArea].spatulas.map((spatula, index) => (
               <div key={index} onMouseOver={() => {this.onSpatulaHover(index)}}>
-                <Spatula key={index}></Spatula>
+                <Spatula key={index} gold={spatulaCount - totalPreviousSpatulas > index} selected={index === this.state.selectedSpatula}></Spatula>
               </div>
             ))}
           </div>

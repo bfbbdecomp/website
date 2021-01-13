@@ -4,6 +4,7 @@ import "./spatula.css";
 export default class Spatula extends React.Component {
   render() {
     const gold = this.props.gold;
+    const selected = this.props.selected;
 
     const className = gold ? 'gold-spatula' : 'silver-spatula';
 

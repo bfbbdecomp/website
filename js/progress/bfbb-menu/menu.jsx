@@ -51,7 +51,7 @@ export default class Menu extends React.Component {
     // const contributorCount = this.props.contributorCount;
     // const pullRequestCount = this.props.pullRequestCount;
 
-    const spatulaCount = 5;
+    const spatulaCount = 50;
     const shinyCount = 20274;
     const sockCount = 2;
     const collectableCount = 25;
@@ -84,7 +84,7 @@ export default class Menu extends React.Component {
               </div>
             </div>
             <div className="menu-body">
-              <SpatulaSelector></SpatulaSelector>
+              <SpatulaSelector spatulaCount={spatulaCount}></SpatulaSelector>
             </div>
             <div className="bottom-row">
               <div className="collectable-count">
