@@ -38,9 +38,61 @@ const contributors = [
 ];
 
 export default class Progress extends React.Component {
-  state = {
-    tab: 0,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      tab: 0,
+
+      // Placeholder Menu Values
+      contributors: [],
+      spatulaCount: 0,
+      shinyCount: 0,
+      sockCount: 0,
+      collectableCount: 0,
+      collectableTotal: 0,
+      commitCount: 0,
+      contributorCount: 0,
+      pullRequestCount: 0,
+    };
+  }
+
+  componentDidMount() {
+
+    // Load top 5 contributors, total commits, and contributor count
+    fetch("https://api.github.com/repos/bfbbdecomp/bfbb/contributors")
+      .then((response) => response.json())
+      .then((data) => {
+        let dataShort = data.slice(0, 5);
+        let contributors = [];
+        for (let item of dataShort) {
+          let contributor = {
+            name: item.login,
+            profileImg: item.avatar_url,
+            profileUrl: item.url,
+          }
+          contributors.push(contributor)
+        }
+        let commits = 0;
+        for (let item of data) {
+          commits += item.contributions;
+        }
+        this.setState({
+          contributors: contributors,
+          commitCount: commits,
+          contributorCount: data.length,
+        })
+      });
+
+    // Load number of active PRs
+    fetch("https://api.github.com/repos/bfbbdecomp/bfbb/pulls")
+      .then((response) => response.json())
+      .then((data) => {
+        let length = data.length;
+        this.setState({
+          pullRequestCount: length,
+        })
+      });
+  }
 
   handleChange = (event, newValue) => {
     this.setState({ tab: newValue });
@@ -71,15 +123,15 @@ export default class Progress extends React.Component {
           <Heatmap />
         </Grid>
         <Menu
-          contributors={contributors}
-          spatulaCount={5}
-          shinyCount={20274}
-          sockCount={10}
-          collectableCount={25}
-          collectableTotal={121}
-          commitCount={174}
-          contributorCount={8}
-          pullRequestCount={1}
+          contributors={this.state.contributors}
+          spatulaCount={this.state.spatulaCount}
+          shinyCount={this.state.shinyCount}
+          sockCount={this.state.sockCount}
+          collectableCount={this.state.collectableCount}
+          collectableTotal={this.state.collectableTotal}
+          commitCount={this.state.commitCount}
+          contributorCount={this.state.contributorCount}
+          pullRequestCount={this.state.pullRequestCount}
         />
       </Grid>
     );
