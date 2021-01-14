@@ -1,5 +1,5 @@
 import React from "react";
-import ReactTooltip from 'react-tooltip';
+import ReactTooltip from "react-tooltip";
 import "./menu.css";
 
 import Bubble from "./menu-components/bubbles/bubble";
@@ -7,10 +7,9 @@ import Counter from "./menu-components/counter/counter";
 import SpatulaSelector from "./menu-components/spatula-selector/spatula-selector";
 import InfoText from "./menu-components/info-text/info-text";
 
-import tank_amb from "./sounds/menu_tank_amb.wav"
+import tank_amb from "./sounds/menu_tank_amb.wav";
 
 export default class Menu extends React.Component {
-
   componentDidMount() {
     const ambience = new Audio(tank_amb);
     ambience.volume = 0.2;
@@ -50,7 +49,10 @@ export default class Menu extends React.Component {
               <div className="spatula-count" data-tip="Percent Decompiled">
                 <Counter type="spatula" count={spatulaCount}></Counter>
               </div>
-              <div className="shiny-count" data-tip="Lines of Assembly Decompiled">
+              <div
+                className="shiny-count"
+                data-tip="Lines of Assembly Decompiled"
+              >
                 <Counter type="shiny" count={shinyCount}></Counter>
               </div>
             </div>
@@ -59,7 +61,11 @@ export default class Menu extends React.Component {
             </div>
             <div className="bottom-row">
               <div className="collectable-count" data-tip="Files Decompiled">
-                <Counter type="collectable" count={collectableCount} total={collectableTotal}></Counter>
+                <Counter
+                  type="collectable"
+                  count={collectableCount}
+                  total={collectableTotal}
+                ></Counter>
               </div>
               <div className="sock-count" data-tip="Function Count">
                 <Counter type="sock" count={sockCount}></Counter>

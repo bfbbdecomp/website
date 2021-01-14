@@ -3,7 +3,7 @@ import { Grid, Toolbar, Tabs, Tab } from "@material-ui/core";
 import Timeline from "./timeline/timeline";
 import Heatmap from "./heatmap/heatmap";
 import ProgressBanner from "./banner";
-import Menu from "./bfbb-menu/menu";
+// import Menu from "./bfbb-menu/menu";
 
 export default class Progress extends React.Component {
   constructor(props) {
@@ -11,6 +11,7 @@ export default class Progress extends React.Component {
     this.state = {
       tab: 0,
 
+      /*
       // Placeholder Menu Values
       contributors: [],
       spatulaCount: 0,
@@ -21,11 +22,12 @@ export default class Progress extends React.Component {
       commitCount: 0,
       contributorCount: 0,
       pullRequestCount: 0,
+      */
     };
   }
 
   componentDidMount() {
-
+    /* this logic should probably be moved into the menu component
     // Load top 5 contributors, total commits, and contributor count
     fetch("https://api.github.com/repos/bfbbdecomp/bfbb/contributors")
       .then((response) => response.json())
@@ -37,8 +39,8 @@ export default class Progress extends React.Component {
             name: item.login,
             profileImg: item.avatar_url,
             profileUrl: item.url,
-          }
-          contributors.push(contributor)
+          };
+          contributors.push(contributor);
         }
         let commits = 0;
         for (let item of data) {
@@ -48,7 +50,7 @@ export default class Progress extends React.Component {
           contributors: contributors,
           commitCount: commits,
           contributorCount: data.length,
-        })
+        });
       });
 
     // Load number of active PRs
@@ -58,8 +60,9 @@ export default class Progress extends React.Component {
         let length = data.length;
         this.setState({
           pullRequestCount: length,
-        })
+        });
       });
+      */
   }
 
   handleChange = (event, newValue) => {
@@ -90,6 +93,7 @@ export default class Progress extends React.Component {
         <Grid item xs={12} md={6}>
           <Heatmap />
         </Grid>
+        {/*
         <Menu
           contributors={this.state.contributors}
           spatulaCount={this.state.spatulaCount}
@@ -101,6 +105,7 @@ export default class Progress extends React.Component {
           contributorCount={this.state.contributorCount}
           pullRequestCount={this.state.pullRequestCount}
         />
+        */}
       </Grid>
     );
   }

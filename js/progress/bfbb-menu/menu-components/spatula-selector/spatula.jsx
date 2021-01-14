@@ -6,13 +6,13 @@ export default class Spatula extends React.Component {
     const gold = this.props.gold;
     const selected = this.props.selected;
 
-    const className = gold ? 'gold-spatula' : 'silver-spatula';
-    const id = selected ? 'selected-spatula' : '';
+    const className = gold ? "gold-spatula" : "silver-spatula";
+    const id = selected ? "selected-spatula" : "";
 
     return (
-    <div className='spat-container' id={id}>
+      <div className="spat-container" id={id}>
         <div className={className}></div>
-    </div>
-    )
+      </div>
+    );
   }
 }
