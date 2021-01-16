@@ -1,6 +1,6 @@
 from pathlib import Path
 from git import Repo
-from helpers import analyzeDiff
+from helpers import diffToLines
 
 # Change these parameters
 decompPath = "../../bfbbdecomp/"
@@ -13,8 +13,8 @@ relevantPaths = [
     "asm/Game/**/*",
 ]
 
-
-commitRange = beginAtCommit + ".." + "HEAD"
+# '^' includes the commit
+commitRange = beginAtCommit + "^" + ".." + "HEAD"
 
 
 def process():
@@ -24,32 +24,24 @@ def process():
 
     # get a list of our commits
     # paths="*.s"
-    commits = repo.iter_commits(
-        rev=commitRange,
-        paths=relevantPaths,
-        reverse=True
-    )
+    commits = repo.iter_commits(rev=commitRange,
+                                paths=relevantPaths,
+                                reverse=True)
 
-    i = 1
     for c in commits:
         if not c.parents:
             continue
 
         parent = c.parents[-1]
-        print(c, c.count(), i)
-        i += 1
+        print(c, c.count())
 
-        diffs = parent.diff(
-            c,
-            create_patch=True,
-            paths=relevantPaths
-        )
+        diffs = parent.diff(c, create_patch=True, paths=relevantPaths)
 
         for diff in diffs:
-            result = analyzeDiff(str(diff.diff))
-            print(result)
-
-        break
+            result = list(diffToLines(diff))
+            for r in result:
+                pass
+                #print(r)
 
 
 process()

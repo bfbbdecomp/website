@@ -1,14 +1,21 @@
+def isAddress(string):
+    return len(string) == 8
+
 
 def isAsmCode(line):
-    print(line.split(" "))
-    print(line)
+    data = line.split()
+
+    if len(data) < 2:
+        return False
+
+    first = data[0]
+
+    if first != "-/*" and first != "+/*":
+        return False
+
+    return isAddress(data[1])
 
 
-def analyzeDiff(diff):
-    print(type(diff))
-    diffLines = diff.splitlines()
-
-    for line in diffLines:
-        print(isAsmCode(line))
-
-    return None
+def diffToLines(diffObject):
+    text = diffObject.diff.decode("utf-8")
+    return filter(isAsmCode, map(lambda x: x.strip(), text.splitlines()))
