@@ -1,3 +1,11 @@
+import json
+
+
+def getFunctionDict():
+    funcs = open("json/functions.json", "r").read()
+    return json.loads(funcs)
+
+
 def isAddress(string):
     return len(string) == 8
 
@@ -19,3 +27,16 @@ def isAsmCode(line):
 def diffToLines(diffObject):
     text = diffObject.diff.decode("utf-8")
     return filter(isAsmCode, map(lambda x: x.strip(), text.splitlines()))
+
+
+# Takes a line of assembly and returns an object
+# containing the address and whether it was removed or added.
+def lineToChangeObject(line):
+    info = line.split()
+    char = info[0][0]
+    address = info[1]
+    change = {
+        "address": address,
+        "delete": char == "-"  # was this deleted or added?
+    }
+    return change
