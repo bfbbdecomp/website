@@ -1,7 +1,29 @@
 import Highcharts from "highcharts/highstock";
+import { getCommitFromID } from "../../helpers/commits";
+import {
+  getDecompCommits,
+  getDecompiledStateAtCommit,
+} from "../../helpers/functions";
 
 function generateTimelineData() {
   const data = [];
+
+  // get all commits where something was decompiled.
+  const commits = getDecompCommits();
+  // console.log(commits);
+  for (const id of commits) {
+    const commit = getCommitFromID(id);
+    // console.log(commit);
+    const state = getDecompiledStateAtCommit(id);
+    console.log(id, state);
+    const dataPoint = [
+      commit.time * 1000, // UNIX time, convert to Milliseconds
+      state.linesDone,
+    ];
+    data.push(dataPoint);
+  }
+
+  console.log(data);
   return data;
 }
 
@@ -30,18 +52,8 @@ export function makeTimeline() {
       text: "Decompilation Progress",
     },
 
-    /*
-    subtitle: {
-      text: "Using ordinal X axis",
-    },
-    */
-
     credits: {
       enabled: false,
-    },
-
-    xAxis: {
-      gapGridLineWidth: 0,
     },
 
     scrollbar: {
@@ -88,7 +100,6 @@ export function makeTimeline() {
         name: "Assembly",
         type: "area",
         data: generateTimelineData(),
-        gapSize: 5,
         tooltip: {
           valueDecimals: 2,
         },
