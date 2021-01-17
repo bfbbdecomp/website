@@ -1,5 +1,7 @@
 import json
 
+from helpers import exportJS
+
 
 def floatToPercent(f):
     return str(round(f * 100, 2)) + "%"
@@ -25,6 +27,7 @@ def generateApi(funcs):
 
 def writeApi(funcs):
     api = generateApi(funcs)
-    apiData = json.dumps(api, indent=4)
-    open("../dist/api.json", "w").write(apiData)
-    open("../data/api.json", "w").write(apiData)
+    open("../dist/api.json", "w").write(json.dumps(api, indent=4))
+    open("../data/api.js", "w").write(exportJS({
+        "API": api  #
+    }))

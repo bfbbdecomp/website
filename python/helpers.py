@@ -3,6 +3,16 @@ import os
 from pathlib import Path
 
 
+def exportJS(objs):
+    output = ""
+    for key in objs:
+        output += "export const "
+        output += key + " = "
+        output += json.dumps(objs[key], indent=2)
+        output += ";\n"
+    return output
+
+
 def makeDirectory(dir):
     if not os.path.exists(Path(dir)):
         os.makedirs(Path(dir))

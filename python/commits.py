@@ -1,5 +1,7 @@
 import json
 
+from helpers import exportJS
+
 
 def getCommitData(repo):
     data = []
@@ -18,4 +20,6 @@ def getCommitData(repo):
 
 
 def writeCommitData(data):
-    open("../data/commits.json", "w").write(json.dumps(data, indent=4))
+    open("../data/commits.js", "w").write(exportJS({
+        "COMMITS": data  #
+    }))
