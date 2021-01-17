@@ -12,10 +12,11 @@ export function getDecompiledStateAtCommit(id) {
     const commit = FUNCTIONS[addr].commit;
     return commit != null && commit <= id;
   });
+  const funcsDone = formatPercent((funcs.length / API.functions) * 100);
   const linesDone = sum(funcs.map((addr) => FUNCTIONS[addr].lines));
   const state = {
     funcs: API.functions,
-    funcsDone: funcs.length,
+    funcsDone: funcsDone,
     linesDone: formatPercent((linesDone / API.lines) * 100),
   };
   return state;
