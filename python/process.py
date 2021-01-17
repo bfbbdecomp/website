@@ -2,6 +2,7 @@ from pathlib import Path
 from git import Repo
 import json
 from api import writeApi
+from commits import getCommitData, writeCommitData
 from helpers import diffToLines, getFunctionDict, lineToChangeObject, makeDirectory
 
 # Change these parameters
@@ -25,6 +26,7 @@ def process():
     makeDirectory("../data/")
 
     repo = Repo(Path(decompPath))
+    commitData, commitLookup = getCommitData(repo)
 
     # get a range of commits which include assembly changes
     commits = repo.iter_commits(rev=commitRange,
@@ -40,8 +42,9 @@ def process():
             continue
         parent = c.parents[-1]
 
-        commitNumber = c.count()
-        print(commitNumber, c)
+        commitHash = str(c)
+        commitID = commitLookup[commitHash]
+        print(commitID + 1, commitHash)
 
         # limit diffs to check to only diffs that modified assembly code
         diffs = parent.diff(c, create_patch=True, paths=relevantPaths)
@@ -63,11 +66,12 @@ def process():
                 # deletions of a line are processed before insertions of the same line.
                 removedAt = None
                 if change["delete"]:
-                    removedAt = commitNumber
+                    removedAt = commitID
                 functions[address]["commit"] = removedAt
 
     # TODO: do something with our calculated data.
     writeApi(functions)
+    writeCommitData(commitData)
     open("../data/functions.json", "w").write(json.dumps(functions))
 
 

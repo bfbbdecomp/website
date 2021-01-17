@@ -1,6 +1,11 @@
 import Highcharts from "highcharts/highstock";
 
-function generateData() {
+function generateTimelineData() {
+  const data = [];
+  return data;
+}
+
+export function generateGarbageData() {
   const data = [];
   let date = Date.UTC(2020, 0, 15, 10, 30);
   let percent = 0.0;
@@ -82,7 +87,7 @@ export function makeTimeline() {
       {
         name: "Assembly",
         type: "area",
-        data: generateData(),
+        data: generateTimelineData(),
         gapSize: 5,
         tooltip: {
           valueDecimals: 2,
