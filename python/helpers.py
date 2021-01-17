@@ -1,4 +1,11 @@
 import json
+import os
+from pathlib import Path
+
+
+def makeDirectory(dir):
+    if not os.path.exists(Path(dir)):
+        os.makedirs(Path(dir))
 
 
 def getFunctionDict():

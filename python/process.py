@@ -1,6 +1,8 @@
 from pathlib import Path
 from git import Repo
-from helpers import diffToLines, getFunctionDict, lineToChangeObject
+import json
+from api import writeApi
+from helpers import diffToLines, getFunctionDict, lineToChangeObject, makeDirectory
 
 # Change these parameters
 decompPath = "../../bfbbdecomp/"
@@ -18,6 +20,10 @@ commitRange = beginAtCommit + "^" + ".." + "HEAD"
 
 
 def process():
+
+    makeDirectory("../dist/")
+    makeDirectory("../data/")
+
     repo = Repo(Path(decompPath))
 
     # get a range of commits which include assembly changes
@@ -60,7 +66,9 @@ def process():
                     removedAt = commitNumber
                 functions[address]["commit"] = removedAt
 
+    # TODO: do something with our calculated data.
+    writeApi(functions)
+    open("../data/functions.json", "w").write(json.dumps(functions))
 
-# TODO: do something with our calculated data.
 
 process()

@@ -1,7 +1,9 @@
-node_modules
-__pycache__
+node_modules/
+__pycache__/
+data/
+dist/
+.cache/
+
 *.pyc
-.cache
-dist
 package-lock.json
 symbols.txt
