@@ -1,12 +1,13 @@
 import React from "react";
 import { Grid, Toolbar, Tabs, Tab, Typography } from "@material-ui/core";
 import Overview from "./overview";
+import FunctionPage from "./functions/functions";
 
 export default class Progress extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 0,
+      tab: 1,
     };
   }
 
@@ -19,6 +20,8 @@ export default class Progress extends React.Component {
     switch (this.state.tab) {
       case 0:
         return <Overview />;
+      case 1:
+        return <FunctionPage />;
       default:
         return <Typography>TODO</Typography>;
     }
