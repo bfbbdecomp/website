@@ -8,6 +8,22 @@ import {
 } from "@material-ui/core";
 
 export default class ProgressBanner extends React.Component {
+  percentDone = () => {
+    return this.props.state.linesPercent;
+  };
+
+  completionDate = () => {
+    return "TODO";
+  };
+
+  asmPercent = () => {
+    return (this.props.state.linesDone / this.props.state.lines) * 100;
+  };
+
+  funcPercent = () => {
+    return (this.props.state.functionsDone / this.props.state.functions) * 100;
+  };
+
   render() {
     return (
       <Grid container>
@@ -15,12 +31,17 @@ export default class ProgressBanner extends React.Component {
           <Card variant="outlined">
             <CardContent>
               <Typography variant="h4">
-                Battle for Bikini Bottom is {5.2}% decompiled
+                Battle for Bikini Bottom is {this.percentDone()} decompiled
               </Typography>
               <Typography color="textSecondary">
-                Estimated completion date: April 20, 2025.
+                Estimated completion date: {this.completionDate()}.
               </Typography>
-              <LinearProgress variant="buffer" value={5.2} valueBuffer={13.1} />
+              {/* TODO: Make this have hover tooltips */}
+              <LinearProgress
+                variant="buffer"
+                value={this.asmPercent()}
+                valueBuffer={this.funcPercent()}
+              />
             </CardContent>
           </Card>
         </Grid>

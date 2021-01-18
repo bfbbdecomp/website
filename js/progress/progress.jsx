@@ -3,6 +3,7 @@ import { Grid, Toolbar, Tabs, Tab } from "@material-ui/core";
 import Timeline from "./timeline/timeline";
 import Heatmap from "./heatmap/heatmap";
 import ProgressBanner from "./banner";
+import { API } from "../../data/api";
 // import Menu from "./bfbb-menu/menu";
 
 export default class Progress extends React.Component {
@@ -85,7 +86,7 @@ export default class Progress extends React.Component {
           </Tabs>
         </Toolbar>
         <Grid item xs={12}>
-          <ProgressBanner />
+          <ProgressBanner state={API} />
         </Grid>
         <Grid item xs={12} md={6}>
           <Timeline />
