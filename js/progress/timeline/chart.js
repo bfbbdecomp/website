@@ -20,14 +20,18 @@ function generateTimelineData() {
 
     const dataPointLine = {
       x: time,
-      y: state.linesDone,
-      name: commit.hash.substring(0, 9),
+      y: state.linesPercent,
+      linesDone: state.linesDone.toLocaleString(),
+      linesTotal: state.lines.toLocaleString(),
+      //name: commit.hash.substring(0, 7),
     };
 
     const dataPointFunc = {
       x: time,
-      y: state.funcsDone,
-      name: commit.hash.substring(0, 9),
+      y: state.funcsPercent,
+      funcsDone: state.funcsDone.toLocaleString(),
+      funcsTotal: state.funcs.toLocaleString(),
+      // name: commit.hash.substring(0, 7),
     };
 
     lineData.push(dataPointLine);
@@ -52,8 +56,12 @@ export function makeTimeline() {
       enabled: false,
     },
 
+    legend: {
+      enabled: true,
+    },
+
     scrollbar: {
-      //enabled: false,
+      enabled: false,
     },
 
     xAxis: {
@@ -113,19 +121,28 @@ export function makeTimeline() {
       inputEnabled: false,
     },
 
+    tooltip: {
+      /*
+      // Custom formatting for the bottom part
+      formatter: function () {
+        return "TODO";
+      },
+      */
+    },
+
     series: [
       {
-        name: "Assembly",
+        name: "Decompiled Lines of Assembly",
         type: "area",
         data: data.lineData,
         tooltip: {
           valueDecimals: 2,
-          pointFormatter: function (str) {
+          pointFormatter: function () {
             //console.log(this);
-            const template = `<span style="color:${this.color}">●</span>
-            Assembly:
-            <b>${this.y}%</b>
+            const template = `<span style="color:${this.color}">\u25CF</span>
+            Assembly: <b>${this.y}%</b>
             <br>
+            ${this.linesDone}/${this.linesTotal} lines
             `;
             //console.log(str);
             return template;
@@ -153,12 +170,23 @@ export function makeTimeline() {
         threshold: null,
       },
       {
-        name: "Functions",
+        name: "Decompiled Functions",
         type: "line",
-        visible: true,
+        // showInNavigator: true,
+        visible: false,
         data: data.funcData,
         tooltip: {
           valueDecimals: 2,
+          pointFormatter: function () {
+            //console.log(this);
+            const template = `<span style="color:${this.color}">\u25CF</span>
+            Functions: <b>${this.y}%</b>
+            <br>
+            ${this.funcsDone}/${this.funcsTotal} functions
+            `;
+            //console.log(str);
+            return template;
+          },
         },
         fillColor: {
           linearGradient: {
