@@ -12,7 +12,6 @@ def getCommitData(repo):
             "hash": str(commit),
             "time": commit.committed_date,
             # TODO: "author": commit.author.email,
-            "id": i + 1
         })
         lookup[str(commit)] = i
         i += 1

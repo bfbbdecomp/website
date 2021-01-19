@@ -1,9 +1,6 @@
 import Highcharts from "highcharts/highstock";
 import { getCommitFromID } from "../../helpers/commits";
-import {
-  getDecompCommits,
-  getDecompiledStateAtCommit,
-} from "../../helpers/functions";
+import { getDecompCommits, getStateAtCommit } from "../../helpers/functions";
 
 function generateTimelineData() {
   const funcData = [];
@@ -14,7 +11,7 @@ function generateTimelineData() {
   // console.log(commits);
   for (const id of commits) {
     const commit = getCommitFromID(id);
-    const state = getDecompiledStateAtCommit(id);
+    const state = getStateAtCommit(id);
     const time = commit.time * 1000; // UNIX time, convert to Milliseconds
     //console.log(id, state);
 

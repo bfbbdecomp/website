@@ -9,7 +9,7 @@ import {
 
 export default class ProgressBanner extends React.Component {
   percentDone = () => {
-    return this.props.state.linesPercent;
+    return this.props.repoState.linesPercent;
   };
 
   completionDate = () => {
@@ -17,11 +17,11 @@ export default class ProgressBanner extends React.Component {
   };
 
   asmPercent = () => {
-    return (this.props.state.linesDone / this.props.state.lines) * 100;
+    return (this.props.repoState.linesDone / this.props.repoState.lines) * 100;
   };
 
   funcPercent = () => {
-    return (this.props.state.functionsDone / this.props.state.functions) * 100;
+    return (this.props.repoState.funcsDone / this.props.repoState.funcs) * 100;
   };
 
   render() {
@@ -31,7 +31,7 @@ export default class ProgressBanner extends React.Component {
           <Card variant="outlined">
             <CardContent>
               <Typography variant="h4">
-                Battle for Bikini Bottom is {this.percentDone()} decompiled
+                Battle for Bikini Bottom is {this.percentDone()}% decompiled
               </Typography>
               <Typography color="textSecondary">
                 Estimated completion date: {this.completionDate()}.

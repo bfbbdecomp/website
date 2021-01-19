@@ -28,6 +28,3 @@ def generateApi(funcs):
 def writeApi(funcs):
     api = generateApi(funcs)
     open("../dist/api.json", "w").write(json.dumps(api, indent=4))
-    open("../data/api.js", "w").write(exportJS({
-        "API": api  #
-    }))

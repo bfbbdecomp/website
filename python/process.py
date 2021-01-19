@@ -1,6 +1,5 @@
 from pathlib import Path
 from git import Repo
-import json
 from api import writeApi
 from commits import getCommitData, writeCommitData
 from helpers import diffToLines, exportJS, getFunctionDict, lineToChangeObject, makeDirectory
@@ -69,7 +68,6 @@ def process():
                     removedAt = commitID
                 functions[address]["commit"] = removedAt
 
-    # TODO: do something with our calculated data.
     writeApi(functions)
     writeCommitData(commitData)
     open("../data/functions.js",
