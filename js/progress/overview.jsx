@@ -3,6 +3,7 @@ import { Grid } from "@material-ui/core";
 import Timeline from "./timeline/timeline";
 import Heatmap from "./heatmap/heatmap";
 import ProgressBanner from "./banner";
+import CommitSlider from "./slider";
 import { COMMITS } from "../../data/commits";
 import { getStateAtCommit } from "../helpers/functions";
 
@@ -22,6 +23,11 @@ export default class Overview extends React.Component {
         <Grid item xs={12} md={6}>
           <Heatmap />
         </Grid>
+        {/*
+        <Grid item xs={12}>
+          <CommitSlider />
+        </Grid>
+        */}
       </Grid>
     );
   }
