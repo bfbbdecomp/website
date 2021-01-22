@@ -1,6 +1,7 @@
 from pathlib import Path
 from git import Repo
 from api import writeApi
+from files import writeFiles
 from commits import getCommitData, writeCommitData
 from helpers import diffToLines, exportJS, getFunctionDict, lineToChangeObject, makeDirectory
 
@@ -70,6 +71,7 @@ def process():
 
     writeApi(functions)
     writeCommitData(commitData)
+    writeFiles()
     open("../data/functions.js",
          "w").write(exportJS({
              "FUNCTIONS": functions  #

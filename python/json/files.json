@@ -1,0 +1,1122 @@
+[
+  {
+    "start": "800058E0",
+    "end": "80009400",
+    "path": "Core/x/xAnim.cpp"
+  },
+  {
+    "start": "80009400",
+    "end": "80009564",
+    "path": "Core/x/xBase.cpp"
+  },
+  {
+    "start": "80009564",
+    "end": "8000A528",
+    "path": "Core/x/xbinio.cpp"
+  },
+  {
+    "start": "8000A528",
+    "end": "8000B2B0",
+    "path": "Core/x/xBound.cpp"
+  },
+  {
+    "start": "8000B2B0",
+    "end": "8000E96C",
+    "path": "Core/x/xCamera.cpp"
+  },
+  {
+    "start": "8000E96C",
+    "end": "8000F058",
+    "path": "Core/x/xClimate.cpp"
+  },
+  {
+    "start": "8000F058",
+    "end": "800159D4",
+    "path": "Core/x/xCollide.cpp"
+  },
+  {
+    "start": "800159D4",
+    "end": "80015B3C",
+    "path": "Core/x/xCollideFast.cpp"
+  },
+  {
+    "start": "80015B3C",
+    "end": "80015B3C",
+    "path": null
+  },
+  {
+    "start": "80015B3C",
+    "end": "80015EA4",
+    "path": "Core/x/xCounter.cpp"
+  },
+  {
+    "start": "80015EA4",
+    "end": "80017D3C",
+    "path": "Core/x/xCutscene.cpp"
+  },
+  {
+    "start": "80017D3C",
+    "end": "80018064",
+    "path": "Core/x/xDebug.cpp"
+  },
+  {
+    "start": "80018064",
+    "end": "8001BB54",
+    "path": "Core/x/xEnt.cpp"
+  },
+  {
+    "start": "8001BB54",
+    "end": "8001C888",
+    "path": "Core/x/xEntDrive.cpp"
+  },
+  {
+    "start": "8001C888",
+    "end": "8001F438",
+    "path": "Core/x/xEntMotion.cpp"
+  },
+  {
+    "start": "8001F438",
+    "end": "8001F524",
+    "path": "Core/x/xEnv.cpp"
+  },
+  {
+    "start": "8001F524",
+    "end": "8001F8BC",
+    "path": "Core/x/xEvent.cpp"
+  },
+  {
+    "start": "8001F8BC",
+    "end": "8001FDBC",
+    "path": "Core/x/xFFX.cpp"
+  },
+  {
+    "start": "8001FDBC",
+    "end": "8001FFB0",
+    "path": "Core/x/xFog.cpp"
+  },
+  {
+    "start": "8001FFB0",
+    "end": "800266C8",
+    "path": "Core/x/xFont.cpp"
+  },
+  {
+    "start": "800266C8",
+    "end": "8002CAA0",
+    "path": "Core/x/xFX.cpp"
+  },
+  {
+    "start": "8002CAA0",
+    "end": "8002CF70",
+    "path": "Core/x/xGroup.cpp"
+  },
+  {
+    "start": "8002CF70",
+    "end": "8002D98C",
+    "path": "Core/x/xhipio.cpp"
+  },
+  {
+    "start": "8002D98C",
+    "end": "8002F008",
+    "path": "Core/x/xHud.cpp"
+  },
+  {
+    "start": "8002F008",
+    "end": "8002F57C",
+    "path": "Core/x/xHudFontMeter.cpp"
+  },
+  {
+    "start": "8002F57C",
+    "end": "8002FC88",
+    "path": "Core/x/xHudMeter.cpp"
+  },
+  {
+    "start": "8002FC88",
+    "end": "8002FF80",
+    "path": "Core/x/xHudModel.cpp"
+  },
+  {
+    "start": "8002FF80",
+    "end": "80030640",
+    "path": "Core/x/xHudUnitMeter.cpp"
+  },
+  {
+    "start": "80030640",
+    "end": "80030C04",
+    "path": "Core/x/xIni.cpp"
+  },
+  {
+    "start": "80030C04",
+    "end": "800318B8",
+    "path": "Core/x/xMath.cpp"
+  },
+  {
+    "start": "800318B8",
+    "end": "800318B8",
+    "path": "Core/x/xMath2.cpp"
+  },
+  {
+    "start": "800318B8",
+    "end": "80033554",
+    "path": "Core/x/xMath3.cpp"
+  },
+  {
+    "start": "80033554",
+    "end": "80033E2C",
+    "path": "Core/x/xMemMgr.cpp"
+  },
+  {
+    "start": "80033E2C",
+    "end": "80035034",
+    "path": "Core/x/xModel.cpp"
+  },
+  {
+    "start": "80035034",
+    "end": "80035494",
+    "path": "Core/x/xMorph.cpp"
+  },
+  {
+    "start": "80035494",
+    "end": "80035A00",
+    "path": "Core/x/xMovePoint.cpp"
+  },
+  {
+    "start": "80035A00",
+    "end": "80035E70",
+    "path": "Core/x/xordarray.cpp"
+  },
+  {
+    "start": "80035E70",
+    "end": "8003694C",
+    "path": "Core/x/xPad.cpp"
+  },
+  {
+    "start": "8003694C",
+    "end": "80036B8C",
+    "path": "Core/x/xPar.cpp"
+  },
+  {
+    "start": "80036B8C",
+    "end": "80038428",
+    "path": "Core/x/xParCmd.cpp"
+  },
+  {
+    "start": "80038428",
+    "end": "80038AD4",
+    "path": "Core/x/xParGroup.cpp"
+  },
+  {
+    "start": "80038AD4",
+    "end": "80038B98",
+    "path": "Core/x/xParMgr.cpp"
+  },
+  {
+    "start": "80038B98",
+    "end": "800392A0",
+    "path": "Core/x/xPartition.cpp"
+  },
+  {
+    "start": "800392A0",
+    "end": "8003C498",
+    "path": "Core/x/xpkrsvc.cpp"
+  },
+  {
+    "start": "8003C498",
+    "end": "8003CC4C",
+    "path": "Core/x/xQuickCull.cpp"
+  },
+  {
+    "start": "8003CC4C",
+    "end": "8003F3A4",
+    "path": "Core/x/xsavegame.cpp"
+  },
+  {
+    "start": "8003F3A4",
+    "end": "80041920",
+    "path": "Core/x/xScene.cpp"
+  },
+  {
+    "start": "80041920",
+    "end": "80042D6C",
+    "path": "Core/x/xScrFx.cpp"
+  },
+  {
+    "start": "80042D6C",
+    "end": "80043EB8",
+    "path": "Core/x/xserializer.cpp"
+  },
+  {
+    "start": "80043EB8",
+    "end": "80044778",
+    "path": "Core/x/xSFX.cpp"
+  },
+  {
+    "start": "80044778",
+    "end": "800480B0",
+    "path": "Core/x/xShadow.cpp"
+  },
+  {
+    "start": "800480B0",
+    "end": "800499E4",
+    "path": "Core/x/xSnd.cpp"
+  },
+  {
+    "start": "800499E4",
+    "end": "8004B108",
+    "path": "Core/x/xSpline.cpp"
+  },
+  {
+    "start": "8004B108",
+    "end": "8004C214",
+    "path": "Core/x/xstransvc.cpp"
+  },
+  {
+    "start": "8004C214",
+    "end": "8004D054",
+    "path": "Core/x/xString.cpp"
+  },
+  {
+    "start": "8004D054",
+    "end": "8004D1F0",
+    "path": "Core/x/xSurface.cpp"
+  },
+  {
+    "start": "8004D1F0",
+    "end": "8004D6AC",
+    "path": "Core/x/xTimer.cpp"
+  },
+  {
+    "start": "8004D6AC",
+    "end": "8004DC48",
+    "path": "Core/x/xTRC.cpp"
+  },
+  {
+    "start": "8004DC48",
+    "end": "8004E2F0",
+    "path": "Core/x/xutil.cpp"
+  },
+  {
+    "start": "8004E2F0",
+    "end": "8004E510",
+    "path": "Core/x/xVec3.cpp"
+  },
+  {
+    "start": "8004E510",
+    "end": "8004E7E0",
+    "path": "Game/zActionLine.cpp"
+  },
+  {
+    "start": "8004E7E0",
+    "end": "8004EBEC",
+    "path": "Game/zAnimList.cpp"
+  },
+  {
+    "start": "8004EBEC",
+    "end": "8004FBFC",
+    "path": "Game/zAssetTypes.cpp"
+  },
+  {
+    "start": "8004FBFC",
+    "end": "80052558",
+    "path": "Game/zCamera.cpp"
+  },
+  {
+    "start": "80052558",
+    "end": "80052874",
+    "path": "Game/zConditional.cpp"
+  },
+  {
+    "start": "80052874",
+    "end": "800534E4",
+    "path": "Game/zCutsceneMgr.cpp"
+  },
+  {
+    "start": "800534E4",
+    "end": "80054200",
+    "path": "Game/zDispatcher.cpp"
+  },
+  {
+    "start": "80054200",
+    "end": "80054BFC",
+    "path": "Game/zEGenerator.cpp"
+  },
+  {
+    "start": "80054BFC",
+    "end": "800564EC",
+    "path": "Game/zEnt.cpp"
+  },
+  {
+    "start": "800564EC",
+    "end": "8005720C",
+    "path": "Game/zEntButton.cpp"
+  },
+  {
+    "start": "8005720C",
+    "end": "800609B4",
+    "path": "Game/zEntCruiseBubble.cpp"
+  },
+  {
+    "start": "800609B4",
+    "end": "8006180C",
+    "path": "Game/zEntDestructObj.cpp"
+  },
+  {
+    "start": "8006180C",
+    "end": "800627CC",
+    "path": "Game/zEntHangable.cpp"
+  },
+  {
+    "start": "800627CC",
+    "end": "80066210",
+    "path": "Game/zEntPickup.cpp"
+  },
+  {
+    "start": "80066210",
+    "end": "80090E88",
+    "path": "Game/zEntPlayer.cpp"
+  },
+  {
+    "start": "80090E88",
+    "end": "80092074",
+    "path": "Game/zEntSimpleObj.cpp"
+  },
+  {
+    "start": "80092074",
+    "end": "80092720",
+    "path": "Game/zEntTrigger.cpp"
+  },
+  {
+    "start": "80092720",
+    "end": "80092AF8",
+    "path": "Game/zEnv.cpp"
+  },
+  {
+    "start": "80092AF8",
+    "end": "80092B0C",
+    "path": "Game/zEvent.cpp"
+  },
+  {
+    "start": "80092B0C",
+    "end": "80092BEC",
+    "path": "Game/zFeet.cpp"
+  },
+  {
+    "start": "80092BEC",
+    "end": "80092D1C",
+    "path": "Game/zFMV.cpp"
+  },
+  {
+    "start": "80092D1C",
+    "end": "800974A8",
+    "path": "Game/zFX.cpp"
+  },
+  {
+    "start": "800974A8",
+    "end": "80099680",
+    "path": "Game/zGame.cpp"
+  },
+  {
+    "start": "80099680",
+    "end": "8009A924",
+    "path": "Game/zGameExtras.cpp"
+  },
+  {
+    "start": "8009A924",
+    "end": "8009AD50",
+    "path": "Game/zGameState.cpp"
+  },
+  {
+    "start": "8009AD50",
+    "end": "8009B684",
+    "path": "Game/zGust.cpp"
+  },
+  {
+    "start": "8009B684",
+    "end": "8009C000",
+    "path": "Game/zHud.cpp"
+  },
+  {
+    "start": "8009C000",
+    "end": "8009E02C",
+    "path": "Game/zLasso.cpp"
+  },
+  {
+    "start": "8009E02C",
+    "end": "8009E870",
+    "path": "Game/zLight.cpp"
+  },
+  {
+    "start": "8009E870",
+    "end": "8009EC78",
+    "path": "Game/zLightEffect.cpp"
+  },
+  {
+    "start": "8009EC78",
+    "end": "800A1D18",
+    "path": "Game/zLightning.cpp"
+  },
+  {
+    "start": "800A1D18",
+    "end": "800A26A0",
+    "path": "Game/zLOD.cpp"
+  },
+  {
+    "start": "800A26A0",
+    "end": "800A6000",
+    "path": "Game/zMain.cpp"
+  },
+  {
+    "start": "800A6000",
+    "end": "800A6BF8",
+    "path": "Game/zMenu.cpp"
+  },
+  {
+    "start": "800A6BF8",
+    "end": "800A6E9C",
+    "path": "Game/zMovePoint.cpp"
+  },
+  {
+    "start": "800A6E9C",
+    "end": "800A7CC4",
+    "path": "Game/zMusic.cpp"
+  },
+  {
+    "start": "800A7CC4",
+    "end": "800A87EC",
+    "path": "Game/zParCmd.cpp"
+  },
+  {
+    "start": "800A87EC",
+    "end": "800A8868",
+    "path": "Game/zParEmitter.cpp"
+  },
+  {
+    "start": "800A8868",
+    "end": "800A8DF0",
+    "path": "Game/zPendulum.cpp"
+  },
+  {
+    "start": "800A8DF0",
+    "end": "800A8EC8",
+    "path": "Game/zPickupTable.cpp"
+  },
+  {
+    "start": "800A8EC8",
+    "end": "800AC8A0",
+    "path": "Game/zPlatform.cpp"
+  },
+  {
+    "start": "800AC8A0",
+    "end": "800AC9E8",
+    "path": "Game/zPortal.cpp"
+  },
+  {
+    "start": "800AC9E8",
+    "end": "800ACDE0",
+    "path": "Game/zRenderState.cpp"
+  },
+  {
+    "start": "800ACDE0",
+    "end": "800AD20C",
+    "path": "Game/zRumble.cpp"
+  },
+  {
+    "start": "800AD20C",
+    "end": "800B0A28",
+    "path": "Game/zSaveLoad.cpp"
+  },
+  {
+    "start": "800B0A28",
+    "end": "800B5228",
+    "path": "Game/zScene.cpp"
+  },
+  {
+    "start": "800B5228",
+    "end": "800B55F0",
+    "path": "Game/zScript.cpp"
+  },
+  {
+    "start": "800B55F0",
+    "end": "800B6928",
+    "path": "Game/zSurface.cpp"
+  },
+  {
+    "start": "800B6928",
+    "end": "800B96B8",
+    "path": "Game/zThrown.cpp"
+  },
+  {
+    "start": "800B96B8",
+    "end": "800BC558",
+    "path": "Game/zUI.cpp"
+  },
+  {
+    "start": "800BC558",
+    "end": "800BD1B0",
+    "path": "Game/zUIFont.cpp"
+  },
+  {
+    "start": "800BD1B0",
+    "end": "800BE470",
+    "path": "Game/zVar.cpp"
+  },
+  {
+    "start": "800BE470",
+    "end": "800BE9F4",
+    "path": "Game/zVolume.cpp"
+  },
+  {
+    "start": "800BE9F4",
+    "end": "800BF1C0",
+    "path": "Core/p2/iAnim.cpp"
+  },
+  {
+    "start": "800BF1C0",
+    "end": "800C0138",
+    "path": "Core/p2/iAnimSKB.cpp"
+  },
+  {
+    "start": "800C0138",
+    "end": "800C0D20",
+    "path": "Core/x/iCamera.cpp"
+  },
+  {
+    "start": "800C0D20",
+    "end": "800C2E38",
+    "path": "Core/p2/iCollide.cpp"
+  },
+  {
+    "start": "800C2E38",
+    "end": "800C2E3C",
+    "path": "Core/p2/iCollideFast.cpp"
+  },
+  {
+    "start": "800C2E3C",
+    "end": "800C2EAC",
+    "path": "Core/p2/iDraw.cpp"
+  },
+  {
+    "start": "800C2EAC",
+    "end": "800C3300",
+    "path": "Core/p2/iEnv.cpp"
+  },
+  {
+    "start": "800C3300",
+    "end": "800C3998",
+    "path": "Core/p2/iFile.cpp"
+  },
+  {
+    "start": "800C3998",
+    "end": "800C477C",
+    "path": "Core/p2/iFMV.cpp"
+  },
+  {
+    "start": "800C477C",
+    "end": "800C4AF4",
+    "path": "Core/p2/iFX.cpp"
+  },
+  {
+    "start": "800C4AF4",
+    "end": "800C4E4C",
+    "path": "Core/p2/iLight.cpp"
+  },
+  {
+    "start": "800C4E4C",
+    "end": "800C4F18",
+    "path": "Core/p2/iMath.cpp"
+  },
+  {
+    "start": "800C4F18",
+    "end": "800C6360",
+    "path": "Core/p2/iMath3.cpp"
+  },
+  {
+    "start": "800C6360",
+    "end": "800C64A8",
+    "path": "Core/p2/iMemMgr.cpp"
+  },
+  {
+    "start": "800C64A8",
+    "end": "800C78C4",
+    "path": "Core/p2/iMix.cpp"
+  },
+  {
+    "start": "800C78C4",
+    "end": "800C9630",
+    "path": "Core/p2/iModel.cpp"
+  },
+  {
+    "start": "800C9630",
+    "end": "800CA920",
+    "path": "Core/p2/iMorph.cpp"
+  },
+  {
+    "start": "800CA920",
+    "end": "800CAEEC",
+    "path": "Core/p2/iPad.cpp"
+  },
+  {
+    "start": "800CAEEC",
+    "end": "800CC5E8",
+    "path": "Core/p2/iParMgr.cpp"
+  },
+  {
+    "start": "800CC5E8",
+    "end": "800CF34C",
+    "path": "Core/p2/isavegame.cpp"
+  },
+  {
+    "start": "800CF34C",
+    "end": "800CF92C",
+    "path": "Core/p2/iScrFX.cpp"
+  },
+  {
+    "start": "800CF92C",
+    "end": "800D30B4",
+    "path": "Core/p2/iSnd.cpp"
+  },
+  {
+    "start": "800D30B4",
+    "end": "800D4924",
+    "path": "Core/p2/iSystem.cpp"
+  },
+  {
+    "start": "800D4924",
+    "end": "800D4A14",
+    "path": "Core/p2/iTime.cpp"
+  },
+  {
+    "start": "800D4A14",
+    "end": "800D50BC",
+    "path": "Core/p2/ngcrad3d.cpp"
+  },
+  {
+    "start": "800D50BC",
+    "end": "800D5114",
+    "path": "Game/zNPCGoals.cpp"
+  },
+  {
+    "start": "800D5114",
+    "end": "800D5480",
+    "path": "Game/zNPCGoalCommon.cpp"
+  },
+  {
+    "start": "800D5480",
+    "end": "800D92AC",
+    "path": "Game/zNPCGoalStd.cpp"
+  },
+  {
+    "start": "800D92AC",
+    "end": "800ECBFC",
+    "path": "Game/zNPCGoalRobo.cpp"
+  },
+  {
+    "start": "800ECBFC",
+    "end": "800ED1E0",
+    "path": "Game/zNPCGoalTiki.cpp"
+  },
+  {
+    "start": "800ED1E0",
+    "end": "800EE2CC",
+    "path": "Game/zNPCMessenger.cpp"
+  },
+  {
+    "start": "800EE2CC",
+    "end": "800EED74",
+    "path": "Game/zNPCMgr.cpp"
+  },
+  {
+    "start": "800EED74",
+    "end": "800EEE4C",
+    "path": "Game/zNPCTypes.cpp"
+  },
+  {
+    "start": "800EEE4C",
+    "end": "800F4A6C",
+    "path": "Game/zNPCTypeCommon.cpp"
+  },
+  {
+    "start": "800F4A6C",
+    "end": "80102C2C",
+    "path": "Game/zNPCTypeRobot.cpp"
+  },
+  {
+    "start": "80102C2C",
+    "end": "801077A0",
+    "path": "Game/zNPCTypeVillager.cpp"
+  },
+  {
+    "start": "801077A0",
+    "end": "80109588",
+    "path": "Game/zNPCTypeAmbient.cpp"
+  },
+  {
+    "start": "80109588",
+    "end": "8010CE24",
+    "path": "Game/zNPCTypeTiki.cpp"
+  },
+  {
+    "start": "8010CE24",
+    "end": "8010EA94",
+    "path": "Core/x/xBehaveMgr.cpp"
+  },
+  {
+    "start": "8010EA94",
+    "end": "8010EB94",
+    "path": "Core/x/xBehaviour.cpp"
+  },
+  {
+    "start": "8010EB94",
+    "end": "8010EED8",
+    "path": "Core/x/xBehaveGoalSimple.cpp"
+  },
+  {
+    "start": "8010EED8",
+    "end": "8010F150",
+    "path": "Core/x/xSkyDome.cpp"
+  },
+  {
+    "start": "8010F150",
+    "end": "8010F2D0",
+    "path": "Core/x/xRMemData.cpp"
+  },
+  {
+    "start": "8010F2D0",
+    "end": "8010F82C",
+    "path": "Core/x/xFactory.cpp"
+  },
+  {
+    "start": "8010F82C",
+    "end": "801102B8",
+    "path": "Core/x/xNPCBasic.cpp"
+  },
+  {
+    "start": "801102B8",
+    "end": "80116588",
+    "path": "Game/zEntPlayerBungeeState.cpp"
+  },
+  {
+    "start": "80116588",
+    "end": "801168EC",
+    "path": "Game/zCollGeom.cpp"
+  },
+  {
+    "start": "801168EC",
+    "end": "80117690",
+    "path": "Core/x/xParSys.cpp"
+  },
+  {
+    "start": "80117690",
+    "end": "80118934",
+    "path": "Core/x/xParEmitter.cpp"
+  },
+  {
+    "start": "80118934",
+    "end": "80118A04",
+    "path": "Core/x/xVolume.cpp"
+  },
+  {
+    "start": "80118A04",
+    "end": "8011A940",
+    "path": "Core/x/xParEmitterType.cpp"
+  },
+  {
+    "start": "8011A940",
+    "end": "8011A9F0",
+    "path": "Core/x/xRenderState.cpp"
+  },
+  {
+    "start": "8011A9F0",
+    "end": "8011D564",
+    "path": "Game/zEntPlayerOOBState.cpp"
+  },
+  {
+    "start": "8011D564",
+    "end": "8011F0B8",
+    "path": "Core/x/xClumpColl.cpp"
+  },
+  {
+    "start": "8011F0B8",
+    "end": "80121E0C",
+    "path": "Core/x/xEntBoulder.cpp"
+  },
+  {
+    "start": "80121E0C",
+    "end": "80122C04",
+    "path": "Core/x/xGrid.cpp"
+  },
+  {
+    "start": "80122C04",
+    "end": "80123228",
+    "path": "Core/x/xJSP.cpp"
+  },
+  {
+    "start": "80123228",
+    "end": "80123638",
+    "path": "Core/x/xLightKit.cpp"
+  },
+  {
+    "start": "80123638",
+    "end": "80123740",
+    "path": "Game/zCamMarker.cpp"
+  },
+  {
+    "start": "80123740",
+    "end": "80123B1C",
+    "path": "Game/zGoo.cpp"
+  },
+  {
+    "start": "80123B1C",
+    "end": "801245D4",
+    "path": "Game/zGrid.cpp"
+  },
+  {
+    "start": "801245D4",
+    "end": "80124AE4",
+    "path": "Game/zNPCGoalScript.cpp"
+  },
+  {
+    "start": "80124AE4",
+    "end": "801251BC",
+    "path": "Game/zNPCSndTable.cpp"
+  },
+  {
+    "start": "801251BC",
+    "end": "801251BC",
+    "path": null
+  },
+  {
+    "start": "801251BC",
+    "end": "801263C0",
+    "path": "Game/zNPCTypeDuplotron.cpp"
+  },
+  {
+    "start": "801263C0",
+    "end": "80127314",
+    "path": "Core/x/xModelBucket.cpp"
+  },
+  {
+    "start": "80127314",
+    "end": "80129FB4",
+    "path": "Game/zShrapnel.cpp"
+  },
+  {
+    "start": "80129FB4",
+    "end": "8012A728",
+    "path": "Game/zNPCGoalDuplotron.cpp"
+  },
+  {
+    "start": "8012A728",
+    "end": "8012C0A8",
+    "path": "Game/zNPCSpawner.cpp"
+  },
+  {
+    "start": "8012C0A8",
+    "end": "8012D888",
+    "path": "Game/zEntTeleportBox.cpp"
+  },
+  {
+    "start": "8012D888",
+    "end": "8012DD64",
+    "path": "Game/zBusStop.cpp"
+  },
+  {
+    "start": "8012DD64",
+    "end": "801305FC",
+    "path": "Game/zNPCSupport.cpp"
+  },
+  {
+    "start": "801305FC",
+    "end": "80133E38",
+    "path": "Game/zTalkBox.cpp"
+  },
+  {
+    "start": "80133E38",
+    "end": "8013499C",
+    "path": "Game/zTextBox.cpp"
+  },
+  {
+    "start": "8013499C",
+    "end": "801352A4",
+    "path": "Game/zTaskBox.cpp"
+  },
+  {
+    "start": "801352A4",
+    "end": "80135ACC",
+    "path": "Core/p2/iCutscene.cpp"
+  },
+  {
+    "start": "80135ACC",
+    "end": "80135EA0",
+    "path": "Game/zNPCTypeTest.cpp"
+  },
+  {
+    "start": "80135EA0",
+    "end": "8013612C",
+    "path": "Game/zNPCTypeSubBoss.cpp"
+  },
+  {
+    "start": "8013612C",
+    "end": "801365C8",
+    "path": "Game/zNPCTypeBoss.cpp"
+  },
+  {
+    "start": "801365C8",
+    "end": "80138CA0",
+    "path": "Game/zNPCGoalVillager.cpp"
+  },
+  {
+    "start": "80138CA0",
+    "end": "80139218",
+    "path": "Game/zNPCGoalSubBoss.cpp"
+  },
+  {
+    "start": "80139218",
+    "end": "8013A5D0",
+    "path": "Core/x/xShadowSimple.cpp"
+  },
+  {
+    "start": "8013A5D0",
+    "end": "8013AF64",
+    "path": "Core/x/xUpdateCull.cpp"
+  },
+  {
+    "start": "8013AF64",
+    "end": "8013D054",
+    "path": "Game/zDiscoFloor.cpp"
+  },
+  {
+    "start": "8013D054",
+    "end": "801465FC",
+    "path": "Game/zNPCTypeBossSandy.cpp"
+  },
+  {
+    "start": "801465FC",
+    "end": "8014EC7C",
+    "path": "Game/zNPCTypeKingJelly.cpp"
+  },
+  {
+    "start": "8014EC7C",
+    "end": "8014F76C",
+    "path": "Game/zNPCGoalBoss.cpp"
+  },
+  {
+    "start": "8014F76C",
+    "end": "80154DD8",
+    "path": "Game/zNPCTypePrawn.cpp"
+  },
+  {
+    "start": "80154DD8",
+    "end": "80156D98",
+    "path": "Game/zNPCTypeBossSB1.cpp"
+  },
+  {
+    "start": "80156D98",
+    "end": "8015FF60",
+    "path": "Game/zNPCTypeBossSB2.cpp"
+  },
+  {
+    "start": "8015FF60",
+    "end": "80160144",
+    "path": "Core/x/xJaw.cpp"
+  },
+  {
+    "start": "80160144",
+    "end": "80168A94",
+    "path": "Game/zNPCTypeBossPatrick.cpp"
+  },
+  {
+    "start": "80168A94",
+    "end": "8017047C",
+    "path": "Game/zNPCTypeBossPlankton.cpp"
+  },
+  {
+    "start": "8017047C",
+    "end": "80172034",
+    "path": "Game/zParPTank.cpp"
+  },
+  {
+    "start": "80172034",
+    "end": "80172664",
+    "path": "Game/zTaxi.cpp"
+  },
+  {
+    "start": "80172664",
+    "end": "8017C0A0",
+    "path": "Game/zNPCTypeDutchman.cpp"
+  },
+  {
+    "start": "8017C0A0",
+    "end": "8017C2B4",
+    "path": "Game/zCameraFly.cpp"
+  },
+  {
+    "start": "8017C2B4",
+    "end": "8017C420",
+    "path": "Core/x/xCurveAsset.cpp"
+  },
+  {
+    "start": "8017C420",
+    "end": "8017D544",
+    "path": "Core/x/xDecal.cpp"
+  },
+  {
+    "start": "8017D544",
+    "end": "8017EEA4",
+    "path": "Core/x/xLaserBolt.cpp"
+  },
+  {
+    "start": "8017EEA4",
+    "end": "8017F5E0",
+    "path": "Game/zCameraTweak.cpp"
+  },
+  {
+    "start": "8017F5E0",
+    "end": "80180038",
+    "path": "Core/x/xPtankPool.cpp"
+  },
+  {
+    "start": "80180038",
+    "end": "80180D54",
+    "path": "Core/p2/iTRC.cpp"
+  },
+  {
+    "start": "80180D54",
+    "end": "8018626C",
+    "path": "Game/zNPCSupplement.cpp"
+  },
+  {
+    "start": "8018626C",
+    "end": "80187630",
+    "path": "Game/zNPCGlyph.cpp"
+  },
+  {
+    "start": "80187630",
+    "end": "8018FDC4",
+    "path": "Game/zNPCHazard.cpp"
+  },
+  {
+    "start": "8018FDC4",
+    "end": "80190F80",
+    "path": "Game/zNPCGoalAmbient.cpp"
+  },
+  {
+    "start": "80190F80",
+    "end": "80195428",
+    "path": "Game/zNPCFXCinematic.cpp"
+  },
+  {
+    "start": "80195428",
+    "end": "8019590C",
+    "path": "Core/x/xHudText.cpp"
+  },
+  {
+    "start": "8019590C",
+    "end": "80195FE8",
+    "path": "Game/zCombo.cpp"
+  },
+  {
+    "start": "80195FE8",
+    "end": "80196880",
+    "path": "Core/x/xCM.cpp"
+  }
+]
