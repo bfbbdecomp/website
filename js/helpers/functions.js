@@ -6,6 +6,15 @@ const formatPercent = (float) => {
   return Math.round(float * 100) / 100;
 };
 
+export function getFunctionsInBounds(start, end) {
+  return Object.keys(FUNCTIONS)
+    .filter((address) => {
+      const int = parseInt(address, 16);
+      return int >= start && int < end;
+    })
+    .map((addr) => FUNCTIONS[addr]);
+}
+
 export function getStateAtCommit(id) {
   const allFunctions = Object.keys(FUNCTIONS);
   const doneFunctions = allFunctions.filter((addr) => {

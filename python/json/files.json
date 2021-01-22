@@ -41,11 +41,6 @@
   },
   {
     "start": "80015B3C",
-    "end": "80015B3C",
-    "path": null
-  },
-  {
-    "start": "80015B3C",
     "end": "80015EA4",
     "path": "Core/x/xCounter.cpp"
   },
@@ -148,11 +143,6 @@
     "start": "80030C04",
     "end": "800318B8",
     "path": "Core/x/xMath.cpp"
-  },
-  {
-    "start": "800318B8",
-    "end": "800318B8",
-    "path": "Core/x/xMath2.cpp"
   },
   {
     "start": "800318B8",
@@ -878,11 +868,6 @@
     "start": "80124AE4",
     "end": "801251BC",
     "path": "Game/zNPCSndTable.cpp"
-  },
-  {
-    "start": "801251BC",
-    "end": "801251BC",
-    "path": null
   },
   {
     "start": "801251BC",

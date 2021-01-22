@@ -1,17 +1,33 @@
 import Highcharts from "highcharts";
 import Heatmap from "highcharts/modules/heatmap";
+import { COMMITS } from "../../../data/commits";
+import { getFilesStateAtCommit } from "../../helpers/files";
 
 Heatmap(Highcharts);
 
-function getPointCategoryName(point, dimension) {
-  var series = point.series,
-    isY = dimension === "y",
-    axis = series[isY ? "yAxis" : "xAxis"];
-  return axis.categories[point[isY ? "y" : "x"]];
+function round(float) {
+  return Math.round(float * 10000) / 100;
 }
 
 function getHeatmapData() {
   const data = [];
+  const id = COMMITS.length - 1;
+  const state = getFilesStateAtCommit(id);
+  state.sort((a, b) => a.path.localeCompare(b.path));
+  let column = 0;
+  let row = 0;
+  for (const file of state) {
+    const point = file;
+    point.x = column;
+    point.y = row;
+    point.value = (point.linesDone / point.totalLines) * 100;
+    data.push(point);
+    column++;
+    if (column >= 15) {
+      column = 0;
+      row++;
+    }
+  }
   // [x, y, value]
   return data;
 }
@@ -37,18 +53,6 @@ export function makeHeatmap() {
     yAxis: {
       visible: false,
       reversed: true,
-    },
-
-    accessibility: {
-      point: {
-        descriptionFormatter: function (point) {
-          var ix = point.index + 1,
-            xName = getPointCategoryName(point, "x"),
-            yName = getPointCategoryName(point, "y"),
-            val = point.value;
-          return ix + ". " + xName + " sales " + yName + ", " + val + ".";
-        },
-      },
     },
 
     colorAxis: {
@@ -84,22 +88,30 @@ export function makeHeatmap() {
 
     tooltip: {
       formatter: function () {
-        return (
-          "<b>" +
-          getPointCategoryName(this.point, "x") +
-          "</b> sold <br><b>" +
-          this.point.value +
-          "</b> items on <br><b>" +
-          getPointCategoryName(this.point, "y") +
-          "</b>"
-        );
+        const fd = this.point.functionsDone.toLocaleString();
+        const fs = this.point.totalFunctions.toLocaleString();
+        const fp = round(this.point.functionsDone / this.point.totalFunctions);
+        const ld = this.point.linesDone.toLocaleString();
+        const ls = this.point.totalLines.toLocaleString();
+        const lp = round(this.point.linesDone / this.point.totalLines);
+        let tip = `<b>${this.point.path}</b><br>
+        ${fd}/${fs} Functions (${fp}%)
+        <br>
+        ${ld}/${ls} Lines (${lp}%)
+        `;
+        if (fd == fs) {
+          // not working for some reason?
+          tip = '<span style="color:green">' + tip + "</span>";
+        }
+        console.log(tip);
+        return tip;
       },
     },
 
     series: [
       {
         name: "File Decompilation Status",
-        borderWidth: 0.1,
+        borderWidth: 0.2,
         data: getHeatmapData(),
       },
     ],

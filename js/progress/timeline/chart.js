@@ -114,7 +114,7 @@ export function makeTimeline() {
           text: "All",
         },
       ],
-      selected: 1,
+      selected: 2,
       inputEnabled: false,
     },
 
