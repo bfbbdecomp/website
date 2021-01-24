@@ -103,7 +103,6 @@ export function makeHeatmap() {
           // not working for some reason?
           tip = '<span style="color:green">' + tip + "</span>";
         }
-        console.log(tip);
         return tip;
       },
     },

@@ -7,7 +7,7 @@ export default class Progress extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 0,
+      tab: 1,
     };
   }
 

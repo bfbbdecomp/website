@@ -11,35 +11,24 @@ import React from "react";
 import { FUNCTIONS } from "../../../data/functions";
 
 export default class FunctionTable extends React.Component {
-  state = {
-    rows: [],
+  formatFunctionName = (name) => {
+    const limit = 40;
+    if (name.length > limit) {
+      return name.slice(0, limit - 3) + "...";
+    }
+    return name;
   };
-
-  componentDidMount = () => {
-    this.updateRows();
-  };
-
-  updateRows = () => {
-    const rows = [];
-    Object.keys(FUNCTIONS)
-      .slice(0, 100)
-      .map((addr) => {
-        rows.push({
-          name: FUNCTIONS[addr].name, //
-          commit: FUNCTIONS[addr].commit,
-        });
-      });
-    this.setState({ rows });
-  };
-
   renderTableBody = () => {
-    return this.state.rows.map((row) => {
+    return this.props.funcs.slice(0, this.props.limit).map((addr) => {
       return (
-        <TableRow key={row.name}>
+        <TableRow key={FUNCTIONS[addr].name}>
           <TableCell component="th" scope="row">
-            {row.name}
+            {this.formatFunctionName(FUNCTIONS[addr].name)}
           </TableCell>
-          <TableCell>{row.commit ? row.commit + 1 : null}</TableCell>
+          <TableCell>{FUNCTIONS[addr].lines}</TableCell>
+          <TableCell>
+            {FUNCTIONS[addr].commit ? FUNCTIONS[addr].commit + 1 : null}
+          </TableCell>
         </TableRow>
       );
     });
@@ -51,7 +40,8 @@ export default class FunctionTable extends React.Component {
         <Table size="small">
           <TableHead>
             <TableRow>
-              <TableCell>Name</TableCell>
+              <TableCell>Name {this.props.limit}</TableCell>
+              <TableCell>Lines</TableCell>
               <TableCell>Commit</TableCell>
             </TableRow>
           </TableHead>
