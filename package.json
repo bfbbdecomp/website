@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel html/*.html",
+    "dev": "parcel html/index.html",
     "build": "parcel build html/*.html --no-source-maps --public-url /bfbb/",
     "prettier": "prettier --check js/**/*.jsx",
     "format": "prettier --write js/**/*.jsx",
