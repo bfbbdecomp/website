@@ -18,7 +18,7 @@ def getInfoAtCommit(funcs, commit):
         linesAsm += ls
         funcsTotal += 1
         c = f["commit"]
-        if c is not None and c <= commit:
+        if c is not None and c < commit:
             funcsDone += 1
             linesDone += ls
     return {
