@@ -10,7 +10,6 @@ commands = [  #
         "cmd": [  #
             ["pip", "install", "gitpython"],  #
             ["pip", "install", "requests"],
-            ["npm", "install", "-g", "parcel-bundler"]
         ]
     },
     {
@@ -20,8 +19,10 @@ commands = [  #
         ]
     },  #
     {
-        "cwd": path,
+        "cwd":
+        path,
         "cmd": [
+            ["npm", "install", "-g", "parcel-bundler"],  #
             ["npm", "install"],
             ["npm", "run", "build"],
         ]
