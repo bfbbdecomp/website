@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel html/*.html",
+    "build": "parcel build html/*.html",
     "prettier": "prettier --check js/**/*.jsx",
     "format": "prettier --write js/**/*.jsx",
     "lint": "eslint js/**/*.jsx"
@@ -34,6 +35,7 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-eslint": "^10.1.0",
+    "cssnano": "^4.1.10",
     "eslint": "^7.17.0",
     "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.2.1"
