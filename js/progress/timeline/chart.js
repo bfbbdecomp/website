@@ -1,6 +1,9 @@
 import Highcharts from "highcharts/highstock";
+import Exporting from "highcharts/modules/exporting";
 import { getCommitFromID } from "../../helpers/commits";
 import { getDecompCommits, getStateAtCommit } from "../../helpers/functions";
+
+Exporting(Highcharts);
 
 function generateTimelineData() {
   const funcData = [];

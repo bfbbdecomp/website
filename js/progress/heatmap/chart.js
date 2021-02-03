@@ -1,9 +1,11 @@
 import Highcharts from "highcharts";
+import Exporting from "highcharts/modules/exporting";
 import Heatmap from "highcharts/modules/heatmap";
 import { COMMITS } from "../../../data/commits";
 import { getFilesStateAtCommit } from "../../helpers/files";
 
 Heatmap(Highcharts);
+Exporting(Highcharts);
 
 function round(float) {
   return Math.round(float * 10000) / 100;
