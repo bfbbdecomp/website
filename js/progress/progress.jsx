@@ -7,7 +7,7 @@ export default class Progress extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 1,
+      tab: 0,
     };
   }
 
@@ -45,8 +45,8 @@ export default class Progress extends React.Component {
               value={this.state.tab}
             >
               <Tab tabIndex={0} label="Overview" />
-              <Tab tabIndex={1} label="Functions" />
-              <Tab tabIndex={2} label="Contributors" />
+              <Tab tabIndex={1} disabled label="Functions" />
+              <Tab tabIndex={2} disabled label="Contributors" />
             </Tabs>
           </Toolbar>
         </Grid>

@@ -28,14 +28,16 @@ export default class ProgressBanner extends React.Component {
     return (
       <Grid container>
         <Grid item xs={12}>
-          <Card variant="outlined">
+          <Card variant="elevation" elevation={0}>
             <CardContent>
               <Typography variant="h4">
                 Battle for Bikini Bottom is {this.percentDone()}% decompiled
               </Typography>
+              {/* 
               <Typography color="textSecondary">
                 Estimated completion date: {this.completionDate()}.
               </Typography>
+              */}
               {/* TODO: Make this have hover tooltips */}
               <LinearProgress
                 variant="buffer"
