@@ -50,8 +50,8 @@ def processDiscordInfo(functions, commit):
         funcsTotal = current["funcsTotal"]
         asmPercent = round(asmDone / asmTotal * 100, 2)
         funcPercent = round(funcsDone / funcsTotal * 100, 2)
-        newLines = f(previous["linesDone"] - asmDone)
-        newFuncs = f(previous["funcsDone"] - funcsDone)
+        newLines = asmDone - f(previous["linesDone"])
+        newFuncs = funcsDone - f(previous["funcsDone"])
         msg = formatMessage({
             "asmDone": f(asmDone),
             "asmTotal": f(asmTotal),
