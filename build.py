@@ -32,4 +32,5 @@ for c in commands:
     cmds = c["cmd"]
     for cmd in cmds:
         print(cwd, ' '.join(cmd))
-        subprocess.run(cmd, cwd=cwd, shell=True)
+        #subprocess.run(cmd, cwd=cwd, shell=True)
+        subprocess.Popen(cmd, cwd=cwd)
