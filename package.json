@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel html/*.html",
-    "build": "parcel build html/*.html",
+    "build": "parcel build html/*.html --no-source-maps --public-url /bfbb/",
     "prettier": "prettier --check js/**/*.jsx",
     "format": "prettier --write js/**/*.jsx",
     "lint": "eslint js/**/*.jsx"
