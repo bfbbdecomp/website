@@ -1,6 +1,7 @@
 from pathlib import Path
 from git import Repo
 from api import writeApi
+from discord import processDiscordInfo
 from files import writeFiles
 from commits import getCommitData, writeCommitData
 from helpers import diffToLines, exportJS, getFunctionDict, lineToChangeObject, makeDirectory
@@ -69,6 +70,10 @@ def process():
                     removedAt = commitID
                 functions[address]["commit"] = removedAt
 
+    try:
+        processDiscordInfo(functions, len(commitData))
+    except:
+        pass
     writeApi(functions)
     writeCommitData(commitData)
     writeFiles()
