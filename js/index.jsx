@@ -6,10 +6,14 @@ import App from "./app";
 import Progress from "./progress/progress";
 import FAQ from "./faq/faq";
 
+function getBasePath() {
+  return process.env.NODE_ENV === "development" ? "" : "bfbb";
+}
+
 // Router Switch renders the first page which matches
 // the current url, therefore the default page must be last.
 const page = (
-  <Router>
+  <Router basename={getBasePath()}>
     <Switch>
       {/* <Route path="/menu">
         <App page={Menu} />
