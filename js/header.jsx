@@ -11,7 +11,7 @@ export default class Header extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { value: window.location.pathname };
+    this.state = { value: window.location.pathname.slice(1) };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -27,6 +27,7 @@ export default class Header extends React.Component {
   };
 
   render() {
+    console.log(this.state.value)
     return (
       <AppBar position="static" color="transparent" elevation={3}>
         <BottomNavigation
