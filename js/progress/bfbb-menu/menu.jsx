@@ -52,7 +52,7 @@ export default class Menu extends React.Component {
             <div className="top-row">
               <div className="bubbles">
                 {contributors.map((contributor, index) => (
-                  <div data-tip={contributor.name}>
+                  <div data-tip={contributor.name} key={index}>
                     <Bubble
                       profileImg={contributor.profileImg}
                       alt={contributor.name}
