@@ -112,7 +112,7 @@ export default class Overview extends React.Component {
           <Menu
             contributors={this.state.contributors}
             spatulaCount={Math.floor(this.state.repoState.linesPercent)}
-            shinyCount={this.state.repoState.lines}
+            shinyCount={this.state.repoState.linesDone}
             sockCount={Math.floor(this.state.repoState.funcsPercent)}
             collectableCount={this.state.repoState.funcsDone}
             collectableTotal={this.state.repoState.funcs}

@@ -85,7 +85,7 @@ export default class Menu extends React.Component {
                   total={collectableTotal}
                 ></Counter>
               </div>
-              <div className="sock-count" data-tip="Function Percent">
+              <div className="sock-count" data-tip="Function Percentage">
                 <Counter type="sock" count={sockCount}></Counter>
               </div>
             </div>
