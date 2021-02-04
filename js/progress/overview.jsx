@@ -7,12 +7,11 @@ import CommitSlider from "./slider";
 import { COMMITS } from "../../data/commits";
 import { getStateAtCommit } from "../helpers/functions";
 
-import Counter from "./bfbb-menu/menu-components/counter/counter"
-import "./bfbb-menu/menu.css"
-import Menu from "./bfbb-menu/menu"
+import Counter from "./bfbb-menu/menu-components/counter/counter";
+import "./bfbb-menu/menu.css";
+import Menu from "./bfbb-menu/menu";
 
 export default class Overview extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -32,19 +31,16 @@ export default class Overview extends React.Component {
   handleOpen = () => {
     this.setState({
       open: true,
-    })
-  }
+    });
+  };
 
   handleClose = () => {
     this.setState({
       open: false,
-    })
-  }
-
-  
+    });
+  };
 
   componentDidMount() {
-
     // Load top 5 contributors, total commits, and contributor count
     fetch("https://api.github.com/repos/bfbbdecomp/bfbb/contributors")
       .then((response) => response.json())
@@ -56,8 +52,8 @@ export default class Overview extends React.Component {
             name: item.login,
             profileImg: item.avatar_url,
             profileUrl: item.url,
-          }
-          contributors.push(contributor)
+          };
+          contributors.push(contributor);
         }
         let commits = 0;
         for (let item of data) {
@@ -67,7 +63,7 @@ export default class Overview extends React.Component {
           contributors: contributors,
           commitCount: commits,
           contributorCount: data.length,
-        })
+        });
       });
 
     // Load number of active PRs
@@ -77,10 +73,9 @@ export default class Overview extends React.Component {
         let length = data.length;
         this.setState({
           pullRequestCount: length,
-        })
+        });
       });
   }
-
 
   render() {
     return (
@@ -91,7 +86,10 @@ export default class Overview extends React.Component {
               <ProgressBanner repoState={this.state.repoState} />
             </Grid>
             <Grid onClick={this.handleOpen} item xs={1}>
-              <Counter type="spatula" count={Math.floor(this.state.repoState.linesPercent)} />
+              <Counter
+                type="spatula"
+                count={Math.floor(this.state.repoState.linesPercent)}
+              />
             </Grid>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -121,8 +119,7 @@ export default class Overview extends React.Component {
             commitCount={this.state.commitCount}
             contributorCount={this.state.contributorCount}
             pullRequestCount={this.state.pullRequestCount}
-          >
-          </Menu>
+          ></Menu>
         </Modal>
       </>
     );
