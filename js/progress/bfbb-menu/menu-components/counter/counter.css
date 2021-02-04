@@ -31,8 +31,28 @@
 }
 
 
-.count {
+.spatula-count {
     font-size: 24pt;
+    color: rgb(255, 238, 0);
+    text-shadow: 4px 4px #145877;
+}
+
+.sock-count {
+    font-size: 24pt;
+    color: rgb(255, 238, 0);
+    text-shadow: 4px 4px #145877;
+}
+
+
+.shiny-count{
+    font-size: 24pt;
+    color: rgb(255, 238, 0);
+    text-shadow: 4px 4px #145877;
+}
+
+
+.collectable-count {
+    font-size: 18pt;
     color: rgb(255, 238, 0);
     text-shadow: 4px 4px #145877;
 }

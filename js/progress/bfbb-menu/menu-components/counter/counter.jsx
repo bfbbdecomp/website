@@ -12,7 +12,7 @@ export default class Counter extends React.Component {
     return (
       <div className="counter">
         <div className={`${type}-img`}></div>
-        <a className="count">{countText}</a>
+        <a className={`${type}-count`}>{countText}</a>
       </div>
     );
   }
