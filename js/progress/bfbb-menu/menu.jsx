@@ -10,11 +10,25 @@ import InfoText from "./menu-components/info-text/info-text";
 import tank_amb from "./sounds/menu_tank_amb.wav";
 
 export default class Menu extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      ambience: new Audio(tank_amb),
+    };
+  }
+
   componentDidMount() {
-    const ambience = new Audio(tank_amb);
+    const ambience = this.state.ambience; 
     ambience.volume = 0.2;
     ambience.loop = true;
     ambience.play();
+  }
+
+  componentWillUnmount() {
+    const ambience = this.state.ambience; 
+    ambience.pause();
+    ambience.currentTime = 0;
   }
 
   render() {
