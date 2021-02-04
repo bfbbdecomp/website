@@ -39,6 +39,7 @@ def processDiscordInfo(functions, commit):
     if not url:
         print("Environment Variable 'OK_WEBHOOK' not set.")
         return
+    print("Processing discord info for commit", commit)
     current = getInfoAtCommit(functions, commit)
     previous = getInfoAtCommit(functions, commit - 1)
 
