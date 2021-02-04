@@ -87,11 +87,11 @@ export default class Overview extends React.Component {
       <>
         <Grid container spacing={2}>
           <Grid container spacing={2}>
-            <Grid item xs={10}>
+            <Grid item xs={11}>
               <ProgressBanner repoState={this.state.repoState} />
             </Grid>
-            <Grid onClick={this.handleOpen} item xs={2}>
-              <Counter type="spatula" count={Math.floor(this.state.repoState.linesPercent)} total="100" />
+            <Grid onClick={this.handleOpen} item xs={1}>
+              <Counter type="spatula" count={Math.floor(this.state.repoState.linesPercent)} />
             </Grid>
           </Grid>
           <Grid item xs={12} md={6}>
