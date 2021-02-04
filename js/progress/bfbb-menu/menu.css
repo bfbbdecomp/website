@@ -58,6 +58,8 @@
 
 .collectable-count {
     margin-right: auto;
+    margin-left: -8px;
+    margin-top: 4px;
 }
 
 .menu-body {
@@ -84,21 +86,21 @@
 
 .info-texts #commits {
     position: relative;
-    top: -100;
+    top: -108;
     left: 285;
     width: 250px;
 }
 
 .info-texts #contribs {
     position: relative;
-    top: -100;
+    top: -108;
     left: 235;
     width: 250px;
 }
 
 .info-texts #pullreqs {
     position: relative;
-    top: -100;
+    top: -108;
     left: 200;
     width: 250px;
 }

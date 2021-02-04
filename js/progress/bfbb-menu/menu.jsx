@@ -44,7 +44,7 @@ export default class Menu extends React.Component {
     const pullRequestCount = this.props.pullRequestCount;
 
     return (
-      <div className="container">
+      <div className="container" tabIndex={0}>
         <ReactTooltip />
         <div className="menu">
           <div className="caustics"></div>
@@ -52,12 +52,14 @@ export default class Menu extends React.Component {
             <div className="top-row">
               <div className="bubbles">
                 {contributors.map((contributor, index) => (
-                  <Bubble
-                    profileImg={contributor.profileImg}
-                    alt={contributor.name}
-                    profileUrl={contributor.profileUrl}
-                    key={index}
-                  ></Bubble>
+                  <div data-tip={contributor.name}>
+                    <Bubble
+                      profileImg={contributor.profileImg}
+                      alt={contributor.name}
+                      profileUrl={contributor.profileUrl}
+                      key={index}
+                    ></Bubble>
+                  </div>
                 ))}
               </div>
               <div className="spatula-count" data-tip="Percent Decompiled">
@@ -74,14 +76,14 @@ export default class Menu extends React.Component {
               <SpatulaSelector spatulaCount={spatulaCount}></SpatulaSelector>
             </div>
             <div className="bottom-row">
-              <div className="collectable-count" data-tip="Files Decompiled">
+              <div className="collectable-count" data-tip="Functions Decompiled">
                 <Counter
                   type="collectable"
                   count={collectableCount}
                   total={collectableTotal}
                 ></Counter>
               </div>
-              <div className="sock-count" data-tip="Function Count">
+              <div className="sock-count" data-tip="Function Percent">
                 <Counter type="sock" count={sockCount}></Counter>
               </div>
             </div>
