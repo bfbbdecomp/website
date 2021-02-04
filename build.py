@@ -8,6 +8,7 @@ commands = [  #
         "cwd":
         path,
         "cmd": [  #
+            ["git", "submodule", "update"],
             ["pip", "install", "gitpython"],  #
             ["pip", "install", "requests"],
         ]
