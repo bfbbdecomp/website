@@ -7,7 +7,7 @@ from commits import getCommitData, writeCommitData
 from helpers import diffToLines, exportJS, getFunctionDict, lineToChangeObject, makeDirectory
 
 # Change these parameters
-decompPath = "../../bfbbdecomp/"
+decompPath = "../bfbb/"
 beginAtCommit = "b99478c01b"
 
 # The files that match the paths in this list
