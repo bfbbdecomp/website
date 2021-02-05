@@ -72,8 +72,9 @@ def process():
 
     try:
         processDiscordInfo(functions, len(commitData))
-    except:
+    except Exception as e:
         print("Error processing discord message")
+        print(e)
         pass
     writeApi(functions)
     writeCommitData(commitData)
