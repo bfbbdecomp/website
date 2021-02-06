@@ -6,7 +6,7 @@
         url('../../images/bubble.png');
         background-size: 100% 100%;
     border-radius: 500px;
-    opacity: 65%;
+    opacity: 65% !important;
     margin-right: -6px;
     animation: MoveUpDown 3s ease-in-out infinite;
     display: flex;
