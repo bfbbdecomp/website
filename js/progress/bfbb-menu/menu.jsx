@@ -43,7 +43,7 @@ export default class Menu extends React.Component {
     const pullRequestCount = this.props.pullRequestCount;
 
     return (
-      <div className="container" tabIndex={0}>
+      <>
         <ReactTooltip />
         <div className="menu">
           <div className="caustics"></div>
@@ -108,7 +108,7 @@ export default class Menu extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

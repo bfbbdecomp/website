@@ -108,6 +108,7 @@ export default class Overview extends React.Component {
           open={this.state.open}
           onClose={this.handleClose}
           onBackdropClick={this.handleClose}
+          style={{display:'flex',alignItems:'center',justifyContent:'center'}}
         >
           <Menu
             contributors={this.state.contributors}
