@@ -17,7 +17,7 @@ import HelpIcon from "@material-ui/icons/Help";
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: window.location.pathname.slice(1) };
+    this.state = { value: window.location.pathname.split('/').slice(-1)[0] };
     this.handleChange = this.handleChange.bind(this);
   }
 
