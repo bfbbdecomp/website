@@ -51,7 +51,7 @@ export default class Overview extends React.Component {
           let contributor = {
             name: item.login,
             profileImg: item.avatar_url,
-            profileUrl: item.url,
+            profileUrl: item.html_url,
           };
           contributors.push(contributor);
         }
