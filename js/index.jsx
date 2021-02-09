@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import App from "./app";
 import Progress from "./progress/progress";
@@ -18,14 +18,14 @@ const page = (
       {/* <Route path="/menu">
         <App page={Menu} />
       </Route> */}
+      <Route exact path="/">
+        <Redirect to="/progress" />
+      </Route>
       <Route path="/progress">
         <App page={Progress} />
       </Route>
       <Route path="/faq">
         <App page={FAQ} />
-      </Route>
-      <Route path="/">
-        <App page={Progress} />
       </Route>
     </Switch>
   </Router>
