@@ -3,6 +3,22 @@ import os
 from funcs import getInfoAtCommit
 from math import floor
 
+milestones = {  #
+    "10":
+    "\n".join([
+        "https://www.youtube.com/watch?v=02KzxLGcNJg",
+        "https://www.youtube.com/watch?v=_UqDEIzqrmY"
+    ]),
+    "11":
+    "https://www.youtube.com/watch?v=YfOohn8_l90",
+    "12":
+    "https://www.youtube.com/watch?v=TpgwhHFH6Rw",
+    "15":
+    "https://www.youtube.com/watch?v=Pb-K2tXWK4w",
+    "50":
+    "https://www.youtube.com/watch?v=lDK9QqIzhwk"
+}
+
 template = """
 ```
 Battle for Bikini Bottom is {donePercent}% decompiled
@@ -12,9 +28,9 @@ Battle for Bikini Bottom is {donePercent}% decompiled
 """.strip()
 
 newPercent = """
-:spongescream:
+<:spongescream:600524132567744542>
 **WE HIT {percent}%!!!**
-:SpongeNut:
+<:SpongeNut:516367513236537364>
 """.strip()
 
 payload = {
@@ -76,5 +92,12 @@ def processDiscordInfo(functions, commit):
                                                     str(nowPercent))
             requests.post(url, payload)
             print(payload)
+
+            milestone = milestones.get(str(nowPercent))
+            if milestone:
+                payload["content"] = milestone
+                print(payload)
+                requests.post(url, payload)
+
     else:
         print("Nothing new in this commit...")
