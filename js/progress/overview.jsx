@@ -1,9 +1,9 @@
 import React from "react";
 import { Grid, Modal } from "@material-ui/core";
 import Timeline from "./timeline/timeline";
-import Heatmap from "./heatmap/heatmap";
+//import Heatmap from "./heatmap/heatmap";
 import ProgressBanner from "./banner";
-import CommitSlider from "./slider";
+// import CommitSlider from "./slider";
 import { COMMITS } from "../../data/commits";
 import { getStateAtCommit } from "../helpers/functions";
 
@@ -92,12 +92,14 @@ export default class Overview extends React.Component {
               />
             </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={12}>
             <Timeline />
           </Grid>
-          <Grid item xs={12} md={6}>
+          {/*
+          <Grid item xs={12} md={12}>
             <Heatmap />
           </Grid>
+          */}
           {/*
           <Grid item xs={12}>
             <CommitSlider />
@@ -108,7 +110,11 @@ export default class Overview extends React.Component {
           open={this.state.open}
           onClose={this.handleClose}
           onBackdropClick={this.handleClose}
-          style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
           <Menu
             contributors={this.state.contributors}

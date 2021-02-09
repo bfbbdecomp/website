@@ -44,12 +44,29 @@ function generateTimelineData() {
   };
 }
 
-export function makeTimeline() {
+export function makeTimeline(options) {
   // create the chart
   const data = generateTimelineData();
   const chart = Highcharts.stockChart("timeline", {
     title: {
       text: "Decompilation Progress",
+    },
+    chart: {
+      height: "50%",
+    },
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 1000,
+          },
+          chartOptions: {
+            chart: {
+              height: 500,
+            },
+          },
+        },
+      ],
     },
 
     credits: {
@@ -67,7 +84,7 @@ export function makeTimeline() {
     xAxis: {
       // makes the X-axis date appear in even intervals.
       // includes days with missing data.
-      ordinal: false,
+      ordinal: !options.showDowntime, // false,
     },
 
     yAxis: {
@@ -84,6 +101,11 @@ export function makeTimeline() {
 
     rangeSelector: {
       buttons: [
+        {
+          type: "day",
+          count: 1,
+          text: "1d",
+        },
         {
           type: "week",
           count: 1,
@@ -118,7 +140,7 @@ export function makeTimeline() {
           text: "All",
         },
       ],
-      selected: 2,
+      selected: 7,
       inputEnabled: false,
     },
 

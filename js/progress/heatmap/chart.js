@@ -25,7 +25,7 @@ function getHeatmapData() {
     point.value = (point.linesDone / point.totalLines) * 100;
     data.push(point);
     column++;
-    if (column >= 15) {
+    if (column >= 30) {
       column = 0;
       row++;
     }
@@ -38,6 +38,7 @@ export function makeHeatmap() {
   const chart = Highcharts.chart("heatmap", {
     chart: {
       type: "heatmap",
+      height: "25%",
     },
 
     title: {

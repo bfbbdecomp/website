@@ -45,8 +45,9 @@ export default class Progress extends React.Component {
               value={this.state.tab}
             >
               <Tab tabIndex={0} label="Overview" />
+              <Tab tabIndex={2} disabled label="Files" />
               <Tab tabIndex={1} disabled label="Functions" />
-              <Tab tabIndex={2} disabled label="Contributors" />
+              <Tab tabIndex={3} disabled label="Contributors" />
             </Tabs>
           </Toolbar>
         </Grid>

@@ -4,7 +4,7 @@ import {
   Typography,
   Card,
   CardContent,
-  LinearProgress,
+  //LinearProgress,
 } from "@material-ui/core";
 
 export default class ProgressBanner extends React.Component {
@@ -38,12 +38,13 @@ export default class ProgressBanner extends React.Component {
                 Estimated completion date: {this.completionDate()}.
               </Typography>
               */}
-              {/* TODO: Make this have hover tooltips */}
+              {/* 
+
               <LinearProgress
                 variant="buffer"
                 value={this.asmPercent()}
                 valueBuffer={this.funcPercent()}
-              />
+              />TODO: Make this have hover tooltips */}
             </CardContent>
           </Card>
         </Grid>
