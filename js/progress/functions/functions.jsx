@@ -1,5 +1,4 @@
 import React from "react";
-import { Grid, TextField, Typography } from "@material-ui/core";
 import FunctionTable from "./table";
 import { FUNCTIONS } from "../../../data/functions";
 

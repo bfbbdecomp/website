@@ -1,16 +1,5 @@
-import {
-  Card,
-  Grid,
-  Typography,
-  CardContent,
-  Collapse,
-  IconButton,
-} from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
 import React from "react";
 import About from "./about";
-
-import "./faq.css";
 
 export default class FAQ extends React.Component {
   state = {

@@ -1,5 +1,3 @@
-import { Checkbox, FormControlLabel, FormGroup } from "@material-ui/core";
-import { HourglassEmptyOutlined, HourglassFull } from "@material-ui/icons";
 import React from "react";
 import { makeTimeline } from "./chart";
 
@@ -36,10 +34,10 @@ export default class Timeline extends React.Component {
     return (
       <div>
         <div id="timeline"></div>
-        <FormGroup row>
-          <FormControlLabel
+        <div row>
+          <div
             control={
-              <Checkbox
+              <div
                 checked={this.state.showDowntime}
                 color="primary"
                 onChange={() => this.toggleDowntime()}
@@ -47,7 +45,7 @@ export default class Timeline extends React.Component {
             }
             label="Show Downtime"
           />
-        </FormGroup>
+        </div>
       </div>
     );
   }

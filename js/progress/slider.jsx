@@ -1,5 +1,4 @@
 import React from "react";
-import { Grid, Slider } from "@material-ui/core";
 import { COMMITS } from "../../data/commits";
 
 export default class CommitSlider extends React.Component {

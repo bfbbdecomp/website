@@ -1,12 +1,3 @@
-import {
-  TableContainer,
-  Paper,
-  Table,
-  TableHead,
-  TableRow,
-  TableBody,
-  TableCell,
-} from "@material-ui/core";
 import React from "react";
 import { FUNCTIONS } from "../../../data/functions";
 

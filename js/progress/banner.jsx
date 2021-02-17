@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  Grid,
-  Typography,
-  Card,
-  CardContent,
-  //LinearProgress,
-} from "@material-ui/core";
 
 export default class ProgressBanner extends React.Component {
   percentDone = () => {

@@ -1,23 +1,10 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Link,
-  BottomNavigation,
-  BottomNavigationAction,
-} from "@material-ui/core";
 import { Link as RouterLink } from "react-router-dom";
-
-import GitHubIcon from "@material-ui/icons/GitHub";
-import SportsEsportsIcon from "@material-ui/icons/SportsEsports";
-import TimelineIcon from "@material-ui/icons/Timeline";
-import HelpIcon from "@material-ui/icons/Help";
 
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: window.location.pathname.split('/').slice(-1)[0] };
+    this.state = { value: window.location.pathname.split("/").slice(-1)[0] };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -34,39 +21,24 @@ export default class Header extends React.Component {
   render() {
     console.log(this.state.value);
     return (
-      <AppBar position="static" variant="outlined" color="transparent">
-        <BottomNavigation
+      <div position="static" variant="outlined" color="transparent">
+        <div
           value={this.state.value}
           onChange={this.handleChange}
           showLabels
           className="bottom-navigation"
         >
-          <BottomNavigationAction
+          <div
             component={RouterLink}
             to="/progress"
             value="progress"
             label="Progress"
-            icon={<TimelineIcon />}
           />
-          <BottomNavigationAction
-            component={RouterLink}
-            to="/faq"
-            value="faq"
-            label="FAQ"
-            icon={<HelpIcon />}
-          />
-          <BottomNavigationAction
-            value="github"
-            label="GitHub"
-            icon={<GitHubIcon />}
-          />
-          <BottomNavigationAction
-            value="discord"
-            label="Discord"
-            icon={<SportsEsportsIcon />}
-          />
-        </BottomNavigation>
-      </AppBar>
+          <div component={RouterLink} to="/faq" value="faq" label="FAQ" />
+          <div value="github" label="GitHub" />
+          <div value="discord" label="Discord" />
+        </div>
+      </div>
     );
   }
 }

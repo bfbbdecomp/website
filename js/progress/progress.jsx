@@ -1,7 +1,5 @@
 import React from "react";
-import { Grid, Toolbar, Tabs, Tab, Typography } from "@material-ui/core";
 import Overview from "./overview";
-import FunctionPage from "./functions/functions";
 
 export default class Progress extends React.Component {
   constructor(props) {
@@ -20,10 +18,8 @@ export default class Progress extends React.Component {
     switch (this.state.tab) {
       case 0:
         return <Overview />;
-      case 1:
-        return <FunctionPage />;
       default:
-        return <Typography>TODO</Typography>;
+        return <div>TODO</div>;
     }
   };
 
@@ -35,26 +31,26 @@ export default class Progress extends React.Component {
 
   render() {
     return (
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Toolbar>
-            <Tabs
+      <div container spacing={2}>
+        <div item xs={12}>
+          <div>
+            <div
               indicatorColor="primary"
               textColor="primary"
               onChange={this.handleChange}
               value={this.state.tab}
             >
-              <Tab tabIndex={0} label="Overview" />
-              <Tab tabIndex={2} disabled label="Files" />
-              <Tab tabIndex={1} disabled label="Functions" />
-              <Tab tabIndex={3} disabled label="Contributors" />
-            </Tabs>
-          </Toolbar>
-        </Grid>
-        <Grid item xs={12}>
+              <div tabIndex={0} label="Overview" />
+              <div tabIndex={2} disabled label="Files" />
+              <div tabIndex={1} disabled label="Functions" />
+              <div tabIndex={3} disabled label="Contributors" />
+            </div>
+          </div>
+        </div>
+        <div item xs={12}>
           {this.renderTab()}
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     );
   }
 }
