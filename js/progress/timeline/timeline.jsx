@@ -34,18 +34,6 @@ export default class Timeline extends React.Component {
     return (
       <div>
         <div id="timeline"></div>
-        <div row>
-          <div
-            control={
-              <div
-                checked={this.state.showDowntime}
-                color="primary"
-                onChange={() => this.toggleDowntime()}
-              />
-            }
-            label="Show Downtime"
-          />
-        </div>
       </div>
     );
   }

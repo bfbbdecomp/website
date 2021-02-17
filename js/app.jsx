@@ -5,7 +5,7 @@ export default class App extends React.Component {
   render() {
     const Page = this.props.page;
     return (
-      <div maxWidth="lg">
+      <div>
         <Header />
         <Page />
       </div>

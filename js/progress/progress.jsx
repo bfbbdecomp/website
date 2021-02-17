@@ -31,15 +31,10 @@ export default class Progress extends React.Component {
 
   render() {
     return (
-      <div container spacing={2}>
-        <div item xs={12}>
+      <div>
+        <div>
           <div>
-            <div
-              indicatorColor="primary"
-              textColor="primary"
-              onChange={this.handleChange}
-              value={this.state.tab}
-            >
+            <div onChange={this.handleChange} value={this.state.tab}>
               <div tabIndex={0} label="Overview" />
               <div tabIndex={2} disabled label="Files" />
               <div tabIndex={1} disabled label="Functions" />
@@ -47,9 +42,7 @@ export default class Progress extends React.Component {
             </div>
           </div>
         </div>
-        <div item xs={12}>
-          {this.renderTab()}
-        </div>
+        <div>{this.renderTab()}</div>
       </div>
     );
   }

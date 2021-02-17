@@ -19,29 +19,27 @@ export default class ProgressBanner extends React.Component {
 
   render() {
     return (
-      <Grid container>
-        <Grid item xs={12}>
-          <Card variant="elevation" elevation={0}>
-            <CardContent>
-              <Typography variant="h4">
-                Battle for Bikini Bottom is {this.percentDone()}% decompiled
-              </Typography>
-              {/* 
-              <Typography color="textSecondary">
+      <div>
+        <div>
+          <div>
+            <div>
+              Battle for Bikini Bottom is {this.percentDone()}% decompiled
+            </div>
+            {/* 
+              <div color="textSecondary">
                 Estimated completion date: {this.completionDate()}.
-              </Typography>
+              </div>
               */}
-              {/* 
+            {/* 
 
               <LinearProgress
                 variant="buffer"
                 value={this.asmPercent()}
                 valueBuffer={this.funcPercent()}
               />TODO: Make this have hover tooltips */}
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+          </div>
+        </div>
+      </div>
     );
   }
 }

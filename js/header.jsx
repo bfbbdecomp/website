@@ -25,7 +25,6 @@ export default class Header extends React.Component {
         <div
           value={this.state.value}
           onChange={this.handleChange}
-          showLabels
           className="bottom-navigation"
         >
           <div

@@ -38,32 +38,14 @@ export default class Overview extends React.Component {
   render() {
     return (
       <>
-        <div container spacing={2}>
-          <div container spacing={2}>
-            <div item xs={11}>
-              <ProgressBanner repoState={this.state.repoState} />
-            </div>
-            <div onClick={this.handleOpen} item xs={1}>
-              <div
-                type="spatula"
-                count={Math.floor(this.state.repoState.linesPercent)}
-              />
-            </div>
+        <div>
+          <div>
+            <ProgressBanner repoState={this.state.repoState} />
           </div>
-          <div item xs={12} md={12}>
+          <div>
             <Timeline />
           </div>
         </div>
-        <div
-          open={this.state.open}
-          onClose={this.handleClose}
-          onBackdropClick={this.handleClose}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        ></div>
       </>
     );
   }
