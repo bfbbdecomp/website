@@ -32,15 +32,12 @@ export default class Progress extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <div>
-            <div onChange={this.handleChange} value={this.state.tab}>
-              <div tabIndex={0} label="Overview" />
-              <div tabIndex={2} disabled label="Files" />
-              <div tabIndex={1} disabled label="Functions" />
-              <div tabIndex={3} disabled label="Contributors" />
-            </div>
-          </div>
+        <div className="font-bold">test</div>
+        <div onChange={this.handleChange} value={this.state.tab}>
+          <div tabIndex={0} label="Overview" />
+          <div tabIndex={2} disabled label="Files" />
+          <div tabIndex={1} disabled label="Functions" />
+          <div tabIndex={3} disabled label="Contributors" />
         </div>
         <div>{this.renderTab()}</div>
       </div>
