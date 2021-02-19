@@ -10,6 +10,7 @@ import {
 import App from "./app";
 import Progress from "./progress/progress";
 import FAQ from "./faq/faq";
+import About from "./about/about";
 
 function getBasePath() {
   return process.env.NODE_ENV === "development" ? "" : "bfbb";
@@ -25,6 +26,9 @@ const page = (
       </Route> */}
       <Route exact path="/">
         <Redirect to="/progress" />
+      </Route>
+      <Route path="/about">
+        <App page={About} />
       </Route>
       <Route path="/progress">
         <App page={Progress} />

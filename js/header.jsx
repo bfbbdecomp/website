@@ -23,9 +23,17 @@ export default class Header extends React.Component {
   render() {
     console.log(this.state.value);
     return (
-      <div id="header" className="flex p-3 shadow text-2xl text-center">
-        <div className="flex flex-grow space-x-6">
+      <div
+        id="header"
+        className="flex flex-wrap p-3 shadow text-2xl text-center"
+      >
+        <div className="flex flex-grow space-x-4">
           <div className="p-2.5 link clicked rounded-md">
+            <a className="uppercase bobfont" href="#">
+              About
+            </a>
+          </div>
+          <div className="p-2.5 link  rounded-md">
             <a className="uppercase bobfont" href="#">
               Progress
             </a>
