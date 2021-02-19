@@ -78,7 +78,7 @@ export function makeTimeline(options) {
     },
 
     scrollbar: {
-      enabled: false,
+      enabled: true,
     },
 
     xAxis: {

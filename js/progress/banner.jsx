@@ -20,11 +20,11 @@ export default class ProgressBanner extends React.Component {
   render() {
     return (
       <div className="md:p-4">
-        <div className="text-3xl font-bold text-gray-700 pb-2 md:pb-0">
+        <div className="text-3xl font-semibold text-gray-700 pb-2 md:pb-0">
           Battle for Bikini Bottom is{" "}
           <span className="">{this.percentDone()}%</span> decompiled
         </div>
-        <div className="text-xl font-semibold text-gray-500">
+        <div className="text-xl text-gray-500">
           Estimated completion Date:{" "}
           <span
             style={{
