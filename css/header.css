@@ -1,0 +1,12 @@
+#header {
+  background-color: #ffec02;
+}
+
+#header .clicked {
+  background-color: #005ca9;
+  color: #ffec02 !important;
+}
+
+#header .link {
+  color: #005ca9;
+}

@@ -1,15 +1,23 @@
+@font-face {
+  font-family: spongebob;
+  src: url("../fonts/spongebob.ttf");
+}
+
+.bobfont {
+  font-family: spongebob;
+}
+
 body {
   /*
-  background: rgb(34, 130, 243);
-  background: linear-gradient(
-    0deg,
-    rgba(34, 130, 243, 1) 0%,
-    rgba(118, 252, 219, 1) 100%
-  );
+  background-image: url("../images/sand2.png");
+  /*
+  background-image: url("../images/sky.png"), url("../images/clouds.png");
+  background-position: left top, left top;
+  background-size: contain, auto auto;
+  background-repeat: no-repeat, repeat;
   */
 }
 
 #page {
-  background-color: white;
   min-height: 100%;
 }

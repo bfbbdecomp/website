@@ -1,6 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
 import App from "./app";
 import Progress from "./progress/progress";
@@ -25,7 +30,7 @@ const page = (
         <App page={Progress} />
       </Route>
       <Route path="/faq">
-        <App page={FAQ} />
+        <App page={Progress} />
       </Route>
     </Switch>
   </Router>
