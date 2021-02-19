@@ -31,8 +31,7 @@ export default class Progress extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="font-bold">test</div>
+      <div className="p-4">
         <div onChange={this.handleChange} value={this.state.tab}>
           <div tabIndex={0} label="Overview" />
           <div tabIndex={2} disabled label="Files" />

@@ -39,10 +39,8 @@ export default class Overview extends React.Component {
     return (
       <>
         <div>
-          <div>
-            <ProgressBanner repoState={this.state.repoState} />
-          </div>
-          <div>
+          <ProgressBanner repoState={this.state.repoState} />
+          <div className="lg:px-10 mt-3">
             <Timeline />
           </div>
         </div>

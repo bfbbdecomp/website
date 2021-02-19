@@ -19,25 +19,22 @@ export default class ProgressBanner extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <div>
-            <div>
-              Battle for Bikini Bottom is {this.percentDone()}% decompiled
-            </div>
-            {/* 
-              <div color="textSecondary">
-                Estimated completion date: {this.completionDate()}.
-              </div>
-              */}
-            {/* 
-
-              <LinearProgress
-                variant="buffer"
-                value={this.asmPercent()}
-                valueBuffer={this.funcPercent()}
-              />TODO: Make this have hover tooltips */}
-          </div>
+      <div className="p-4">
+        <div className="text-3xl font-bold text-gray-700 pb-2 md:pb-0">
+          Battle for Bikini Bottom is{" "}
+          <span className="">{this.percentDone()}%</span> decompiled
+        </div>
+        <div className="text-xl text-gray-600">
+          Estimated completion date:{" "}
+          <span
+            style={{
+              cursor: "help",
+              borderBottom: "dashed 1px",
+              borderColor: "#999999",
+            }}
+          >
+            January 69th, 2020
+          </span>
         </div>
       </div>
     );

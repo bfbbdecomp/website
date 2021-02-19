@@ -49,7 +49,7 @@ export function makeTimeline(options) {
   const data = generateTimelineData();
   const chart = Highcharts.stockChart("timeline", {
     title: {
-      text: "Decompilation Progress",
+      // text: "Decompilation Progress",
     },
     chart: {
       height: "50%",

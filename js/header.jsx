@@ -21,22 +21,12 @@ export default class Header extends React.Component {
   render() {
     console.log(this.state.value);
     return (
-      <div position="static" variant="outlined" color="transparent">
-        <div
-          value={this.state.value}
-          onChange={this.handleChange}
-          className="bottom-navigation"
-        >
-          <div
-            component={RouterLink}
-            to="/progress"
-            value="progress"
-            label="Progress"
-          />
-          <div component={RouterLink} to="/faq" value="faq" label="FAQ" />
-          <div value="github" label="GitHub" />
-          <div value="discord" label="Discord" />
+      <div className="flex bg-pink-200 p-4">
+        <div className="flex-grow text-xl">
+          <a href="#">Progress</a>
+          <a href="#">FAQ</a>
         </div>
+        <div className="">Something on the right</div>
       </div>
     );
   }

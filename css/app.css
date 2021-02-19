@@ -1,3 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  background-color: lightblue;
+}
+
+#page {
+  background-color: white;
+  min-height: 100%;
+}
