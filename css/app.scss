@@ -1,0 +1,11 @@
+@import "node_modules/bulma/sass/utilities/initial-variables";
+@import "node_modules/bulma/bulma";
+
+@font-face {
+  font-family: spongebob;
+  src: url("../fonts/spongebob.ttf");
+}
+
+.bobfont {
+  font-family: spongebob;
+}

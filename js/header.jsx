@@ -1,8 +1,6 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 
-import "../css/header.css";
-
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -23,38 +21,12 @@ export default class Header extends React.Component {
   render() {
     console.log(this.state.value);
     return (
-      <div
-        id="header"
-        className="flex flex-wrap p-3 shadow text-2xl text-center"
-      >
-        <div className="flex flex-grow space-x-4">
-          <div className="p-2.5 link clicked rounded-md">
-            <a className="uppercase bobfont" href="#">
-              About
-            </a>
-          </div>
-          <div className="p-2.5 link  rounded-md">
-            <a className="uppercase bobfont" href="#">
-              Progress
-            </a>
-          </div>
-          <div className="p-2.5 link">
-            <a className="uppercase bobfont" href="#">
-              FAQ
-            </a>
-          </div>
+      <div id="header">
+        <div>
+          <a href="#">About</a>
         </div>
-        <div className="flex">
-          <div className="p-2.5 link">
-            <a className="uppercase bobfont" href="#">
-              GitHub
-            </a>
-          </div>
-          <div className="p-2.5 link">
-            <a className="uppercase bobfont" href="#">
-              Discord
-            </a>
-          </div>
+        <div>
+          <a href="#">Progress</a>
         </div>
       </div>
     );
