@@ -62,7 +62,7 @@ export function makeTimeline(options) {
           },
           chartOptions: {
             chart: {
-              height: 500,
+              height: 450,
             },
           },
         },

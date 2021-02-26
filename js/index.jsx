@@ -24,9 +24,6 @@ const page = (
       {/* <Route path="/menu">
         <App page={Menu} />
       </Route> */}
-      <Route exact path="/">
-        <Redirect to="/progress" />
-      </Route>
       <Route path="/about">
         <App page={About} />
       </Route>
@@ -34,7 +31,10 @@ const page = (
         <App page={Progress} />
       </Route>
       <Route path="/faq">
-        <App page={Progress} />
+        <App page={FAQ} />
+      </Route>
+      <Route path="/">
+        <Redirect to="/progress" />
       </Route>
     </Switch>
   </Router>
