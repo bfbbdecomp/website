@@ -1,4 +1,19 @@
+import { FILES } from "../../data/files";
 import { FUNCTIONS } from "../../data/functions";
+
+// Add file information to each function
+for (const fileIndex in FILES) {
+  const file = FILES[fileIndex];
+  const start = parseInt(file.start, 16);
+  const end = parseInt(file.end, 16);
+
+  for (const addressString in FUNCTIONS) {
+    const addr = parseInt(addressString, 16);
+    if (addr >= start && addr < end) {
+      FUNCTIONS[addressString].file = fileIndex;
+    }
+  }
+}
 
 const sum = (array) => array.reduce((a, b) => a + b, 0);
 
