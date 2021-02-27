@@ -32,7 +32,9 @@ export default [
         we currently are at, as well as an estimation of when we will be done.
         This is a difficult question to answer. Decompilation projects tend to
         take a long time, a few years is almost a given. A lot of factors
-        influence the speed.
+        influence the speed. Progress will likely be slower as we near the end.
+        This is due to the fact that the remaining functions will naturally be
+        more difficult as they were avoided and put off for later.
       </>
     ),
   },
@@ -50,6 +52,22 @@ export default [
     ),
   },
   {
+    id: "what-about-modding",
+    q: "Is this useful for modding?",
+    a: (
+      <>
+        Yes, but there are some major caveats that limit its usefulness right
+        now. The biggest caveat is that the game&apos;s code cannot be
+        &quot;shifted&quot; around. There is a lot of hardcoded information and
+        addresses (think compiler generated jump tables) which cannot be shifted
+        or the game will crash or behave unpredictably. However, this can be
+        avoided and mods can be made with some effort. By inserting your new
+        code after everything else, you can patch an assembly function to hook
+        into your custom function. This is tedious however, but works.
+      </>
+    ),
+  },
+  {
     id: "why-gamecube",
     q: "Why choose the GameCube version?",
     a: (
@@ -59,8 +77,8 @@ export default [
         with. It&apos;s very difficult to find compilers and other necessary
         tools to create a functioning project like this. We were fortunate
         enough to be able to find a compiler for GameCube. Minor details that
-        are missing in the GameCube version can be added back, as the source
-        code is available to modify.
+        are missing in the GameCube version can be added back as the source code
+        is available to modify.
       </>
     ),
   },
