@@ -32,9 +32,11 @@ export default [
         we currently are at, as well as an estimation of when we will be done.
         This is a difficult question to answer. Decompilation projects tend to
         take a long time, a few years is almost a given. A lot of factors
-        influence the speed. Progress will likely be slower as we near the end.
-        This is due to the fact that the remaining functions will naturally be
-        more difficult as they were avoided and put off for later.
+        influence the speed, such as the popularity of the game and number of
+        people willing to work on the decompilation. Progress will likely be
+        slower as we near the end. This is due to the fact that the remaining
+        functions will naturally be more difficult as they were avoided and put
+        off for later.
       </>
     ),
   },
@@ -69,7 +71,7 @@ export default [
   },
   {
     id: "can-u-make-x-mod",
-    q: "Can you make a ____ mod for me?",
+    q: "Can you make ______ mod for me?",
     a: "No.",
   },
   {
@@ -99,6 +101,14 @@ export default [
           <li>
             Studying the source code can help glitch hunters and speedrunners
             understand the mechanics of the game
+          </li>
+          <li>
+            To make it easier for players to create BFBB mods that affect parts
+            of the game that are unable to be edited with{" "}
+            <a href="https://battlepedia.org/Industrial_Park_(level_editor)">
+              Industrial Park
+            </a>{" "}
+            alone.
           </li>
         </ul>
       </>

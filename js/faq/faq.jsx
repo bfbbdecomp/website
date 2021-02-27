@@ -1,21 +1,30 @@
 import React from "react";
-import GameFAQ from "./game";
+import GameFAQ from "./decomp";
 import ContributeFAQ from "./contribute";
 import GeneralFAQ from "./general";
+import DecompFAQ from "./game";
 
 const sections = {
   general: {
     name: "General",
     qa: GeneralFAQ,
   },
+  /*
+  decomp: {
+    name: "Decompilation",
+    qa: DecompFAQ,
+  },
+  */
   contribute: {
     name: "Contributing",
     qa: ContributeFAQ,
   },
+  /*
   game: {
     name: "Game",
     qa: GameFAQ,
   },
+  */
 };
 
 export default class FAQ extends React.Component {
