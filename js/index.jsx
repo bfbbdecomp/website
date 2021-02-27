@@ -11,6 +11,8 @@ import App from "./app";
 import Progress from "./progress/progress";
 import FAQ from "./faq/faq";
 import About from "./about/about";
+import Functions from "./functions/functions";
+import Discoveries from "./discoveries/discoveries";
 
 function getBasePath() {
   return process.env.NODE_ENV === "development" ? "" : "bfbb";
@@ -21,14 +23,17 @@ function getBasePath() {
 const page = (
   <Router basename={getBasePath()}>
     <Switch>
-      {/* <Route path="/menu">
-        <App page={Menu} />
-      </Route> */}
       <Route path="/about">
         <App page={About} />
       </Route>
       <Route path="/progress">
         <App page={Progress} />
+      </Route>
+      <Route path="/functions">
+        <App page={Functions} />
+      </Route>
+      <Route path="/discoveries">
+        <App page={Discoveries} />
       </Route>
       <Route path="/faq">
         <App page={FAQ} />

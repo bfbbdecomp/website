@@ -15,12 +15,14 @@ export default class Header extends React.Component {
               Functions
             </Link>
             */}
-            <Link className="navbar-item" to="#">
+            <Link className="navbar-item" to="functions">
               Functions
             </Link>
-            <Link className="navbar-item" to="#">
+            {/*
+            <Link className="navbar-item" to="discoveries">
               Discoveries
             </Link>
+            */}
             <Link className="navbar-item" to="faq">
               FAQ
             </Link>
