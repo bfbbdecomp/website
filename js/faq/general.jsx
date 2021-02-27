@@ -68,6 +68,11 @@ export default [
     ),
   },
   {
+    id: "can-u-make-x-mod",
+    q: "Can you make a ____ mod for me?",
+    a: "No.",
+  },
+  {
     id: "why-gamecube",
     q: "Why choose the GameCube version?",
     a: (
@@ -77,8 +82,8 @@ export default [
         with. It&apos;s very difficult to find compilers and other necessary
         tools to create a functioning project like this. We were fortunate
         enough to be able to find a compiler for GameCube. Minor details that
-        are missing in the GameCube version can be added back as the source code
-        is available to modify.
+        are missing in the GameCube version can be added back in the future as
+        the source code is available for anyone to modify.
       </>
     ),
   },

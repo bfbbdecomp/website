@@ -15,7 +15,10 @@ export default class Header extends React.Component {
               Functions
             </Link>
             */}
-            <Link className="navbar-item" to="faq">
+            <Link className="navbar-item" to="#">
+              Functions
+            </Link>
+            <Link className="navbar-item" to="#">
               Discoveries
             </Link>
             <Link className="navbar-item" to="faq">
@@ -30,7 +33,7 @@ export default class Header extends React.Component {
                   target="_blank"
                   rel="noreferrer"
                   className="button"
-                  href="https://www.github.com/bfbbdecomp/"
+                  href="https://www.github.com/bfbbdecomp/bfbb"
                 >
                   <span className="icon">
                     <i className="fab fa-github"></i>
