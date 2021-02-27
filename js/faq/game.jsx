@@ -10,9 +10,9 @@ export default [
     id: "test",
     q: "foo bar baz",
     a: (
-      <React.Fragment>
+      <>
         test<b>foo</b>
-      </React.Fragment>
+      </>
     ),
   },
 ];
