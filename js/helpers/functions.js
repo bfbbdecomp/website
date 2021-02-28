@@ -10,7 +10,7 @@ for (const fileIndex in FILES) {
   for (const addressString in FUNCTIONS) {
     const addr = parseInt(addressString, 16);
     if (addr >= start && addr < end) {
-      FUNCTIONS[addressString].file = fileIndex;
+      FUNCTIONS[addressString].file = parseInt(fileIndex);
     }
   }
 }

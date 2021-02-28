@@ -46,15 +46,19 @@ export default class FunctionTable extends React.Component {
   }
 
   renderFileCell(fileID, commitID) {
-    const path = FILES[fileID].path;
+    let path = FILES[fileID].path;
+    let url = "";
     if (commitID) {
-      const cpp = baseURL + "blob/master/src/" + path;
-      return (
-        <a target="_blank" rel="noreferrer" href={cpp}>
-          {path}
-        </a>
-      );
+      url = baseURL + "blob/master/src/" + path;
+    } else {
+      path = path.replace(".cpp", ".s");
+      url = baseURL + "blob/master/asm/" + path;
     }
+    return (
+      <a target="_blank" rel="noreferrer" href={url}>
+        {path}
+      </a>
+    );
   }
 
   generateRow(func) {
