@@ -8,25 +8,61 @@ const baseURL = "https://github.com/bfbbdecomp/bfbb/";
 
 export default class FunctionTable extends React.Component {
   state = {
-    limit: 50,
+    limit: 100,
     tableData: [],
+
+    pager: {
+      totalPages: 0,
+      currentPage: 0,
+    },
   };
 
   componentDidMount() {
     this.generateTableData();
   }
 
+  pageChangeCallback(newPageNumber) {
+    const pager = this.state.pager;
+    pager.currentPage = newPageNumber;
+    this.setState({ pager });
+    console.log(this.state);
+  }
+
   generateTableData() {
     const slice = Object.keys(FUNCTIONS)
-      .slice(0, this.state.limit)
+      //.slice(0, this.state.limit * 2)
       .map((addr) => {
         const obj = FUNCTIONS[addr];
         obj["address"] = addr;
         return obj;
       });
-    console.log(slice);
+    // console.log(slice);
 
-    this.setState({ tableData: slice });
+    this.setState({ tableData: slice }, () => {
+      this.updatePageInfo();
+    });
+  }
+
+  updatePageInfo() {
+    /*
+    const pager = {
+      totalPages: this.state.pager.totalPages,
+      currentPage: ,
+    };*/
+
+    const oldTotalPages = this.state.pager.totalPages;
+    const newTotalPages = Math.ceil(
+      this.state.tableData.length / this.state.limit
+    );
+    const oldCurrentPage = this.state.pager.currentPage;
+    //console.log(this.state.tableData);
+    const pager = {
+      totalPages: newTotalPages,
+      currentPage: oldTotalPages == newTotalPages ? oldCurrentPage : 0,
+      //currentPage: 0,
+    };
+
+    this.setState({ pager });
   }
 
   renderCommitCell(commitID) {
@@ -62,7 +98,7 @@ export default class FunctionTable extends React.Component {
   }
 
   generateRow(func) {
-    console.log(func);
+    //console.log(func);
     return (
       <tr
         className={func.commit ? "has-background-success-light" : ""}
@@ -79,6 +115,12 @@ export default class FunctionTable extends React.Component {
   render() {
     return (
       <div>
+        <Pagination
+          callback={(pageID) => {
+            this.pageChangeCallback(pageID);
+          }}
+          info={this.state.pager}
+        />
         <table className="table is-fullwidth">
           <thead>
             <tr>
@@ -89,12 +131,23 @@ export default class FunctionTable extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.tableData.map((func) => {
-              return this.generateRow(func);
-            })}
+            {this.state.tableData
+              .slice(
+                this.state.pager.currentPage * this.state.limit,
+                this.state.pager.currentPage * this.state.limit +
+                  this.state.limit
+              )
+              .map((func) => {
+                return this.generateRow(func);
+              })}
           </tbody>
         </table>
-        <Pagination />
+        <Pagination
+          callback={(pageID) => {
+            this.pageChangeCallback(pageID);
+          }}
+          info={this.state.pager}
+        />
       </div>
     );
   }
