@@ -6,6 +6,11 @@ import Pagination from "./pagination";
 
 const baseURL = "https://github.com/bfbbdecomp/bfbb/";
 
+/*
+  TODO ideas:
+  include references/importance. # of times this function is referenced
+*/
+
 export default class FunctionTable extends React.Component {
   state = {
     limit: 100,
@@ -25,7 +30,7 @@ export default class FunctionTable extends React.Component {
     const pager = this.state.pager;
     pager.currentPage = newPageNumber;
     this.setState({ pager });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   generateTableData() {

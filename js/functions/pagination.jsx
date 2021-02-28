@@ -1,43 +1,52 @@
 import React from "react";
 
 const GROUP_LIMIT = 5;
-const PADDING = 2;
+
+const range = (min, max) =>
+  Array.from({ length: max - min + 1 }, (_, i) => i + min);
 
 export default class Pagination extends React.Component {
-  renderPageButtons() {
-    const info = this.props.info;
+  getButtonList() {
+    const { totalPages, currentPage } = this.props.info;
+    // console.log(totalPages, currentPage);
+
     const pageArray = [];
 
-    if (info.currentPage >= GROUP_LIMIT - PADDING) {
-      pageArray.push([1]);
-      pageArray.push(null);
-      // are we in the middle or are we at the end?
-      if (info.currentPage <= info.totalPages - GROUP_LIMIT) {
-        pageArray.push(
-          Array.from(
-            { length: GROUP_LIMIT },
-            (_, i) => i + info.currentPage - 1
-          )
-        );
-        pageArray.push(null);
-        pageArray.push([info.totalPages]);
-      }
-      // we are at the end
-      else {
-        pageArray.push(
-          Array.from(
-            { length: GROUP_LIMIT },
-            (_, i) => i + info.totalPages - GROUP_LIMIT + 1
-          )
-        );
-      }
-    } else {
-      pageArray.push(Array.from({ length: GROUP_LIMIT }, (_, i) => i + 1));
-      pageArray.push(null);
-      pageArray.push([info.totalPages]);
+    if (totalPages <= 0) {
+      return pageArray;
     }
 
-    console.log(info, pageArray);
+    if (totalPages <= GROUP_LIMIT) {
+      pageArray.push(range(1, totalPages));
+      return pageArray;
+    }
+
+    if (currentPage < GROUP_LIMIT) {
+      pageArray.push(range(1, GROUP_LIMIT + 1));
+      pageArray.push(null);
+      pageArray.push([totalPages]);
+      return pageArray;
+    }
+
+    if (currentPage > totalPages - GROUP_LIMIT) {
+      pageArray.push([1], null);
+      pageArray.push(range(totalPages - GROUP_LIMIT, totalPages));
+      return pageArray;
+    }
+
+    const GROUP_HALF = Math.floor(GROUP_LIMIT / 2);
+    pageArray.push([1], null);
+    pageArray.push(
+      range(currentPage - GROUP_HALF + 1, currentPage + GROUP_HALF + 1)
+    );
+    pageArray.push(null, [totalPages]);
+
+    return pageArray;
+  }
+
+  renderPageButtons() {
+    const info = this.props.info;
+    const pageArray = this.getButtonList();
 
     return (
       <ul className="pagination-list">
