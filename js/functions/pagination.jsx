@@ -22,6 +22,15 @@ export default class Pagination extends React.Component {
         pageArray.push(null);
         pageArray.push([info.totalPages]);
       }
+      // we are at the end
+      else {
+        pageArray.push(
+          Array.from(
+            { length: GROUP_LIMIT },
+            (_, i) => i + info.totalPages - GROUP_LIMIT + 1
+          )
+        );
+      }
     } else {
       pageArray.push(Array.from({ length: GROUP_LIMIT }, (_, i) => i + 1));
       pageArray.push(null);
@@ -36,7 +45,7 @@ export default class Pagination extends React.Component {
           // null = page separator
           if (!value) {
             return (
-              <li>
+              <li key={Math.random()}>
                 <span className="pagination-ellipsis">&hellip;</span>
               </li>
             );
@@ -65,13 +74,34 @@ export default class Pagination extends React.Component {
   }
 
   render() {
+    const currentPage = this.props.info.currentPage;
+    const totalPages = this.props.info.totalPages;
     return (
       <>
         <nav className="pagination" role="navigation" aria-label="pagination">
-          <a className="pagination-previous">Previous</a>
-          <a className="pagination-next">Next page</a>
+          <a
+            onClick={() => {
+              if (currentPage != 0) {
+                this.props.callback(currentPage - 1);
+              }
+            }}
+            className="pagination-previous"
+          >
+            Previous
+          </a>
+          <a
+            onClick={() => {
+              if (currentPage < totalPages - 1) {
+                this.props.callback(currentPage + 1);
+              }
+            }}
+            className="pagination-next"
+          >
+            Next page
+          </a>
           {this.renderPageButtons()}
         </nav>
+        {/*
         <div>
           {Object.keys(this.props.info).map((key) => {
             return (
@@ -81,6 +111,7 @@ export default class Pagination extends React.Component {
             );
           })}
         </div>
+        */}
       </>
     );
   }
