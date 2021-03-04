@@ -23,7 +23,7 @@ commands = [  #
         "cwd":
         path,
         "cmd": [
-            ["npm", "install", "-g", "parcel-bundler"],  #
+            ["npm", "install", "-g", "parcel-bundler@1.12.3"],  #
             ["npm", "install"],
             ["npm", "run", "build"],
         ]
