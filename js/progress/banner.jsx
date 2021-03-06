@@ -8,10 +8,6 @@ export default class ProgressBanner extends React.Component {
     showEstimate: false,
   };
 
-  componentDidMount() {
-    console.log(this.state.time);
-  }
-
   percentDone = () => {
     return this.props.repoState.linesPercent;
   };

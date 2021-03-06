@@ -6,7 +6,6 @@ import { getStateAtCommit } from "./functions";
 export function getTimeEstimate(days) {
   const today = Date.now();
   const goal = Math.round(today / 1000) - days * 24 * 60 * 60; // days;
-  console.log(goal);
 
   const closest = COMMITS.reduce((prev, curr) => {
     return Math.abs(curr.time - goal) < Math.abs(prev.time - goal)
