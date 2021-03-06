@@ -27,7 +27,7 @@
     "date-fns": "^2.19.0",
     "highcharts": "^8.2.2",
     "highlight.js": "^10.6.0",
-    "parcel-bundler": "^1.12.4",
+    "parcel-bundler": "1.12.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
