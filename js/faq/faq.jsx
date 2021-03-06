@@ -76,7 +76,7 @@ export default class FAQ extends React.Component {
                     <div className="has-text-weight-semibold is-size-5">
                       {qa.q}
                     </div>
-                    <p className="py-1">{qa.a}</p>
+                    <div className="py-1">{qa.a}</div>
                   </div>
                 );
               })}
