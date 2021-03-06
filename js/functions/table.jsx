@@ -102,6 +102,22 @@ export default class FunctionTable extends React.Component {
     );
   }
 
+  renderSummary() {
+    const total = this.state.tableData.length;
+    const limit = this.state.limit;
+    const page = this.state.pager.currentPage;
+    const lower = limit * page + 1;
+    let upper = limit * page + limit;
+    if (upper > total) {
+      upper = total;
+    }
+    return (
+      <div className="my-2 is-size-7">
+        Displaying {lower}-{upper} of {total}
+      </div>
+    );
+  }
+
   generateRow(func) {
     //console.log(func);
     return (
@@ -120,6 +136,7 @@ export default class FunctionTable extends React.Component {
   render() {
     return (
       <div>
+        {this.renderSummary()}
         <Pagination
           callback={(pageID) => {
             this.pageChangeCallback(pageID);
@@ -130,7 +147,7 @@ export default class FunctionTable extends React.Component {
           <thead>
             <tr>
               <th>File</th>
-              <th>Size</th>
+              <th>Lines</th>
               <th>Name</th>
               <th>Commit</th>
             </tr>
@@ -147,6 +164,7 @@ export default class FunctionTable extends React.Component {
               })}
           </tbody>
         </table>
+        {this.renderSummary()}
         <Pagination
           callback={(pageID) => {
             this.pageChangeCallback(pageID);
