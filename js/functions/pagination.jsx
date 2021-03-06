@@ -21,7 +21,7 @@ export default class Pagination extends React.Component {
       return pageArray;
     }
 
-    if (currentPage < GROUP_LIMIT) {
+    if (currentPage < GROUP_LIMIT - 1) {
       pageArray.push(range(1, GROUP_LIMIT + 1));
       pageArray.push(null);
       pageArray.push([totalPages]);
@@ -94,6 +94,7 @@ export default class Pagination extends React.Component {
                 this.props.callback(currentPage - 1);
               }
             }}
+            disabled={currentPage == 0 ? true : false}
             className="pagination-previous"
           >
             Previous
@@ -105,6 +106,7 @@ export default class Pagination extends React.Component {
               }
             }}
             className="pagination-next"
+            disabled={currentPage + 1 == totalPages ? true : false}
           >
             Next page
           </a>
