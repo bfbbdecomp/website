@@ -23,6 +23,11 @@ function getHeatmapData() {
     point.x = column;
     point.y = row;
     point.value = (point.linesDone / point.totalLines) * 100;
+
+    if (point.value == 100) {
+      point.color = "#48C774";
+    }
+
     data.push(point);
     column++;
     if (column >= 20) {
@@ -102,7 +107,7 @@ export function makeHeatmap() {
         <br>
         ${ld}/${ls} Lines (${lp}%)
         `;
-        if (fd == fs) {
+        if (this.point.value == 100) {
           // not working for some reason?
           tip = '<span style="color:green">' + tip + "</span>";
         }
