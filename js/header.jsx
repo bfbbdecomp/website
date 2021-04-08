@@ -46,7 +46,7 @@ export default class Header extends React.Component {
                   target="_blank"
                   rel="noreferrer"
                   className="button is-discord"
-                  href="https://discord.gg/zEr6u3mRWe"
+                  href="https://discord.gg/dVbGFdYU6A"
                 >
                   <span className="icon">
                     <i className="fab fa-discord"></i>
