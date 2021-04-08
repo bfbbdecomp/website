@@ -1,5 +1,6 @@
 import React from "react";
 import Timeline from "./timeline/timeline";
+import Heatmap from "./heatmap/heatmap";
 import ProgressBanner from "./banner";
 import { COMMITS } from "../../data/commits";
 import { getStateAtCommit } from "../helpers/functions";
@@ -38,9 +39,16 @@ export default class Overview extends React.Component {
   render() {
     return (
       <>
-        <div>
+        <div className="container">
           <ProgressBanner repoState={this.state.repoState} />
-          <Timeline />
+          <div className="columns">
+            <div className="column">
+              <Timeline />
+            </div>
+            <div className="column">
+              <Heatmap />
+            </div>
+          </div>
         </div>
       </>
     );

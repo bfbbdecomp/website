@@ -51,6 +51,7 @@ export function makeTimeline(options) {
     title: {
       // text: "Decompilation Progress",
     },
+    /*
     chart: {
       height: "50%",
     },
@@ -68,6 +69,7 @@ export function makeTimeline(options) {
         },
       ],
     },
+    */
 
     credits: {
       enabled: false,
