@@ -18,8 +18,20 @@ export function getTimeEstimate(days) {
     new Date(closest.time * 1000)
   );
 
-  const stateThen = getStateAtCommit(getCommitIDByHash(closest.hash));
+  let stateThen = getStateAtCommit(getCommitIDByHash(closest.hash));
   const stateNow = getStateAtCommit(COMMITS.length);
+
+  /*
+    for some reason the progress script has a bug and adds commits with
+    no difference in progress when it shouldn't... not sure why.
+    instead of fixing this bug, here's a ghetto hack
+    that just selects the last commit that was different.
+  */
+  let i = 0;
+  while (stateNow.linesDone == stateThen.linesDone) {
+    stateThen = getStateAtCommit(COMMITS.length - i);
+    i += 1;
+  }
 
   const difference = stateNow.linesDone - stateThen.linesDone;
   const remaining = stateNow.lines - stateNow.linesDone;
