@@ -1,0 +1,21 @@
+.fn BbowlTossEndCB__FP15xAnimTransitionP11xAnimSinglePv, local
+stwu r1, -0x10(r1)
+mflr r0
+stw r0, 0x14(r1)
+lfs f1, sBubbleBowlMultiplier@sda21(r0)
+bl xEntBoulder_BubbleBowl__Ff
+lis r3, globals@ha
+li r0, 0x0
+addi r4, r3, globals@l
+li r3, 0x4
+stw r0, 0x1aec(r4)
+bl zEntPlayer_SNDStop__F14_tagePlayerSnd
+lfs f1, "@976"@sda21(r0)
+li r3, 0x5
+bl zEntPlayer_SNDPlay__F14_tagePlayerSndf
+lwz r0, 0x14(r1)
+li r3, 0x0
+mtlr r0
+addi r1, r1, 0x10
+blr
+.endfn BbowlTossEndCB__FP15xAnimTransitionP11xAnimSinglePv

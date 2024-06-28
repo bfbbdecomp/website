@@ -1,0 +1,8 @@
+uint32 BbowlTossEndCB(xAnimTransition* tran, xAnimSingle* anim, void* param_3)
+{
+    xEntBoulder_BubbleBowl(sBubbleBowlMultiplier);
+    globals.player.IsBubbleBowling = false;
+    zEntPlayer_SNDStop(ePlayerSnd_BowlWindup);
+    zEntPlayer_SNDPlay(ePlayerSnd_BowlRelease, lbl_803CD5A0);
+    return false;
+}

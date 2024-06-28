@@ -1,0 +1,17 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 0px; /* Adjust the gap between squares if needed */
+  width: 95%;
+  height: 95%;
+}
+
+.grid-item {
+  cursor: pointer;
+  aspect-ratio: 1 / 1; /* Ensures the squares maintain a 1:1 aspect ratio */
+}
+
+.grid-item:hover {
+  border: 2px solid black;
+  aspect-ratio: 1 / 1; /* Ensures the squares maintain a 1:1 aspect ratio */
+}
