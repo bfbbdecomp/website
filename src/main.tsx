@@ -24,7 +24,7 @@ const theme = createTheme({
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <MantineProvider theme={theme}>
-      <BrowserRouter>
+      <BrowserRouter basename="bfbb">
         <App />
       </BrowserRouter>
     </MantineProvider>
