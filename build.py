@@ -10,6 +10,7 @@ commands = [
 ]
 
 for command in commands:
+    print(command)
     proc = subprocess.run(command, shell=True)
     if proc.returncode != 0:
         raise RuntimeError(f"Command {command} failed with return code {proc.returncode}")

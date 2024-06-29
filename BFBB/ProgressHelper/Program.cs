@@ -41,4 +41,4 @@ var outAPIJson = JsonSerializer.Serialize(new
 
 
 File.WriteAllText($"{outPath}/progress.json", outProgressJson);
-File.WriteAllText($"{outPath}api.json", outAPIJson);
+File.WriteAllText($"{outPath}../public/api.json", outAPIJson);

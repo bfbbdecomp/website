@@ -6,4 +6,5 @@ bin/
 obj/
 json/*.json
 artifacts/*.json
+public/*.json
 dist/
