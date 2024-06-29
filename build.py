@@ -4,7 +4,7 @@ import os
 path = os.path.dirname(os.path.realpath(__file__))
 
 commands = [
-    "dotnet run --project BFBB/ProgressHelper progress.json json/",
+    "dotnet run --project BFBB/ProgressHelper artifacts/progress.json json/",
     "npm install",
     "npm run build"
 ]
