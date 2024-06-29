@@ -4,5 +4,5 @@ package-lock.json
 .idea
 bin/
 obj/
-json/
+json/*.json
 dist/
