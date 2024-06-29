@@ -5,4 +5,5 @@ package-lock.json
 bin/
 obj/
 json/*.json
+artifacts/*.json
 dist/
