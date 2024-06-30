@@ -36,7 +36,7 @@ export const metricData: Record<FileMetric, FileMetricData> = {
     value: (unit) => unit.matched_code,
     percentage: (unit, units) =>
       (unit.matched_code / max(units.flatMap((x) => x.matched_code))) * 100,
-    gradient: chroma.scale(["pink", "darkblue"]),
+    gradient: chroma.scale(["lightgray", "darkgreen"]),
   },
   [FileMetric.CodeSize]: {
     description: "Code Size",
