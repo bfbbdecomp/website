@@ -16,6 +16,8 @@ export enum FileMetric {
   CodeSize = "size",
   FunctionCount = "total-functions",
   Complete = "complete",
+  TotalData = "total-data",
+  MatchedDataPercent = "matched-data-percent",
 }
 
 // const sum = (arr: number[]) => arr.reduce((acc, curr) => acc + curr, 0);
@@ -75,6 +77,19 @@ export const metricData: Record<FileMetric, FileMetricData> = {
       (unit.functions.length / max(units.flatMap((x) => x.functions.length))) *
       100,
     gradient: chroma.scale(["pink", "black"]),
+  },
+  [FileMetric.TotalData]: {
+    description: "Total Data",
+    value: (unit) => unit.total_data,
+    percentage: (unit, units) =>
+      (unit.total_data / max(units.flatMap((x) => x.total_data))) * 100,
+    gradient: chroma.scale(["lightgray", "maroon"]),
+  },
+  [FileMetric.MatchedDataPercent]: {
+    description: "Matched Data %",
+    value: (unit) =>
+      unit.total_data ? (unit.matched_data / unit.total_data) * 100 : 100,
+    gradient: chroma.scale(["lightgray", "maroon"]),
   },
   [FileMetric.Complete]: {
     description: "Completed",
