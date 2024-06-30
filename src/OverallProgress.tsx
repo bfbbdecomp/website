@@ -89,12 +89,14 @@ export function OverallProgress() {
   };
 
   function getUnits(units: Unit[]): Unit[] {
+    // Filter units by filename
     const fileFiltered = !fileFilter
       ? units
       : units.filter((u) =>
           u.name.toLowerCase().includes(fileFilter.toLowerCase())
         );
 
+    // filter by function name
     const filtered = !functionFilter
       ? fileFiltered
       : fileFiltered.filter((u) =>
@@ -109,6 +111,7 @@ export function OverallProgress() {
             )
         );
 
+    // filter by the current selected metric sort if it is selected
     if (!sortType) return filtered;
     const { accessor } = metricData[sortType];
     return filtered.sort((a, b) => accessor(b) - accessor(a));
