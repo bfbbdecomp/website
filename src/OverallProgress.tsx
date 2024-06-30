@@ -127,8 +127,8 @@ export function OverallProgress() {
               <TextInput
                 value={fileFilter}
                 onChange={(event) => setFileFilter(event.currentTarget.value)}
-                label="Filename Filter"
-                placeholder="Filter by filename"
+                label="File Name Filter"
+                placeholder="Filter by file name"
               />
               <TextInput
                 value={functionFilter}
