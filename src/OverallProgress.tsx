@@ -14,7 +14,7 @@ export function OverallProgress() {
   const [unit, setUnit] = useState<Unit | undefined>(ProgressReport.units[0]);
   const [sortMetric, setSortMetric] = useState<FileMetric | null>(null);
   const [highlightMetric, setHighlightMetric] = useState<FileMetric | null>(
-    null
+    FileMetric.FuzzyPercent
   );
   const [fileFilter, setFileFilter] = useState("");
   const [functionFilter, setFunctionFilter] = useState("");

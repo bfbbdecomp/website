@@ -23,12 +23,12 @@ export const metricData: Record<FileMetric, FileMetricData> = {
   [FileMetric.FuzzyPercent]: {
     description: "Close Match %",
     value: (unit) => unit.fuzzy_match_percent,
-    gradient: chroma.scale(["red", "green"]),
+    gradient: chroma.scale(["red", "lime"]),
   },
   [FileMetric.MatchedPercent]: {
     description: "Perfect Match %",
     value: (unit) => (unit.matched_code / unit.total_code) * 100,
-    gradient: chroma.scale(["red", "green"]),
+    gradient: chroma.scale(["red", "lime"]),
   },
   [FileMetric.MatchedCode]: {
     description: "Perfect Match Size",

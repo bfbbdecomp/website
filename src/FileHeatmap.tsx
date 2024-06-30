@@ -1,8 +1,8 @@
 import { Unit } from "./progress";
 import "./css/heatmap.css";
 import { Tooltip, Text } from "@mantine/core";
-import { FileMetricData } from "./OverallProgress";
 import { prettyPercent } from "./helpers";
+import { FileMetricData } from "./FileMetric";
 
 type HeatmapProps = {
   folderName: string;
@@ -41,7 +41,7 @@ export function FileHeatmap({
 
   const getColor = (percentage: number): string => {
     return metric.gradient
-      .mode("lab")(percentage / 100)
+      .mode("rgb")(percentage / 100)
       .hex();
   };
 
