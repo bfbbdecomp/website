@@ -1,11 +1,4 @@
-import {
-  Text,
-  Group,
-  Select,
-  Stack,
-  Container,
-  ComboboxItem,
-} from "@mantine/core";
+import { Text, Group, Select, Stack, Container } from "@mantine/core";
 import { ProgressReport, Unit } from "./progress";
 import { prettyPercent } from "./helpers";
 import { ProgressBar } from "./ProgressBar";
@@ -15,36 +8,41 @@ import "./css/app.css";
 import { SourceFileInfo } from "./File";
 import { useState } from "react";
 
-enum FileSortType {
+type FileMetricData = {
+  description: string;
+  accessor: (unit: Unit) => number;
+};
+
+enum FileMetric {
   FuzzyPercent = "fuzzy",
   MatchedCode = "matched",
   AvgFunctionSize = "avgFnSize",
   CodeSize = "size",
 }
 
-const sortSelections: Record<FileSortType, ComboboxItem> = {
-  [FileSortType.FuzzyPercent]: {
-    label: "Partial + Matching Code",
-    value: FileSortType.FuzzyPercent,
+const metricData: Record<FileMetric, FileMetricData> = {
+  [FileMetric.FuzzyPercent]: {
+    description: "Matching + Partially Matching Code",
+    accessor: (unit) => unit.fuzzy_match_percent,
   },
-  [FileSortType.MatchedCode]: {
-    label: "Matching Code",
-    value: FileSortType.MatchedCode,
+  [FileMetric.MatchedCode]: {
+    description: "Matched Code",
+    accessor: (unit) => unit.matched_code,
   },
-  [FileSortType.CodeSize]: {
-    label: "Total Code Size",
-    value: FileSortType.CodeSize,
+  [FileMetric.CodeSize]: {
+    description: "Total Code",
+    accessor: (unit) => unit.total_code,
   },
-  [FileSortType.AvgFunctionSize]: {
-    label: "Average Function Size",
-    value: FileSortType.AvgFunctionSize,
+  [FileMetric.AvgFunctionSize]: {
+    description: "Average Function Size",
+    accessor: (unit) => unit.total_code / unit.total_functions,
   },
 };
 
 export function OverallProgress() {
   const total = ProgressReport.matched_code_percent;
   const [unit, setUnit] = useState<Unit | undefined>(ProgressReport.units[0]);
-  const [sortType, setSortType] = useState<FileSortType | null>(null);
+  const [sortType, setSortType] = useState<FileMetric | null>(null);
 
   const gcUnits = ProgressReport.units.filter((x) =>
     x.name.toLowerCase().includes("/gc/")
@@ -78,22 +76,8 @@ export function OverallProgress() {
 
   function sortUnits(units: Unit[]): Unit[] {
     if (!sortType) return units;
-
-    const sorts: Record<FileSortType, (a: Unit, b: Unit) => number> = {
-      [FileSortType.CodeSize]: (a, b) => b.total_code - a.total_code,
-      [FileSortType.FuzzyPercent]: (a, b) =>
-        b.fuzzy_match_percent - a.fuzzy_match_percent,
-      [FileSortType.MatchedCode]: (a, b) => b.matched_code - a.matched_code,
-      [FileSortType.AvgFunctionSize]: (a, b) => {
-        return (
-          b.total_code / b.total_functions - a.total_code / a.total_functions
-        );
-      },
-    };
-
-    const sortFn = sorts[sortType];
-
-    return units.sort((a, b) => sortFn(a, b));
+    const { accessor } = metricData[sortType];
+    return units.sort((a, b) => accessor(b) - accessor(a));
   }
 
   return (
@@ -108,9 +92,12 @@ export function OverallProgress() {
             <div>
               <Text>File Sorting Method</Text>
               <Select
-                data={Object.values(sortSelections)}
+                data={Object.entries(metricData).map(([key, data]) => ({
+                  label: data.description,
+                  value: key,
+                }))}
                 value={sortType}
-                onChange={(value) => setSortType(value as FileSortType)}
+                onChange={(value) => setSortType(value as FileMetric)}
               ></Select>
             </div>
             {allFolders.map((folder, index) => (
