@@ -44,7 +44,7 @@ export function SourceFileInfo({ unit }: SourceFileInfoProps) {
     },
     {
       color: "yellowgreen",
-      name: "Partially Matching",
+      name: "Fuzzy Match",
       value: fuzzyMatch,
     },
     {

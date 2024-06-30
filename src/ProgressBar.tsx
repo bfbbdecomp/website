@@ -12,7 +12,7 @@ export function ProgressBar() {
         <Tooltip label={prettyPercent(matchPercent) + " Perfectly Matching"}>
           <Progress.Section value={matchPercent} color="green" />
         </Tooltip>
-        <Tooltip label={prettyPercent(fuzzyPercent) + " Partialy Matching"}>
+        <Tooltip label={prettyPercent(fuzzyPercent) + " Fuzzy Match"}>
           <Progress.Section
             animated
             value={fuzzyPercent - matchPercent}
