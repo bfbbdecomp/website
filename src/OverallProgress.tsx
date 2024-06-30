@@ -15,6 +15,7 @@ type FileMetricData = {
 
 enum FileMetric {
   FuzzyPercent = "fuzzy",
+  MatchedPercent = "matched-percent",
   MatchedCode = "matched",
   AvgFunctionSize = "avgFnSize",
   CodeSize = "size",
@@ -22,15 +23,19 @@ enum FileMetric {
 
 const metricData: Record<FileMetric, FileMetricData> = {
   [FileMetric.FuzzyPercent]: {
-    description: "Matching + Partially Matching Code",
+    description: "Close Match %",
+    accessor: (unit) => unit.fuzzy_match_percent,
+  },
+  [FileMetric.MatchedPercent]: {
+    description: "Perfect Match %",
     accessor: (unit) => unit.fuzzy_match_percent,
   },
   [FileMetric.MatchedCode]: {
-    description: "Matched Code",
+    description: "Perfect Match Size",
     accessor: (unit) => unit.matched_code,
   },
   [FileMetric.CodeSize]: {
-    description: "Total Code",
+    description: "Code Size",
     accessor: (unit) => unit.total_code,
   },
   [FileMetric.AvgFunctionSize]: {
@@ -89,8 +94,8 @@ export function OverallProgress() {
         </div>
         <Group grow gap={"lg"}>
           <Stack gap={"sm"}>
-            <div>
-              <Text>File Sorting Method</Text>
+            <Group>
+              <Text>Sort Metric</Text>
               <Select
                 data={Object.entries(metricData).map(([key, data]) => ({
                   label: data.description,
@@ -99,7 +104,7 @@ export function OverallProgress() {
                 value={sortType}
                 onChange={(value) => setSortType(value as FileMetric)}
               ></Select>
-            </div>
+            </Group>
             {allFolders.map((folder, index) => (
               <FileHeatmap
                 key={index}
