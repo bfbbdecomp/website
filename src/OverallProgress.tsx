@@ -1,10 +1,10 @@
 import {
-  ComboboxData,
   Text,
   Group,
   Select,
   Stack,
   Container,
+  ComboboxItem,
 } from "@mantine/core";
 import { ProgressReport, Unit } from "./progress";
 import { prettyPercent } from "./helpers";
@@ -22,24 +22,24 @@ enum FileSortType {
   CodeSize = "size",
 }
 
-const sortSelections: ComboboxData = [
-  {
+const sortSelections: Record<FileSortType, ComboboxItem> = {
+  [FileSortType.FuzzyPercent]: {
     label: "Partial + Matching Code",
     value: FileSortType.FuzzyPercent,
   },
-  {
+  [FileSortType.MatchedCode]: {
     label: "Matching Code",
     value: FileSortType.MatchedCode,
   },
-  {
+  [FileSortType.CodeSize]: {
     label: "Total Code Size",
     value: FileSortType.CodeSize,
   },
-  {
+  [FileSortType.AvgFunctionSize]: {
     label: "Average Function Size",
     value: FileSortType.AvgFunctionSize,
   },
-];
+};
 
 export function OverallProgress() {
   const total = ProgressReport.matched_code_percent;
@@ -108,7 +108,7 @@ export function OverallProgress() {
             <div>
               <Text>File Sorting Method</Text>
               <Select
-                data={sortSelections}
+                data={Object.values(sortSelections)}
                 value={sortType}
                 onChange={(value) => setSortType(value as FileSortType)}
               ></Select>

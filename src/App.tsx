@@ -10,7 +10,6 @@ function App() {
       <AppShell.Header>
         <Group h="100%" px="md">
           <Group justify="space-between" style={{ flex: 1 }}>
-            {" "}
             <Group ml="xl" gap={"lg"}>
               <UnstyledButton onClick={() => navigate("/about")}>
                 About
