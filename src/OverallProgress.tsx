@@ -56,6 +56,7 @@ export function OverallProgress() {
   const [unit, setUnit] = useState<Unit | undefined>(ProgressReport.units[0]);
   const [sortType, setSortType] = useState<FileMetric | null>(null);
   const [fileFilter, setFileFilter] = useState("");
+  const [functionFilter, setFunctionFilter] = useState("");
 
   const gcUnits = ProgressReport.units.filter((x) =>
     x.name.toLowerCase().includes("/gc/")
@@ -88,9 +89,25 @@ export function OverallProgress() {
   };
 
   function getUnits(units: Unit[]): Unit[] {
-    const filtered = !fileFilter
+    const fileFiltered = !fileFilter
       ? units
-      : units.filter((u) => u.name.toLowerCase().includes(fileFilter));
+      : units.filter((u) =>
+          u.name.toLowerCase().includes(fileFilter.toLowerCase())
+        );
+
+    const filtered = !functionFilter
+      ? fileFiltered
+      : fileFiltered.filter((u) =>
+          u.functions
+            .flatMap((fn) => fn)
+            .some(
+              (fn) =>
+                fn.name.toLowerCase().includes(functionFilter.toLowerCase()) ||
+                fn.demangled_name
+                  ?.toLowerCase()
+                  .includes(functionFilter.toLowerCase())
+            )
+        );
 
     if (!sortType) return filtered;
     const { accessor } = metricData[sortType];
@@ -104,8 +121,24 @@ export function OverallProgress() {
           <h1>Battle for Bikini Bottom is {prettyPercent(total)} decompiled</h1>
           <ProgressBar />
         </div>
-        <Group grow gap={"lg"}>
+        <Group grow gap={"lg"} align={"flex-start"}>
           <Stack gap={"sm"}>
+            <Group grow>
+              <TextInput
+                value={fileFilter}
+                onChange={(event) => setFileFilter(event.currentTarget.value)}
+                label="Filename Filter"
+                placeholder="Filter by filename"
+              />
+              <TextInput
+                value={functionFilter}
+                onChange={(event) =>
+                  setFunctionFilter(event.currentTarget.value)
+                }
+                label="Function Name Filter"
+                placeholder="Filter by function name"
+              />
+            </Group>
             <Group>
               <Text>Sort Metric</Text>
               <Select
@@ -117,14 +150,6 @@ export function OverallProgress() {
                 onChange={(value) => setSortType(value as FileMetric)}
               ></Select>
             </Group>
-            <div>
-              <TextInput
-                value={fileFilter}
-                onChange={(event) => setFileFilter(event.currentTarget.value)}
-                label="File Filter"
-                placeholder="Filter by filename"
-              />
-            </div>
             <div>
               {allFolders.map((folder, index) => (
                 <FileHeatmap
