@@ -1,11 +1,4 @@
-import {
-  Text,
-  Group,
-  Select,
-  Stack,
-  Container,
-  TextInput,
-} from "@mantine/core";
+import { Group, Select, Stack, Container, TextInput } from "@mantine/core";
 import { ProgressReport, Unit } from "./progress";
 import { prettyPercent } from "./helpers";
 import { ProgressBar } from "./ProgressBar";
@@ -14,10 +7,13 @@ import { FileHeatmap } from "./FileHeatmap";
 import "./css/app.css";
 import { SourceFileInfo } from "./File";
 import { useState } from "react";
+import chroma from "chroma-js";
 
-type FileMetricData = {
+export type FileMetricData = {
   description: string;
   accessor: (unit: Unit) => number;
+  gradient: chroma.Scale;
+  isPercentage: boolean;
 };
 
 enum FileMetric {
@@ -32,22 +28,32 @@ const metricData: Record<FileMetric, FileMetricData> = {
   [FileMetric.FuzzyPercent]: {
     description: "Close Match %",
     accessor: (unit) => unit.fuzzy_match_percent,
+    isPercentage: true,
+    gradient: chroma.scale(["red", "green"]),
   },
   [FileMetric.MatchedPercent]: {
     description: "Perfect Match %",
     accessor: (unit) => unit.fuzzy_match_percent,
+    isPercentage: true,
+    gradient: chroma.scale(["pink", "darkblue"]),
   },
   [FileMetric.MatchedCode]: {
     description: "Perfect Match Size",
     accessor: (unit) => unit.matched_code,
+    isPercentage: false,
+    gradient: chroma.scale(["pink", "darkblue"]),
   },
   [FileMetric.CodeSize]: {
     description: "Code Size",
     accessor: (unit) => unit.total_code,
+    isPercentage: false,
+    gradient: chroma.scale(["pink", "darkblue"]),
   },
   [FileMetric.AvgFunctionSize]: {
     description: "Average Function Size",
     accessor: (unit) => unit.total_code / unit.total_functions,
+    isPercentage: true,
+    gradient: chroma.scale(["pink", "darkblue"]),
   },
 };
 
@@ -172,6 +178,9 @@ export function OverallProgress() {
                   folderName={folder.name}
                   units={getUnits(folder.units)}
                   onClick={onFileClick}
+                  metric={
+                    metricData[highlightMetric ?? FileMetric.FuzzyPercent]
+                  }
                 />
               ))}
             </div>

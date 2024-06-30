@@ -17,6 +17,7 @@
     "@mantine/hooks": "^7.11.0",
     "@tabler/icons-react": "^3.7.0",
     "apexcharts": "^3.49.1",
+    "chroma-js": "^2.4.2",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
     "mantine-react-table": "^2.0.0-beta.5",
@@ -27,6 +28,7 @@
     "recharts": "^2.12.7"
   },
   "devDependencies": {
+    "@types/chroma-js": "^2.4.4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.13.1",

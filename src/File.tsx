@@ -9,7 +9,11 @@ type Info = {
   current: number;
 };
 
-export function SourceFileInfo({ unit }: { unit: Unit }) {
+type SourceFileInfoProps = {
+  unit: Unit;
+};
+
+export function SourceFileInfo({ unit }: SourceFileInfoProps) {
   const perfectMatch = (unit.matched_code / unit.total_code) * 100;
   const fuzzyMatch = unit.fuzzy_match_percent - perfectMatch;
   const remaining = 100 - unit.fuzzy_match_percent;
