@@ -1,4 +1,11 @@
-import { Text, Group, Select, Stack, Container } from "@mantine/core";
+import {
+  Text,
+  Group,
+  Select,
+  Stack,
+  Container,
+  TextInput,
+} from "@mantine/core";
 import { ProgressReport, Unit } from "./progress";
 import { prettyPercent } from "./helpers";
 import { ProgressBar } from "./ProgressBar";
@@ -48,6 +55,7 @@ export function OverallProgress() {
   const total = ProgressReport.matched_code_percent;
   const [unit, setUnit] = useState<Unit | undefined>(ProgressReport.units[0]);
   const [sortType, setSortType] = useState<FileMetric | null>(null);
+  const [fileFilter, setFileFilter] = useState("");
 
   const gcUnits = ProgressReport.units.filter((x) =>
     x.name.toLowerCase().includes("/gc/")
@@ -79,10 +87,14 @@ export function OverallProgress() {
     setUnit(unit);
   };
 
-  function sortUnits(units: Unit[]): Unit[] {
-    if (!sortType) return units;
+  function getUnits(units: Unit[]): Unit[] {
+    const filtered = !fileFilter
+      ? units
+      : units.filter((u) => u.name.toLowerCase().includes(fileFilter));
+
+    if (!sortType) return filtered;
     const { accessor } = metricData[sortType];
-    return units.sort((a, b) => accessor(b) - accessor(a));
+    return filtered.sort((a, b) => accessor(b) - accessor(a));
   }
 
   return (
@@ -105,14 +117,24 @@ export function OverallProgress() {
                 onChange={(value) => setSortType(value as FileMetric)}
               ></Select>
             </Group>
-            {allFolders.map((folder, index) => (
-              <FileHeatmap
-                key={index}
-                folderName={folder.name}
-                units={sortUnits(folder.units)}
-                onClick={onFileClick}
+            <div>
+              <TextInput
+                value={fileFilter}
+                onChange={(event) => setFileFilter(event.currentTarget.value)}
+                label="File Filter"
+                placeholder="Filter by filename"
               />
-            ))}
+            </div>
+            <div>
+              {allFolders.map((folder, index) => (
+                <FileHeatmap
+                  key={index}
+                  folderName={folder.name}
+                  units={getUnits(folder.units)}
+                  onClick={onFileClick}
+                />
+              ))}
+            </div>
           </Stack>
           {unit && <SourceFileInfo unit={unit} />}
         </Group>
