@@ -54,7 +54,10 @@ const metricData: Record<FileMetric, FileMetricData> = {
 export function OverallProgress() {
   const total = ProgressReport.matched_code_percent;
   const [unit, setUnit] = useState<Unit | undefined>(ProgressReport.units[0]);
-  const [sortType, setSortType] = useState<FileMetric | null>(null);
+  const [sortMetric, setSortMetric] = useState<FileMetric | null>(null);
+  const [highlightMetric, setHighlightMetric] = useState<FileMetric | null>(
+    null
+  );
   const [fileFilter, setFileFilter] = useState("");
   const [functionFilter, setFunctionFilter] = useState("");
 
@@ -112,8 +115,8 @@ export function OverallProgress() {
         );
 
     // filter by the current selected metric sort if it is selected
-    if (!sortType) return filtered;
-    const { accessor } = metricData[sortType];
+    if (!sortMetric) return filtered;
+    const { accessor } = metricData[sortMetric];
     return filtered.sort((a, b) => accessor(b) - accessor(a));
   }
 
@@ -142,16 +145,25 @@ export function OverallProgress() {
                 placeholder="Filter by function name"
               />
             </Group>
-            <Group>
+            <Group grow>
               <Select
                 label="File Sort Metric"
                 data={Object.entries(metricData).map(([key, data]) => ({
                   label: data.description,
                   value: key,
                 }))}
-                value={sortType}
-                onChange={(value) => setSortType(value as FileMetric)}
-              ></Select>
+                value={sortMetric}
+                onChange={(value) => setSortMetric(value as FileMetric)}
+              />
+              <Select
+                label="Highlight Metric"
+                data={Object.entries(metricData).map(([key, data]) => ({
+                  label: data.description,
+                  value: key,
+                }))}
+                value={highlightMetric}
+                onChange={(value) => setHighlightMetric(value as FileMetric)}
+              />
             </Group>
             <div>
               {allFolders.map((folder, index) => (
