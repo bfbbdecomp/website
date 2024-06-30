@@ -129,7 +129,7 @@ export function OverallProgress() {
                   key={index}
                   folderName={folder.name}
                   filteredUnits={getUnits(folder.units)}
-                  allUnits={folder.units}
+                  allUnits={allFolders.flatMap((x) => x.units)}
                   onClick={onFileClick}
                   metric={
                     metricData[highlightMetric ?? FileMetric.FuzzyPercent]
