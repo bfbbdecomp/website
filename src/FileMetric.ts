@@ -14,6 +14,7 @@ export enum FileMetric {
   MatchedCode = "matched",
   AvgFunctionSize = "avgFnSize",
   CodeSize = "size",
+  FunctionCount = "total-functions",
   Complete = "complete",
 }
 
@@ -66,6 +67,14 @@ export const metricData: Record<FileMetric, FileMetricData> = {
         : 0,
 
     gradient: chroma.scale(["yellow", "darkblue"]),
+  },
+  [FileMetric.FunctionCount]: {
+    description: "Function Count",
+    value: (unit) => unit.functions.length,
+    percentage: (unit, units) =>
+      (unit.functions.length / max(units.flatMap((x) => x.functions.length))) *
+      100,
+    gradient: chroma.scale(["pink", "black"]),
   },
   [FileMetric.Complete]: {
     description: "Completed",
