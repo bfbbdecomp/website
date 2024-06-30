@@ -140,8 +140,8 @@ export function OverallProgress() {
               />
             </Group>
             <Group>
-              <Text>Sort Metric</Text>
               <Select
+                label="File Sort Metric"
                 data={Object.entries(metricData).map(([key, data]) => ({
                   label: data.description,
                   value: key,
