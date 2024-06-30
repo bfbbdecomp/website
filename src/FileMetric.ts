@@ -27,7 +27,8 @@ export const metricData: Record<FileMetric, FileMetricData> = {
   },
   [FileMetric.MatchedPercent]: {
     description: "Perfect Match %",
-    value: (unit) => (unit.matched_code / unit.total_code) * 100,
+    value: (unit) =>
+      unit.total_code ? (unit.matched_code / unit.total_code) * 100 : 100,
     gradient: chroma.scale(["red", "lime"]),
   },
   [FileMetric.MatchedCode]: {
@@ -46,12 +47,23 @@ export const metricData: Record<FileMetric, FileMetricData> = {
   },
   [FileMetric.AvgFunctionSize]: {
     description: "Average Function Size",
-    value: (unit) => Math.floor(unit.total_code / unit.total_functions),
+    value: (unit) =>
+      unit.total_functions
+        ? Math.floor(unit.total_code / unit.total_functions)
+        : 0,
     percentage: (unit, units) =>
-      (unit.total_code /
-        unit.total_functions /
-        max(units.flatMap((x) => x.total_code / x.total_functions))) *
-      100,
-    gradient: chroma.scale(["pink", "darkblue"]),
+      // yeah, this is kind of ugly, but we have to keep from dividing against 0
+      unit.total_functions
+        ? (unit.total_code /
+            unit.total_functions /
+            max(
+              units.flatMap((x) =>
+                x.total_functions ? x.total_code / x.total_functions : 0
+              )
+            )) *
+          100
+        : 0,
+
+    gradient: chroma.scale(["yellow", "darkblue"]),
   },
 };
