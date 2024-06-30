@@ -14,6 +14,7 @@ export enum FileMetric {
   MatchedCode = "matched",
   AvgFunctionSize = "avgFnSize",
   CodeSize = "size",
+  Complete = "complete",
 }
 
 // const sum = (arr: number[]) => arr.reduce((acc, curr) => acc + curr, 0);
@@ -65,5 +66,10 @@ export const metricData: Record<FileMetric, FileMetricData> = {
         : 0,
 
     gradient: chroma.scale(["yellow", "darkblue"]),
+  },
+  [FileMetric.Complete]: {
+    description: "Completed",
+    value: (unit) => (unit.complete ? 100 : 0),
+    gradient: chroma.scale(["red", "lime"]),
   },
 };
