@@ -1,12 +1,12 @@
 import { Unit } from "./progress";
 import "./css/heatmap.css";
 import { Tooltip, Text } from "@mantine/core";
-import { prettyPercent } from "./helpers";
 import { FileMetricData } from "./OverallProgress";
 
 type HeatmapProps = {
   folderName: string;
-  units: Unit[];
+  filteredUnits: Unit[];
+  allUnits: Unit[];
   onClick: (name: string) => void;
   metric: FileMetricData;
 };
@@ -14,7 +14,8 @@ type HeatmapProps = {
 export function FileHeatmap({
   folderName,
   onClick,
-  units,
+  filteredUnits,
+  allUnits,
   metric,
 }: HeatmapProps) {
   type FileInfo = {
@@ -27,11 +28,15 @@ export function FileHeatmap({
     units: FileInfo[];
   };
 
-  const fileInfos: FileInfo[] = units.map((unit) => ({
-    name: unit.name,
-    percentage: metric.accessor(unit),
-    value: "hey",
-  }));
+  const fileInfos: FileInfo[] = filteredUnits.map((unit) => {
+    const value = metric.value(unit);
+    const info: FileInfo = {
+      name: unit.name,
+      value: value.toString(),
+      percentage: metric.percentage ? metric.percentage(unit, allUnits) : value,
+    };
+    return info;
+  });
 
   const getColor = (percentage: number): string => {
     return metric.gradient.mode("lab")(percentage).hex();

@@ -11,9 +11,9 @@ import chroma from "chroma-js";
 
 export type FileMetricData = {
   description: string;
-  accessor: (unit: Unit) => number;
+  value: (unit: Unit) => number;
+  percentage?: (unit: Unit, units: Unit[]) => number;
   gradient: chroma.Scale;
-  isPercentage: boolean;
 };
 
 enum FileMetric {
@@ -24,35 +24,37 @@ enum FileMetric {
   CodeSize = "size",
 }
 
+// const sum = (arr: number[]) => arr.reduce((acc, curr) => acc + curr, 0);
+const max = (arr: number[]) => Math.max(...arr);
+
 const metricData: Record<FileMetric, FileMetricData> = {
   [FileMetric.FuzzyPercent]: {
     description: "Close Match %",
-    accessor: (unit) => unit.fuzzy_match_percent,
-    isPercentage: true,
+    value: (unit) => unit.fuzzy_match_percent,
     gradient: chroma.scale(["red", "green"]),
   },
   [FileMetric.MatchedPercent]: {
     description: "Perfect Match %",
-    accessor: (unit) => unit.fuzzy_match_percent,
-    isPercentage: true,
-    gradient: chroma.scale(["pink", "darkblue"]),
+    value: (unit) => unit.matched_code / unit.total_code,
+    gradient: chroma.scale(["red", "blue"]),
   },
   [FileMetric.MatchedCode]: {
     description: "Perfect Match Size",
-    accessor: (unit) => unit.matched_code,
-    isPercentage: false,
+    value: (unit) => unit.matched_code,
+    percentage: (unit, units) =>
+      unit.matched_code / max(units.flatMap((x) => x.matched_code)),
     gradient: chroma.scale(["pink", "darkblue"]),
   },
   [FileMetric.CodeSize]: {
     description: "Code Size",
-    accessor: (unit) => unit.total_code,
-    isPercentage: false,
+    value: (unit) => unit.total_code,
+    percentage: (unit, units) =>
+      unit.total_code / max(units.flatMap((x) => x.total_code)),
     gradient: chroma.scale(["pink", "darkblue"]),
   },
   [FileMetric.AvgFunctionSize]: {
     description: "Average Function Size",
-    accessor: (unit) => unit.total_code / unit.total_functions,
-    isPercentage: true,
+    value: (unit) => unit.total_code / unit.total_functions,
     gradient: chroma.scale(["pink", "darkblue"]),
   },
 };
@@ -122,8 +124,8 @@ export function OverallProgress() {
 
     // filter by the current selected metric sort if it is selected
     if (!sortMetric) return filtered;
-    const { accessor } = metricData[sortMetric];
-    return filtered.sort((a, b) => accessor(b) - accessor(a));
+    const { value } = metricData[sortMetric];
+    return filtered.sort((a, b) => value(b) - value(a));
   }
 
   return (
@@ -176,7 +178,8 @@ export function OverallProgress() {
                 <FileHeatmap
                   key={index}
                   folderName={folder.name}
-                  units={getUnits(folder.units)}
+                  filteredUnits={getUnits(folder.units)}
+                  allUnits={folder.units}
                   onClick={onFileClick}
                   metric={
                     metricData[highlightMetric ?? FileMetric.FuzzyPercent]
