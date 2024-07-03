@@ -36,7 +36,10 @@ var outAPIJson = JsonSerializer.Serialize(new
     gameReport.MatchedCodePercent,
     gameReport.MatchedDataPercent,
     gameReport.MatchedFunctionsPercent,
-    gameReport.FuzzyMatchPercent
+    gameReport.FuzzyMatchPercent,
+    PerfectMatch =  gameReport.MatchedCodePercent.ToString("0.00") + "%",
+    FuzzyMatch = gameReport.FuzzyMatchPercent.ToString("0.00") + "%",
+    FunctionsMatched = gameReport.MatchedFunctionsPercent.ToString("0.00") + "%"
 }, serializerOptions);
 
 
