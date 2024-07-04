@@ -22,6 +22,9 @@ var gameReport =
         })
         .ToList());
 
+var tsSample = gameReport with { Units = gameReport.Units.Take(2).ToList() };
+var sampleJson = JsonHelper.Serialize(tsSample);
+
 var outProgressJson = JsonHelper.Serialize(gameReport);
 var outAPIJson = JsonHelper.Serialize(new
 {
@@ -42,4 +45,5 @@ var outAPIJson = JsonHelper.Serialize(new
 
 
 File.WriteAllText($"{outPath}/progress.json", outProgressJson);
+File.WriteAllText($"{outPath}/sample.json", sampleJson);
 File.WriteAllText($"{outPath}../public/api.json", outAPIJson);
