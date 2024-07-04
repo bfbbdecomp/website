@@ -16,8 +16,6 @@ import progress from "../json/progress.json";
 type Report = typeof sample;
 export const ProgressReport = progress as Report;
 
-const foo = 3;
-
 export type Unit = (typeof ProgressReport.units)[number];
 
 const fn = ProgressReport.units[0].functions;
