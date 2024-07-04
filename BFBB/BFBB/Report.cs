@@ -1,6 +1,8 @@
+using System.Text.Json;
+
 namespace BFBB;
 
-public record Report(List<ReportUnit> Units)
+public record Report(List<ReportUnit> Units, AsmFunction? AsmInfo = null)
 {
     public long TotalCode => Units.Select(x => x.TotalCode).Sum();
     public long TotalData => Units.Select(x => x.TotalData).Sum();
@@ -20,13 +22,13 @@ public record Report(List<ReportUnit> Units)
         0 => 100,
         _ => (float)MatchedCode / TotalCode * 100
     };
-    
+
     public float MatchedDataPercent => TotalCode switch
     {
         0 => 100,
         _ => (float)MatchedData / TotalData * 100
     };
-    
+
     public float MatchedFunctionsPercent => TotalCode switch
     {
         0 => 100,

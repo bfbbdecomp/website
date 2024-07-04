@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace BFBB;
 
 public record ReportItem(
@@ -5,5 +7,7 @@ public record ReportItem(
     string? DemangledName,
     string? Address,
     long Size,
-    float FuzzyMatchPercent
+    float FuzzyMatchPercent,
+    [property: JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+    AsmInfo? AsmInfo
 );
