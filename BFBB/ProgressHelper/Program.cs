@@ -22,7 +22,15 @@ var gameReport =
         })
         .ToList());
 
-var tsSample = gameReport with { Units = gameReport.Units.Take(2).ToList() };
+List<string> sampleUnits = ["zEntPlayer"];
+
+var tsSample = gameReport with
+{
+    Units = gameReport.Units.Where(
+        x => sampleUnits.Any(u => x.Name.Contains(u))
+    ).ToList()
+};
+
 var sampleJson = JsonHelper.Serialize(tsSample);
 
 var outProgressJson = JsonHelper.Serialize(gameReport);

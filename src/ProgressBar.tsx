@@ -1,24 +1,48 @@
 import { Progress, Tooltip } from "@mantine/core";
-import { ProgressReport } from "./progress";
 import { prettyPercent } from "./helpers";
 
-export function ProgressBar() {
-  const matchPercent = ProgressReport.matched_code_percent;
-  const fuzzyPercent = ProgressReport.fuzzy_match_percent;
+type ProgressBarData = {
+  percentage: number;
+  label?: string;
+  color?: string;
+};
+
+export type ProgressBarProps = {
+  current: ProgressBarData;
+  fuzzy?: ProgressBarData;
+  size?: number;
+};
+
+export function ProgressBar(props: ProgressBarProps) {
+  const { current, fuzzy, size } = props;
 
   return (
     <div>
-      <Progress.Root size={40}>
-        <Tooltip label={prettyPercent(matchPercent) + " Perfectly Matching"}>
-          <Progress.Section value={matchPercent} color="green" />
-        </Tooltip>
-        <Tooltip label={prettyPercent(fuzzyPercent) + " Fuzzy Match"}>
+      <Progress.Root size={size ?? 25}>
+        <Tooltip
+          label={
+            current.label ??
+            prettyPercent(current.percentage) + " Perfectly Matching"
+          }
+        >
           <Progress.Section
-            animated
-            value={fuzzyPercent - matchPercent}
-            color="yellowgreen"
+            value={current.percentage}
+            color={current.color ?? "green"}
           />
         </Tooltip>
+        {fuzzy !== undefined && (
+          <Tooltip
+            label={
+              fuzzy.label ?? prettyPercent(fuzzy.percentage) + " Fuzzy Match"
+            }
+          >
+            <Progress.Section
+              animated
+              value={fuzzy.percentage - current.percentage}
+              color={fuzzy.color ?? "yellowgreen"}
+            />
+          </Tooltip>
+        )}
       </Progress.Root>
     </div>
   );

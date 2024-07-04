@@ -1,7 +1,14 @@
-import { Group, Select, Stack, Container, TextInput } from "@mantine/core";
+import {
+  Group,
+  Select,
+  Stack,
+  Container,
+  TextInput,
+  ProgressSection,
+} from "@mantine/core";
 import { ProgressReport, Unit } from "./progress";
 import { prettyPercent } from "./helpers";
-import { ProgressBar } from "./ProgressBar";
+import { ProgressBar, ProgressBarProps } from "./ProgressBar";
 import { FileHeatmap } from "./FileHeatmap";
 
 import "./css/app.css";
@@ -10,7 +17,8 @@ import { useState } from "react";
 import { FileMetric, metricData } from "./FileMetric";
 
 export function OverallProgress() {
-  const total = ProgressReport.matched_code_percent;
+  const total_percent = ProgressReport.matched_code_percent;
+  const fuzzy_percent = ProgressReport.fuzzy_match_percent;
   const [unit, setUnit] = useState<Unit | undefined>(ProgressReport.units[0]);
   const [sortMetric, setSortMetric] = useState<FileMetric | null>(null);
   const [highlightMetric, setHighlightMetric] = useState<FileMetric | null>(
@@ -18,6 +26,16 @@ export function OverallProgress() {
   );
   const [fileFilter, setFileFilter] = useState("");
   const [functionFilter, setFunctionFilter] = useState("");
+
+  const progressBar: ProgressBarProps = {
+    size: 40,
+    current: {
+      percentage: ProgressReport.matched_code_percent,
+    },
+    fuzzy: {
+      percentage: fuzzy_percent,
+    },
+  };
 
   const gcUnits = ProgressReport.units.filter((x) =>
     x.name.toLowerCase().includes("/gc/")
@@ -82,8 +100,11 @@ export function OverallProgress() {
     <Container id="main" size={"lg"}>
       <Stack gap={"md"}>
         <div>
-          <h1>Battle for Bikini Bottom is {prettyPercent(total)} decompiled</h1>
-          <ProgressBar />
+          <h1>
+            Battle for Bikini Bottom is {prettyPercent(total_percent)}{" "}
+            decompiled
+          </h1>
+          <ProgressBar {...progressBar} />
         </div>
         <Group grow gap={"lg"} align={"flex-start"}>
           <Stack gap={"sm"}>
