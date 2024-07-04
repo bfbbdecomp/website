@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace BFBB;
 
 public record AsmFunction(
@@ -9,4 +11,4 @@ public record AsmFunction(
     public HashSet<string> Opcodes = Lines.Select(x => x.Split(" ").First()).ToHashSet();
 };
 
-public record AsmInfo(string Name, int NumberOfLabels, HashSet<string> Opcodes);
+public record AsmInfo(string Name, int Labels, HashSet<string> Opcodes);

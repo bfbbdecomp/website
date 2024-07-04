@@ -1,15 +1,25 @@
 ﻿using BFBB;
 
-var inputFile = args[0];
+var inputPath = args[0];
 var outPath = args[1];
 
-var progress = File.ReadAllText(inputFile);
+var progress = File.ReadAllText($"{inputPath}progress.json");
+var asmInfoText = File.ReadAllText($"{inputPath}asminfo.json");
 
 var report = JsonHelper.Deserialize<Report>(progress);
+var asmInfo = JsonHelper.Deserialize<List<AsmInfo>>(asmInfoText);
 
 var gameReport =
     new Report(Units: report.Units
-        .Where(x => x.Name.Contains("/sb/", StringComparison.CurrentCultureIgnoreCase))
+        .Where(unit => unit.Name.Contains("/sb/", StringComparison.CurrentCultureIgnoreCase))
+        .Select(unit => unit with
+        {
+            Functions = unit.Functions.Select(fn => fn with
+            {
+                Opcodes = asmInfo.FirstOrDefault(info => info.Name == fn.Name)?.Opcodes ?? null,
+                Labels = asmInfo.FirstOrDefault(info => info.Name == fn.Name)?.Labels ?? null,
+            }).ToList()
+        })
         .ToList());
 
 var outProgressJson = JsonHelper.Serialize(gameReport);
