@@ -11,4 +11,4 @@ public record AsmFunction(
     public HashSet<string> Opcodes = Lines.Select(x => x.Split(" ").First()).ToHashSet();
 };
 
-public record AsmInfo(string Name, int Labels, HashSet<string> Opcodes);
+public record AsmInfo(string Name, int Referenced, int Labels, HashSet<string> Opcodes);

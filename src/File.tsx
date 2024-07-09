@@ -1,7 +1,8 @@
 import { Unit } from "./progress";
-import { Anchor, Group, Text } from "@mantine/core";
+import { Anchor, Group, Stack, Text } from "@mantine/core";
 import { ProgressBar, ProgressBarProps } from "./ProgressBar";
-import { GithubLink } from "./Functions";
+import { FunctionList, GithubLink } from "./FunctionList";
+import { GameFunctions } from "./Functions";
 
 type SourceFileInfoProps = {
   unit: Unit;
@@ -15,9 +16,11 @@ export function SourceFileInfo({ unit }: SourceFileInfoProps) {
     ? (unit.matched_data / unit.total_data) * 100
     : 100;
 
+  const fns = GameFunctions.filter((x) => x.path === unit.name);
+
   const progressInfo: ({ name: string } & ProgressBarProps)[] = [
     {
-      name: "Functions",
+      name: "Code",
       size: 30,
       current: {
         percentage: perfectMatch,
@@ -37,22 +40,25 @@ export function SourceFileInfo({ unit }: SourceFileInfoProps) {
   ];
 
   return (
-    <div>
+    <Stack>
       <div style={{ textAlign: "center" }}>
         <Anchor href={GithubLink(unit.name)} target="_blank">
           <h2>{unit.name}</h2>
         </Anchor>
       </div>
-      {progressInfo.map((info, id) => (
-        <div key={id} style={{ marginBottom: "0.5rem" }}>
-          <Text size={"lg"}>{info.name}</Text>
-          <Group grow gap={"xl"}>
-            <div key={id} style={{ textAlign: "center" }}>
-              <ProgressBar {...info} />
-            </div>
-          </Group>
-        </div>
-      ))}
-    </div>
+      <div>
+        {progressInfo.map((info, id) => (
+          <div key={id} style={{ marginBottom: "0.5rem" }}>
+            <Text size={"lg"}>{info.name}</Text>
+            <Group grow gap={"xl"}>
+              <div key={id} style={{ textAlign: "center" }}>
+                <ProgressBar {...info} />
+              </div>
+            </Group>
+          </div>
+        ))}
+      </div>
+      <FunctionList functions={fns} pageSize={7} />
+    </Stack>
   );
 }

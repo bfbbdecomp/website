@@ -1,37 +1,22 @@
-import { GameFunction, ProgressReport } from "./progress";
-import { useEffect, useState } from "react";
+import { ProgressReport } from "./progress";
+import { useState } from "react";
 import {
-  Anchor,
+  Card,
+  Text,
   Container,
   Group,
   MultiSelect,
-  Pagination,
   Select,
   Stack,
-  Text,
   TextInput,
-  Tooltip,
+  Flex,
 } from "@mantine/core";
-import { ProgressBar, ProgressBarProps } from "./ProgressBar";
+import { FileFunction, FileName, FunctionList } from "./FunctionList";
 import { prettyPercent } from "./helpers";
 
-type FileFunction = GameFunction & { path: string };
-
-const GameFunctions: FileFunction[] = ProgressReport.units.flatMap((x) =>
+export const GameFunctions: FileFunction[] = ProgressReport.units.flatMap((x) =>
   x.functions.map((fn) => ({ ...fn, path: x.name }))
 );
-
-const FileName = (path: string): string => {
-  return path.split("/").slice(-1)[0];
-};
-
-export function GithubLink(path: string): string {
-  return (
-    "https://github.com/bfbbdecomp/bfbb/blob/main/src/" +
-    path.replace("main/", "") +
-    ".cpp"
-  );
-}
 
 const FileNames = [...new Set(GameFunctions.map((x) => FileName(x.path)))];
 const Opcodes = [...new Set(GameFunctions.flatMap((x) => x.opcodes))].sort(
@@ -57,55 +42,74 @@ const sortFunctions: Record<
   [FnSort.Size]: (a, b) => b.size - a.size,
 };
 
-const FunctionInfo = (fn: FileFunction) => {
-  const progress: ProgressBarProps = {
-    size: 20,
-    current: {
-      percentage: fn.fuzzy_match_percent,
-      label: prettyPercent(fn.fuzzy_match_percent) + " Match",
-    },
-  };
-  return (
-    <div style={{ marginBottom: "1.5rem", fontFamily: "monospace" }}>
-      <Text fw={700}>{fn.demangled_name}</Text>
-      <Text>
-        <Anchor href={GithubLink(fn.path)} target="_blank">
-          {FileName(fn.path)}
-        </Anchor>{" "}
-        / {fn.address} / size: {fn.size} / labels: {fn.labels}
-      </Text>
-      <ProgressBar {...progress} />
-    </div>
-  );
+type Stat = {
+  title: string;
+  value: string;
 };
 
+function StatisticsCard({ title, value }: Stat) {
+  return (
+    <Card shadow="sm" padding="lg">
+      <Text fw={500}>{title}</Text>
+      <Text size="xl" fw={700}>
+        {value}
+      </Text>
+    </Card>
+  );
+}
+
 export function Functions() {
-  const FNS_PER_PAGE = 15;
-  const [activePage, setPage] = useState(1);
   const [searchText, setSearchText] = useState("");
   const [fileFilter, setFileFilter] = useState<string[]>([]);
   const [sortFn, setSortFn] = useState<FnSort>();
   const [opcodeFilter, setOpcodeFilter] = useState<string[]>([]);
-  const index = (activePage - 1) * FNS_PER_PAGE;
+
+  const search = searchText.toLowerCase();
 
   const filteredItems = GameFunctions.filter(
     (x) =>
-      !searchText || x.name.toLowerCase().includes(searchText.toLowerCase())
+      !searchText ||
+      x.name.toLowerCase().includes(search) ||
+      x.path.toLowerCase().includes(search) ||
+      (x.demangled_name && x.demangled_name.toLowerCase().includes(search))
   )
     .filter((x) => !fileFilter.length || fileFilter.includes(FileName(x.path)))
     .filter(
       (x) =>
         !opcodeFilter.length || x.opcodes.some((o) => opcodeFilter.includes(o))
     );
-  const sortedItems = sortFn
+  const items = sortFn
     ? filteredItems.sort(sortFunctions[sortFn])
     : filteredItems;
-  const totalPages = Math.ceil(sortedItems.length / FNS_PER_PAGE);
-  const items = sortedItems.slice(index, index + FNS_PER_PAGE);
 
-  useEffect(() => {
-    if (activePage > totalPages) setPage(1);
-  }, [searchText, fileFilter, opcodeFilter]);
+  const sum = (xs: number[]) => xs.reduce((tot, a) => tot + a, 0);
+
+  const selectionCodeSize = sum(items.map((x) => x.size));
+  const fuzzyPercent =
+    sum(items.map((x) => x.fuzzy_match_percent * x.size)) / selectionCodeSize;
+  const fuzzyCode = (fuzzyPercent * selectionCodeSize) / 100;
+
+  const percentageOfGameCode =
+    (selectionCodeSize / ProgressReport.total_code) * 100;
+
+  const stats: Stat[] = [
+    {
+      title: "Total Code",
+      value: selectionCodeSize.toLocaleString(),
+    },
+    {
+      title: "Matched Code",
+      value: fuzzyCode.toLocaleString(),
+    },
+    {
+      title: "Matched Code %",
+      value: prettyPercent(fuzzyPercent),
+    },
+    {
+      title: "% of Game Code",
+      value: prettyPercent(percentageOfGameCode),
+    },
+  ];
 
   return (
     <Container fluid>
@@ -117,7 +121,7 @@ export function Functions() {
                 value={searchText}
                 onChange={(event) => setSearchText(event.currentTarget.value)}
                 label="Search"
-                placeholder="Filter by Function name"
+                placeholder="Filter by Function name or path"
               />
               <MultiSelect
                 label="File Filter"
@@ -145,26 +149,19 @@ export function Functions() {
                 onChange={(value) => setSortFn(value as FnSort)}
               />
             </Group>
+            {items.length > 0 && (
+              <div>
+                <Flex gap={"lg"}>
+                  {stats.map((x) => (
+                    <StatisticsCard {...x} />
+                  ))}
+                </Flex>
+              </div>
+            )}
           </Stack>
         </div>
         <div>
-          <Pagination
-            total={totalPages}
-            value={activePage}
-            onChange={setPage}
-            withEdges
-            mb="sm"
-          />
-          {items.map((fn, key) => (
-            <FunctionInfo {...fn} key={key} />
-          ))}
-          <Pagination
-            total={totalPages}
-            value={activePage}
-            onChange={setPage}
-            withEdges
-            mt="sm"
-          />
+          <FunctionList functions={items} pageSize={10} />
         </div>
       </Group>
     </Container>

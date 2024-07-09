@@ -1,6 +1,18 @@
-import { AppShell, Group, UnstyledButton } from "@mantine/core";
+import {
+  AppShell,
+  Group,
+  NavLink,
+  Tooltip,
+  UnstyledButton,
+} from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import { RouteSwitcher } from "./RouteSwitcher";
+import {
+  IconBrandDiscord,
+  IconBrandDiscordFilled,
+  IconBrandGithubFilled,
+  IconGitCherryPick,
+} from "@tabler/icons-react";
 
 function App() {
   const navigate = useNavigate();
@@ -20,6 +32,26 @@ function App() {
               <UnstyledButton onClick={() => navigate("/functions")}>
                 Functions
               </UnstyledButton>
+            </Group>
+            <Group gap={"lg"}>
+              <Tooltip label="Source Code on GitHub">
+                <UnstyledButton
+                  component="a"
+                  target={"_blank"}
+                  href="https://github.com/bfbbdecomp/bfbb"
+                >
+                  <IconBrandGithubFilled size={"1.5rem"} stroke={1.5} />
+                </UnstyledButton>
+              </Tooltip>
+              <Tooltip label="Join us on Discord">
+                <UnstyledButton
+                  component="a"
+                  target={"_blank"}
+                  href="https://discord.gg/dVbGFdYU6A"
+                >
+                  <IconBrandDiscordFilled size={"1.5rem"} stroke={1.5} />
+                </UnstyledButton>
+              </Tooltip>
             </Group>
           </Group>
         </Group>
