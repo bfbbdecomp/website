@@ -37,7 +37,7 @@ const FunctionInfo = (fn: FileFunction) => {
   function copyClipboard(value: string) {
     navigator.clipboard.writeText(value);
     notifications.show({
-      title: "Demangled Name Copied",
+      title: "Mangled Name Copied",
       message: value,
     });
   }
