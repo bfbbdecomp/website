@@ -26,6 +26,7 @@ export function ProgressBar(props: ProgressBarProps) {
           }
         >
           <Progress.Section
+            animated={current.percentage == 100 ? false : true}
             value={current.percentage}
             color={current.color ?? "green"}
           />

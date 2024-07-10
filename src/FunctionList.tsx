@@ -42,8 +42,18 @@ const FunctionInfo = (fn: FileFunction) => {
     });
   }
 
+  const completedStyle: React.CSSProperties = {
+    color: "var(--mantine-color-green-filled)",
+  };
+
   return (
-    <div style={{ marginBottom: "1.5rem", fontFamily: "monospace" }}>
+    <div
+      style={{
+        marginBottom: "1.5rem",
+        fontFamily: "monospace",
+        ...(progress.current.percentage == 100 ? completedStyle : {}),
+      }}
+    >
       <Text fw={700}>{fn.demangled_name ?? fn.name}</Text>
       <Text>
         <ActionIcon variant="subtle" onClick={() => copyClipboard(fn.name)}>

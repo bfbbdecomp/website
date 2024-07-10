@@ -92,6 +92,9 @@ export function Functions() {
   const percentageOfGameCode =
     (selectionCodeSize / ProgressReport.total_code) * 100;
 
+  const matchingFns = items.filter((x) => x.fuzzy_match_percent === 100);
+  const totalFns = items.length;
+
   const stats: Stat[] = [
     {
       title: "Total Code",
@@ -108,6 +111,25 @@ export function Functions() {
     {
       title: "% of Game Code",
       value: prettyPercent(percentageOfGameCode),
+    },
+  ];
+
+  const fnStats: Stat[] = [
+    {
+      title: "Functions",
+      value: totalFns.toLocaleString(),
+    },
+    {
+      title: "Matched Functions",
+      value: matchingFns.length.toLocaleString(),
+    },
+    {
+      title: "Matched Functions %",
+      value: prettyPercent((matchingFns.length / totalFns) * 100),
+    },
+    {
+      title: "Files",
+      value: new Set([...items.map((x) => x.path)]).size.toLocaleString(),
     },
   ];
 
@@ -150,13 +172,18 @@ export function Functions() {
               />
             </Group>
             {items.length > 0 && (
-              <div>
+              <Stack>
                 <Flex gap={"lg"}>
                   {stats.map((x) => (
                     <StatisticsCard {...x} />
                   ))}
                 </Flex>
-              </div>
+                <Flex gap={"lg"}>
+                  {fnStats.map((x) => (
+                    <StatisticsCard {...x} />
+                  ))}
+                </Flex>
+              </Stack>
             )}
           </Stack>
         </div>
