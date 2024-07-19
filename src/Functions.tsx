@@ -35,7 +35,7 @@ const sortFunctions: Record<
   FnSort,
   (a: FileFunction, b: FileFunction) => number
 > = {
-  [FnSort.Address]: (a, b) => b.address.localeCompare(a.address),
+  [FnSort.Address]: (a, b) => Number(a.address) - Number(b.address),
   [FnSort.Labels]: (a, b) => b.labels - a.labels,
   [FnSort.Matched]: (a, b) => b.fuzzy_match_percent - a.fuzzy_match_percent,
   [FnSort.Name]: (a, b) => a.name.localeCompare(b.name),
@@ -175,12 +175,12 @@ export function Functions() {
               <Stack>
                 <Flex gap={"lg"}>
                   {stats.map((x) => (
-                    <StatisticsCard {...x} />
+                    <StatisticsCard key={x.title} {...x} />
                   ))}
                 </Flex>
                 <Flex gap={"lg"}>
                   {fnStats.map((x) => (
-                    <StatisticsCard {...x} />
+                    <StatisticsCard key={x.title} {...x} />
                   ))}
                 </Flex>
               </Stack>

@@ -10,7 +10,7 @@ type SourceFileInfoProps = {
 
 export function SourceFileInfo({ unit }: SourceFileInfoProps) {
   const perfectMatch = (unit.matched_code / unit.total_code) * 100;
-  const fuzzyMatch = unit.fuzzy_match_percent - perfectMatch;
+  const fuzzyMatch = unit.fuzzy_match_percent;
 
   const dataMatch = unit.total_data
     ? (unit.matched_data / unit.total_data) * 100
