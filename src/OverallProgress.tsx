@@ -49,16 +49,16 @@ export function OverallProgress() {
 
   const allFolders = [
     {
-      name: "GameCube Specific Code",
-      units: gcUnits,
+      name: "BFBB Game Code",
+      units: gameUnits,
     },
     {
       name: "Core Game Engine",
       units: xUnits,
     },
     {
-      name: "BFBB Game Code",
-      units: gameUnits,
+      name: "GameCube Specific Code",
+      units: gcUnits,
     },
   ];
 
@@ -144,7 +144,7 @@ export function OverallProgress() {
                 onChange={(value) => setHighlightMetric(value as FileMetric)}
               />
             </Group>
-            <div>
+            <Stack>
               {allFolders.map((folder, index) => (
                 <FileHeatmap
                   key={index}
@@ -157,7 +157,7 @@ export function OverallProgress() {
                   }
                 />
               ))}
-            </div>
+            </Stack>
           </Stack>
           {unit && <SourceFileInfo unit={unit} />}
         </Group>
