@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFBB", "BFBB\BFBB.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressHelper", "ProgressHelper\ProgressHelper.csproj", "{D6ACF740-B2B6-42B8-96EF-C612F5136C14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Differ", "Differ\Differ.csproj", "{AA12A965-A089-46C2-A14F-0648AAEAC747}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{D6ACF740-B2B6-42B8-96EF-C612F5136C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6ACF740-B2B6-42B8-96EF-C612F5136C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6ACF740-B2B6-42B8-96EF-C612F5136C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA12A965-A089-46C2-A14F-0648AAEAC747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA12A965-A089-46C2-A14F-0648AAEAC747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA12A965-A089-46C2-A14F-0648AAEAC747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA12A965-A089-46C2-A14F-0648AAEAC747}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

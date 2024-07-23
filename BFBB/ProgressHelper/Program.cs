@@ -1,17 +1,17 @@
-﻿using BFBB;
+﻿using System.Runtime.InteropServices;
+using BFBB;
 
 var inputPath = args[0];
 var outPath = args[1];
 
-var progress = File.ReadAllText($"{inputPath}progress.json");
+var progress = $"{inputPath}progress.json";
 var asmInfoText = File.ReadAllText($"{inputPath}asminfo.json");
 
-var report = JsonHelper.Deserialize<Report>(progress);
+var report = JsonHelper.ReadReport(progress);
 var asmInfo = JsonHelper.Deserialize<List<AsmInfo>>(asmInfoText);
 
 var gameReport =
     new Report(Units: report.Units
-        .Where(unit => unit.Name.Contains("/sb/", StringComparison.CurrentCultureIgnoreCase))
         .Select(unit => unit with
         {
             Functions = unit.Functions.Select(fn => fn with
@@ -55,3 +55,36 @@ var outAPIJson = JsonHelper.Serialize(new
 File.WriteAllText($"{outPath}/progress.json", outProgressJson);
 File.WriteAllText($"{outPath}/sample.json", sampleJson);
 File.WriteAllText($"{outPath}../public/api.json", outAPIJson);
+
+// Check to see if there are any differences between the current and previous commit
+// If there are, update the commit cache, so it can be added to the repo
+
+var previous = $"{inputPath}previous.json";
+var progressCommit = File.ReadAllText($"{inputPath}progress-commit.json");
+var commitCachePath = $"{inputPath}../json/commits.json";
+var commitCache = File.ReadAllText(commitCachePath);
+
+var previousReport = JsonHelper.ReadReport(previous);
+var commits = JsonHelper.Deserialize<List<Commit>>(commitCache);
+var progressCommitData = JsonHelper.Deserialize<Commit>(progressCommit);
+var differences = DiffHelper.GetReportDifferences(report, previousReport);
+
+if (differences.Count != 0)
+{
+    progressCommitData = progressCommitData with
+    {
+        Differences = differences.Select(
+            x => new Difference(x.NewItem.Address, x.NewItem.FuzzyMatchPercent, x.OldItem.FuzzyMatchPercent)
+        ).ToList()
+    };
+    
+    
+    // Only add the commit if it isn't already in the cache.
+    // We don't want to add it multiple times if we re-run the action
+    if (commits.All(x => x.Id != progressCommitData.Id))
+    {
+        commits.Add(progressCommitData);
+        commits = commits.OrderByDescending(x => x.Time).ToList();
+        File.WriteAllText(commitCachePath, JsonHelper.Serialize(commits));
+    }
+}

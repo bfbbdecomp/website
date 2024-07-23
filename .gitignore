@@ -4,7 +4,11 @@ package-lock.json
 .idea
 bin/
 obj/
-json/*.json
+json/progress.json
+json/sample.json
 artifacts/progress.json
+artifacts/previous.json
+artifacts/progress-commit.json
 public/*.json
 dist/
+parsed

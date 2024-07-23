@@ -22,4 +22,14 @@ public abstract class JsonHelper
     {
         return JsonSerializer.Serialize(item, ParseOptions);
     }
+
+    public static Report ReadReport(string path)
+    {
+        var report = Deserialize<Report>(File.ReadAllText(path));
+
+        return new Report(Units: report.Units
+            .Where(unit => unit.Name
+                .Contains("/sb/", StringComparison.CurrentCultureIgnoreCase)
+            ).ToList());
+    }
 }

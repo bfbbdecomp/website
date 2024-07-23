@@ -1,0 +1,5824 @@
+[
+  {
+    "id": "c84b0b3133df4ee3e4537d0cc8b2e26509c128e6",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-21T09:04:53",
+    "message": "Start decompiling zNPCGoalVillager (#331)",
+    "differences": [
+      {
+        "addr": "0x801365c8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013703c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80137074",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013710c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801374f8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80137618",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013799c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801379f0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80137a3c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80137afc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80137d34",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80137d64",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80137dc4",
+        "new": 96.721306,
+        "old": 0
+      },
+      {
+        "addr": "0x801380e4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013814c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801381c8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013821c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013824c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013827c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801382fc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138354",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138388",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801383e4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801384c8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013856c",
+        "new": 92.95775,
+        "old": 0
+      },
+      {
+        "addr": "0x80138750",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801388d8",
+        "new": 92.30769,
+        "old": 0
+      },
+      {
+        "addr": "0x80138940",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138988",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801389d0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138a24",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138a6c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138ac0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138b08",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138b50",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138b8c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138bd4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80138c1c",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "798fe2bc0f59f1f4c88c6e1e44d407db332a9994",
+    "email": "iamtotallynotmichael@gmail.com",
+    "time": "2024-07-20T14:11:18",
+    "message": "Misc. decomp (#332)",
+    "differences": [
+      {
+        "addr": "0x8004f3c4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80060028",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ee2c0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800fc4f0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80102764",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010276c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80102790",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80102798",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801027a0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801027a8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801027b0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801027b8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010281c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801028ac",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801028c4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801028dc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80102928",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80107550",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80107558",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80107564",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010756c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80107574",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801075dc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801075e4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801075ec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801075f4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801075fc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801093a4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010cdfc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010ce04",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010ce0c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010ce14",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010ce1c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80154c74",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80154c7c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80154c84",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80154c8c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8015f7bc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80160a0c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016ee08",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016eec0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016fa40",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016faf8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016fbb0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80170234",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017023c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80170244",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017be28",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017be30",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017be38",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017be40",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017be48",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "8befa6bde83c65913dc7c302b0003681c1655d32",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-19T23:16:18",
+    "message": "more pat progress",
+    "differences": [
+      {
+        "addr": "0x80164dac",
+        "new": 100,
+        "old": 2.2222223
+      },
+      {
+        "addr": "0x80165408",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80165570",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801655f8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016614c",
+        "new": 97.82609,
+        "old": 0
+      },
+      {
+        "addr": "0x80166204",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016628c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80166700",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80166858",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "6a1d06c1fc9b730731aae3fcce66aa2cff751cf9",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-19T22:03:57",
+    "message": "pat boss progress",
+    "differences": [
+      {
+        "addr": "0x80160a18",
+        "new": 0.78740156,
+        "old": 0
+      },
+      {
+        "addr": "0x80160c14",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80160c68",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80160c7c",
+        "new": 77.87418,
+        "old": 0
+      },
+      {
+        "addr": "0x801613b0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801615cc",
+        "new": 73.591545,
+        "old": 0
+      },
+      {
+        "addr": "0x80161a3c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80161a9c",
+        "new": 70.70707,
+        "old": 0
+      },
+      {
+        "addr": "0x80161c28",
+        "new": 0.06622516,
+        "old": 0
+      },
+      {
+        "addr": "0x801633c0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80163418",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801635f0",
+        "new": 1.6666667,
+        "old": 0
+      },
+      {
+        "addr": "0x801636e0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80163724",
+        "new": 0.64102566,
+        "old": 0
+      },
+      {
+        "addr": "0x80163994",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80163b40",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80163bc4",
+        "new": 1.754386,
+        "old": 0
+      },
+      {
+        "addr": "0x80163ca8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80163d60",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80163d9c",
+        "new": 0.81300807,
+        "old": 0
+      },
+      {
+        "addr": "0x80163f88",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80163fcc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801641bc",
+        "new": 0.53763443,
+        "old": 0
+      },
+      {
+        "addr": "0x801644a4",
+        "new": 2.3809524,
+        "old": 0
+      },
+      {
+        "addr": "0x8016454c",
+        "new": 0.8695652,
+        "old": 0
+      },
+      {
+        "addr": "0x80164718",
+        "new": 1.9607844,
+        "old": 0
+      },
+      {
+        "addr": "0x801647e4",
+        "new": 0.5813953,
+        "old": 0
+      },
+      {
+        "addr": "0x80164a94",
+        "new": 2.3255813,
+        "old": 0
+      },
+      {
+        "addr": "0x80164b40",
+        "new": 2.0833335,
+        "old": 0
+      },
+      {
+        "addr": "0x80164c00",
+        "new": 1.8867924,
+        "old": 0
+      },
+      {
+        "addr": "0x80164cd4",
+        "new": 1.8518518,
+        "old": 0
+      },
+      {
+        "addr": "0x80164dac",
+        "new": 2.2222223,
+        "old": 0
+      },
+      {
+        "addr": "0x80164e60",
+        "new": 2.2222223,
+        "old": 0
+      },
+      {
+        "addr": "0x80164f14",
+        "new": 2.2222223,
+        "old": 0
+      },
+      {
+        "addr": "0x80164fc8",
+        "new": 1.9607844,
+        "old": 0
+      },
+      {
+        "addr": "0x80165094",
+        "new": 0.6134969,
+        "old": 0
+      },
+      {
+        "addr": "0x80165320",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "9678f3608ea17ac5682ed61bb2ca32ed09d99f31",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-18T18:35:14",
+    "message": "zEntPlayer daily progress (#329)",
+    "differences": [
+      {
+        "addr": "0x8006b7b8",
+        "new": 85.80645,
+        "old": 0.32258064
+      },
+      {
+        "addr": "0x8006bed8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bf24",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bf70",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bfbc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c008",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c054",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c0a0",
+        "new": 93.548386,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c11c",
+        "new": 92.30769,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c184",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c2cc",
+        "new": 97.14286,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c3e4",
+        "new": 97.9798,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c570",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c684",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c6f0",
+        "new": 58.823532,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c734",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c78c",
+        "new": 95.454544,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c83c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c8ac",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c8e0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006c940",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006ca5c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006cac8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006cbb0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006cc14",
+        "new": 66.66667,
+        "old": 0
+      },
+      {
+        "addr": "0x8006cc68",
+        "new": 60.000004,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "67d49c06624de4ac75a3dd35081b86211ea88a65",
+    "email": "ian.goofygoober@gmail.com",
+    "time": "2024-07-18T17:39:34",
+    "message": "Finish iPad Equivalent (#330)",
+    "differences": [
+      {
+        "addr": "0x800ca944",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ca98c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ca9f4",
+        "new": 98.5348,
+        "old": 0
+      },
+      {
+        "addr": "0x800cae7c",
+        "new": 47.058823,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "391935e83751cbe51a49c636c82ab29100f19795",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-17T15:10:02",
+    "message": "zGameState equivalent (#326)",
+    "differences": [
+      {
+        "addr": "0x8009ac18",
+        "new": 94.871796,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "03e3ce34c86679b081d21d1710b4b634f7187d71",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-17T01:27:36",
+    "message": "minor zEntPlayer progress (#325)",
+    "differences": [
+      {
+        "addr": "0x8006b310",
+        "new": 99.45055,
+        "old": 98.35165
+      },
+      {
+        "addr": "0x8006b5e8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b604",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b624",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b6cc",
+        "new": 72.91667,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b78c",
+        "new": 81.818184,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b7b8",
+        "new": 0.32258064,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bc90",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bd40",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bda8",
+        "new": 96.666664,
+        "old": 0
+      },
+      {
+        "addr": "0x8007dfe0",
+        "new": 67.28346,
+        "old": 66.29921
+      },
+      {
+        "addr": "0x8008089c",
+        "new": 100,
+        "old": 29.411766
+      },
+      {
+        "addr": "0x80080ac0",
+        "new": 80.2974,
+        "old": 55.76208
+      },
+      {
+        "addr": "0x80082d08",
+        "new": 88.88889,
+        "old": 100
+      }
+    ]
+  },
+  {
+    "id": "105224177323323bce124740d3e335135e9d69b3",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-16T08:55:44",
+    "message": "sb1 file 98%",
+    "differences": [
+      {
+        "addr": "0x80155310",
+        "new": 85.84906,
+        "old": 79.71698
+      }
+    ]
+  },
+  {
+    "id": "778c42d903cb36a946a059ceaeba2e2b491e15bc",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-16T01:49:24",
+    "message": "SB1 progress and correct Init",
+    "differences": [
+      {
+        "addr": "0x80155310",
+        "new": 79.71698,
+        "old": 55.18868
+      },
+      {
+        "addr": "0x80155660",
+        "new": 100,
+        "old": 8.080808
+      }
+    ]
+  },
+  {
+    "id": "1e346592d577b64469a19adc949e77c3ad453076",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-16T00:55:05",
+    "message": "zEntPlayer (#324)",
+    "differences": [
+      {
+        "addr": "0x8006aca4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006ad00",
+        "new": 90.983604,
+        "old": 0
+      },
+      {
+        "addr": "0x8006aee8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006aefc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006af94",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006afa4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006afd4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b004",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b024",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b080",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b0a4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b158",
+        "new": 78.94737,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b1a4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b1b8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b1cc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b1e4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b22c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b2a0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b2d4",
+        "new": 73.333336,
+        "old": 0
+      },
+      {
+        "addr": "0x8006b310",
+        "new": 98.35165,
+        "old": 0
+      },
+      {
+        "addr": "0x8007dfc0",
+        "new": 100,
+        "old": 12.5
+      }
+    ]
+  },
+  {
+    "id": "eb59cc2faf4161a59b9b16d27859f97d62db702b",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-15T23:46:19",
+    "message": "more SB1 progress",
+    "differences": [
+      {
+        "addr": "0x80155310",
+        "new": 55.18868,
+        "old": 0.4716981
+      },
+      {
+        "addr": "0x801567c8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801569e0",
+        "new": 100,
+        "old": 32.467533
+      },
+      {
+        "addr": "0x80156c54",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "1138b1f85a71474b74e0cf8c8b0b3a24673f76a3",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-15T21:30:01",
+    "message": "Finish decompiling xHudModel, equivalent",
+    "differences": [
+      {
+        "addr": "0x8002fc88",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002fd10",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002fd68",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002fdcc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002fdec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002fe0c",
+        "new": 87.5,
+        "old": 0
+      },
+      {
+        "addr": "0x8002fe4c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002feb4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ff30",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ff70",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "cbdedaffefbd31e54e2dd33092c8d0761c738b75",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-15T18:07:15",
+    "message": "Finish matching xCollideFast (#322)",
+    "differences": [
+      {
+        "addr": "0x800159f4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80015adc",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "7dcf22c666eee0c971109ffddc528928643dde08",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-15T09:29:43",
+    "message": "BoulderRollCB and some small callbacks (#318)",
+    "differences": [
+      {
+        "addr": "0x8006a890",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a8c0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a8e8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a92c",
+        "new": 92.79279,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "02a7a5a5f6cb481dd697270ea49fdb16084e4eb8",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-15T08:30:23",
+    "message": "Finish matching xRMemData (#320)",
+    "differences": [
+      {
+        "addr": "0x8010f150",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "7fdd418f3f8b7c8ab8bcc256c91fa913128c87bf",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-14T20:46:42",
+    "message": "Decompile zEntButton, equivalent (#317)",
+    "differences": [
+      {
+        "addr": "0x800564ec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8005650c",
+        "new": 96.190475,
+        "old": 0
+      },
+      {
+        "addr": "0x800566b0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8005675c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8005677c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056804",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056888",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8005695c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056b88",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056c1c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056c34",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056cb8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056d50",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056da4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80056e60",
+        "new": 53.65854,
+        "old": 0
+      },
+      {
+        "addr": "0x80056f04",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "0d7932a1d21c5955a43cb785a0422118a0fcf385",
+    "email": "56528995\u002Bgelatinstudios@users.noreply.github.com",
+    "time": "2024-07-14T10:07:44",
+    "message": "Begin work on Game/zGust.cpp (#316)",
+    "differences": [
+      {
+        "addr": "0x8009ad50",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009adcc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009ae14",
+        "new": 93.181816,
+        "old": 0
+      },
+      {
+        "addr": "0x8009aec4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009af50",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009af68",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009af78",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009af90",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009afb4",
+        "new": 69.565216,
+        "old": 0
+      },
+      {
+        "addr": "0x8009b294",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009b2b4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009b2d4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009b310",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009b38c",
+        "new": 68.32298,
+        "old": 0
+      },
+      {
+        "addr": "0x8009b610",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "8770ee7b48757c6b1e4421fe88deb071ef7d09be",
+    "email": "agtescape@gmail.com",
+    "time": "2024-07-14T03:04:38",
+    "message": "More zhud matches (#314)",
+    "differences": [
+      {
+        "addr": "0x8009b838",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009ba8c",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "47db18032ba95b12aa5fa713d4dd62e7b3e275cd",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-13T22:04:14",
+    "message": "More neverending animation callbacks (#313)",
+    "differences": [
+      {
+        "addr": "0x8006a098",
+        "new": 75.268814,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a238",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a2a8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a344",
+        "new": 96.77419,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a43c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a458",
+        "new": 63.15789,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a4fc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a58c",
+        "new": 70.52631,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a708",
+        "new": 80.769226,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a770",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a788",
+        "new": 96.36363,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a864",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "9f2cad4e5acb58d6a4d3a6c40bcc71810151143e",
+    "email": "agtescape@gmail.com",
+    "time": "2024-07-13T18:22:54",
+    "message": "Match zhud::render (#312)",
+    "differences": [
+      {
+        "addr": "0x8009bdc4",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "655ff586af890f127f00cd8a2d8eb8acce708e5c",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-13T08:43:52",
+    "message": "zEntPlayer (#311)",
+    "differences": [
+      {
+        "addr": "0x80069e28",
+        "new": 79.82456,
+        "old": 0
+      },
+      {
+        "addr": "0x80069ff0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a054",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a20c",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "9f847dc8a8136654c0c3835a6bfda5de4bb17c7e",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-12T14:09:48",
+    "message": "Cleanup zEntPickup (#310)",
+    "differences": [
+      {
+        "addr": "0x800627cc",
+        "new": 97.24771,
+        "old": 0
+      },
+      {
+        "addr": "0x8006509c",
+        "new": 93.42105,
+        "old": 0
+      },
+      {
+        "addr": "0x80065af0",
+        "new": 66.66667,
+        "old": 0
+      },
+      {
+        "addr": "0x80065b08",
+        "new": 69.50673,
+        "old": 0
+      },
+      {
+        "addr": "0x80065e84",
+        "new": 95.789474,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "e66b44057d6a653036f0ae20278c8113b0a7cec2",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-11T23:50:57",
+    "message": "more SB1 progress",
+    "differences": [
+      {
+        "addr": "0x80155310",
+        "new": 0.4716981,
+        "old": 0
+      },
+      {
+        "addr": "0x801557ec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8015598c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155a60",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801566e8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80156b14",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "6fd1bec573d18049a5c20dd9ef8d8a37c1fc7404",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-11T15:18:54",
+    "message": "zEntPlayer progress (#309)",
+    "differences": [
+      {
+        "addr": "0x800699f0",
+        "new": 79.13043,
+        "old": 0
+      },
+      {
+        "addr": "0x80069bbc",
+        "new": 89.47369,
+        "old": 0
+      },
+      {
+        "addr": "0x80069cf0",
+        "new": 89.655174,
+        "old": 0
+      },
+      {
+        "addr": "0x80069dd8",
+        "new": 80,
+        "old": 0
+      },
+      {
+        "addr": "0x80076a20",
+        "new": 76,
+        "old": 0
+      },
+      {
+        "addr": "0x8007dfc0",
+        "new": 12.5,
+        "old": 0
+      },
+      {
+        "addr": "0x8007dfe0",
+        "new": 66.29921,
+        "old": 0
+      },
+      {
+        "addr": "0x80080790",
+        "new": 89.655174,
+        "old": 0
+      },
+      {
+        "addr": "0x80080878",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8008089c",
+        "new": 29.411766,
+        "old": 0
+      },
+      {
+        "addr": "0x80080968",
+        "new": 86.53847,
+        "old": 0
+      },
+      {
+        "addr": "0x80080a38",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80080a7c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80080ac0",
+        "new": 55.76208,
+        "old": 0
+      },
+      {
+        "addr": "0x80080ef4",
+        "new": 49.704144,
+        "old": 0
+      },
+      {
+        "addr": "0x80081240",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800812e4",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "3ac178a501344f1536178618455167156ecef5dd",
+    "email": "iamtotallynotmichael@gmail.com",
+    "time": "2024-07-11T13:14:58",
+    "message": "First batch of Size 8s (#307)",
+    "differences": [
+      {
+        "addr": "0x8017025c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017f428",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017f430",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017f438",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8019540c",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "0cead21d7e635de5dd59243568671272fac54596",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-10T23:09:01",
+    "message": "Finish decompiling zRumble, equivalent",
+    "differences": [
+      {
+        "addr": "0x80053850",
+        "new": 100,
+        "old": 98.36066
+      },
+      {
+        "addr": "0x800a6180",
+        "new": 87.83784,
+        "old": 87.297295
+      },
+      {
+        "addr": "0x800acde0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ad054",
+        "new": 100,
+        "old": 91.66667
+      },
+      {
+        "addr": "0x800ad084",
+        "new": 100,
+        "old": 92.30769
+      },
+      {
+        "addr": "0x800ad0b8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ad11c",
+        "new": 95.454544,
+        "old": 0
+      },
+      {
+        "addr": "0x800ad1cc",
+        "new": 100,
+        "old": 93.75
+      },
+      {
+        "addr": "0x800ad328",
+        "new": 48.71795,
+        "old": 45.512817
+      },
+      {
+        "addr": "0x800b08f0",
+        "new": 100,
+        "old": 96.36363
+      },
+      {
+        "addr": "0x800bd1b0",
+        "new": 100,
+        "old": 78.94737
+      }
+    ]
+  },
+  {
+    "id": "80cb0230043b980d077c47e5b9a9137f133367d2",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-10T20:28:19",
+    "message": "Start decompiling xHud (#299)",
+    "differences": [
+      {
+        "addr": "0x8002d98c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002d9cc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002da24",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002da34",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002da98",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dae4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002daf4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002db00",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002db4c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002db88",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dba8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dbdc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dbfc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dc28",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dcc4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dd30",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dd94",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ddb4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dddc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002deb4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002df5c",
+        "new": 87.5,
+        "old": 0
+      },
+      {
+        "addr": "0x8002df9c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002dfd4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002e168",
+        "new": 62.903225,
+        "old": 0
+      },
+      {
+        "addr": "0x8002e358",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002e384",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002e584",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002e628",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002e690",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002e75c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002e9bc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ea48",
+        "new": 85.71429,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ee24",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ee34",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ee68",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ee74",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ee9c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002eec0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ef08",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ef10",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x8002ef58",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002efb0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002efd0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801347dc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80195428",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80195480",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801954c4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801954e4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80195630",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80195650",
+        "new": 87.5,
+        "old": 0
+      },
+      {
+        "addr": "0x80195690",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801956f8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801957dc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80195900",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "c19335325205a5e23eae28f7c053a85a96212a6f",
+    "email": "iamtotallynotmichael@gmail.com",
+    "time": "2024-07-10T20:11:46",
+    "message": "My first ever Size 8 Submission (#306)",
+    "differences": [
+      {
+        "addr": "0x801953a4",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "cb9e826656f6f633b6d640589898ac533cf5f27a",
+    "email": "iamtotallynotmichael@gmail.com",
+    "time": "2024-07-10T10:23:01",
+    "message": "Got some more size 4 voids out of the way (#304)",
+    "differences": [
+      {
+        "addr": "0x8002be78",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002be7c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002be80",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002bea8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002beac",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002bf0c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002bf10",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002bf14",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002bfa8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ee30",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002eebc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002ef10",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002efa8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8002efac",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8003926c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8004223c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80042398",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8004d904",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80053438",
+        "new": 100,
+        "old": 79.06977
+      },
+      {
+        "addr": "0x800c0d20",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800c80ec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800cb080",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800cb084",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800cee48",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800cf258",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80107734",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80107738",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801093ec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8011f5c4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80154dd4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80168a90",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "50c8ffa738f44d4bc88c0caeb484c0c1f140469d",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-10T07:45:13",
+    "message": "lots more zEntPlayer functions (#305)",
+    "differences": [
+      {
+        "addr": "0x80053438",
+        "new": 79.06977,
+        "old": 100
+      },
+      {
+        "addr": "0x80067f40",
+        "new": 78.26087,
+        "old": 0
+      },
+      {
+        "addr": "0x80068068",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800680e8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068180",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068218",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800682b0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006833c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006838c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068410",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068490",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068528",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800685b4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006864c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006869c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068704",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068760",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800687c8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068818",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068834",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006884c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068878",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800688a0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800688d0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068918",
+        "new": 28.57143,
+        "old": 0
+      },
+      {
+        "addr": "0x80068934",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068950",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068968",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006899c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800689d0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068a00",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068a30",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068a60",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068a90",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068ad0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068b10",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068b50",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068b90",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068bdc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068c28",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068c5c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068c9c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068cb4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068d30",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068d78",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068e0c",
+        "new": 52.941177,
+        "old": 0
+      },
+      {
+        "addr": "0x80068e94",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068e9c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068eb8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80068f24",
+        "new": 86.666664,
+        "old": 0
+      },
+      {
+        "addr": "0x80068fe8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80069054",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006905c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80069168",
+        "new": 83.60656,
+        "old": 0
+      },
+      {
+        "addr": "0x800698a8",
+        "new": 91.803276,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "49ce8da058f39b9ed54af3d4d4983d93890be74d",
+    "email": "iamtotallynotmichael@gmail.com",
+    "time": "2024-07-09T22:42:50",
+    "message": "Even More zNPC Void Functions (#303)",
+    "differences": [
+      {
+        "addr": "0x8004fab8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80060ed0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80091b04",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80097354",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eaf0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eaf4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eaf8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eafc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eb00",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eb04",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eb08",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eb0c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eb10",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eb14",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eb18",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8009eb1c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a1d08",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a1d0c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a1d10",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a1d14",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a5ffc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800b9374",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ed220",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ed224",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ee2c8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80105390",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80107560",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80125228",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8012df04",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8014bc00",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8014e80c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8014e810",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8014e814",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "4d5d823119d22deac8ea229dd79a8fd2ac5a060b",
+    "email": "iamtotallynotmichael@gmail.com",
+    "time": "2024-07-09T20:41:50",
+    "message": "Assorted zNPC Debug Functions (#302)",
+    "differences": [
+      {
+        "addr": "0x80152e34",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80154aec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8015a9d0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8015b0bc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8015f9d0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80160a14",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016c5e8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8016fbd4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80175c94",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017705c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8017b838",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "d6d1bfdc62ef2d4167d3494cf2a5cec57de68073",
+    "email": "iamtotallynotmichael@gmail.com",
+    "time": "2024-07-09T19:26:32",
+    "message": "zNPCFXCinematic (#301)",
+    "differences": [
+      {
+        "addr": "0x80194f68",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "5580045d7ebf2a122466ca4c618c84e5fb861f44",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-09T17:15:16",
+    "message": "NPCHazard::Upd_Patriot 100%",
+    "differences": [
+      {
+        "addr": "0x8018bd04",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "92f6fb5e11b568b87af2ec9c11493f76adb23690",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-09T12:04:52",
+    "message": "zEntPlayer progress (#300)",
+    "differences": [
+      {
+        "addr": "0x80066864",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800669ec",
+        "new": 79.78022,
+        "old": 0
+      },
+      {
+        "addr": "0x8006d71c",
+        "new": 96,
+        "old": 92
+      },
+      {
+        "addr": "0x80082acc",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "4585ecb6768f9c0eac343018200582598869d6ec",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-08T17:43:31",
+    "message": "sb1 progress",
+    "differences": [
+      {
+        "addr": "0x80155660",
+        "new": 8.080808,
+        "old": 0
+      },
+      {
+        "addr": "0x80156098",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80156268",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801563ac",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80156538",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "a1e941547c466a26f39e777a802ab99d2f1a1cd0",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-07T16:38:06",
+    "message": "SB1 boss progress",
+    "differences": [
+      {
+        "addr": "0x80154dd8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8015592c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155c08",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155c7c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155ca0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155cb4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155cc8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155d4c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155e04",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155ea8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80155f74",
+        "new": 90.69768,
+        "old": 0
+      },
+      {
+        "addr": "0x80156020",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801561ec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80156340",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80156450",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801564b4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8015667c",
+        "new": 70.37037,
+        "old": 0
+      },
+      {
+        "addr": "0x801569e0",
+        "new": 32.467533,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "29e26d27eb28d754625c93550b477f16f8d19c88",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-07T10:04:06",
+    "message": "Finish matching zNPCTypeTest (#298)",
+    "differences": [
+      {
+        "addr": "0x80135bd0",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "7e63f290f90e2c70522f67c534a4a9c80d1b4b4d",
+    "email": "32021834\u002Bseilweiss@users.noreply.github.com",
+    "time": "2024-07-07T01:22:02",
+    "message": "Rename typedefs in types.h to match Ratatouille (#296)",
+    "differences": [
+      {
+        "addr": "0x80053850",
+        "new": 98.36066,
+        "old": 100
+      },
+      {
+        "addr": "0x800a6180",
+        "new": 87.297295,
+        "old": 87.83784
+      },
+      {
+        "addr": "0x800ad054",
+        "new": 91.66667,
+        "old": 100
+      },
+      {
+        "addr": "0x800ad084",
+        "new": 92.30769,
+        "old": 100
+      },
+      {
+        "addr": "0x800ad1cc",
+        "new": 93.75,
+        "old": 100
+      },
+      {
+        "addr": "0x800ad20c",
+        "new": 98.591545,
+        "old": 100
+      },
+      {
+        "addr": "0x800ad328",
+        "new": 45.512817,
+        "old": 48.71795
+      },
+      {
+        "addr": "0x800af30c",
+        "new": 97.231834,
+        "old": 97.923874
+      },
+      {
+        "addr": "0x800b08f0",
+        "new": 96.36363,
+        "old": 100
+      },
+      {
+        "addr": "0x800bd1b0",
+        "new": 78.94737,
+        "old": 100
+      },
+      {
+        "addr": "0x800f7900",
+        "new": 85.71429,
+        "old": 100
+      },
+      {
+        "addr": "0x800f791c",
+        "new": 85.71429,
+        "old": 100
+      }
+    ]
+  },
+  {
+    "id": "c69187d7aeefb752575be0499540ed5909be0f57",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-06T21:34:57",
+    "message": "Finish matching zConditional and mark xFog as matching (#294)",
+    "differences": [
+      {
+        "addr": "0x800527ec",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "40402ea5f5e8dd2800181451a042536a40d3ecb4",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-06T20:33:59",
+    "message": "neptune anim table 99%",
+    "differences": [
+      {
+        "addr": "0x80107c28",
+        "new": 99.49495,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "4f61ec29f97ae5b597851cc0f6035f2fd456b0b8",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-06T20:03:58",
+    "message": "ZNPC_AnimTable_Jelly 99% match",
+    "differences": [
+      {
+        "addr": "0x80107a00",
+        "new": 99.27536,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "07781fb06aab899e87b4f21dad857e0f8251db39",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-06T19:04:55",
+    "message": "Jellyfish Decomp",
+    "differences": [
+      {
+        "addr": "0x801081f4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80108450",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80108530",
+        "new": 79.36508,
+        "old": 0
+      },
+      {
+        "addr": "0x8010862c",
+        "new": 48.88889,
+        "old": 0
+      },
+      {
+        "addr": "0x801086e0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801087a0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8010898c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801089b4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801092b0",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "6c678cf1ed7aa04c358af8462dc09159f0b9f7d1",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-06T10:29:03",
+    "message": "zEntPlayer progress (#292)",
+    "differences": [
+      {
+        "addr": "0x80066210",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800665d8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800667a0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800667ec",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006d71c",
+        "new": 92,
+        "old": 100
+      }
+    ]
+  },
+  {
+    "id": "94b91706416c34a252f3a31f5e1cd00fa6d71c07",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-04T23:33:50",
+    "message": "xstransvc equivalent (#291)",
+    "differences": [
+      {
+        "addr": "0x8004ba18",
+        "new": 91.56626,
+        "old": 0
+      },
+      {
+        "addr": "0x8004bcec",
+        "new": 77.77778,
+        "old": 0
+      },
+      {
+        "addr": "0x8004bf38",
+        "new": 86.36364,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "df36ca93e29468855adc2e634d89f69663d8f5bc",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-04T17:32:32",
+    "message": "misc. fodder progress",
+    "differences": [
+      {
+        "addr": "0x800e1fd8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800e20ac",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800e2114",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800e21e4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800f9c90",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80102940",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80102948",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "4e53b6bc1cf6dbca586fb7fdf62119385b6fdfb9",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-03T22:58:34",
+    "message": "Some nonmatches fixed (#290)",
+    "differences": [
+      {
+        "addr": "0x800bea58",
+        "new": 97.41936,
+        "old": 0
+      },
+      {
+        "addr": "0x800bf19c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80170808",
+        "new": 87.73585,
+        "old": 93.396225
+      },
+      {
+        "addr": "0x801710a4",
+        "new": 87.57397,
+        "old": 65.08875
+      }
+    ]
+  },
+  {
+    "id": "9ae94b6095792fe1fcfe700e281410263a6ff2f7",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-03T20:19:23",
+    "message": "Finish matching xVec3 (#289)",
+    "differences": [
+      {
+        "addr": "0x8004e2f0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8004e3dc",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "2d9eb0dea33f6db89d327c3b8945ad73de947871",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-03T16:54:57",
+    "message": "misc. decompilation",
+    "differences": [
+      {
+        "addr": "0x80066500",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80066558",
+        "new": 83.33333,
+        "old": 0
+      },
+      {
+        "addr": "0x8006697c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80069508",
+        "new": 78.94737,
+        "old": 0
+      },
+      {
+        "addr": "0x8006999c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80069ca0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006a4a4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006be20",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006be94",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bea8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006beb8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bec0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8006bed0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80082d08",
+        "new": 100,
+        "old": 88.88889
+      },
+      {
+        "addr": "0x800a8888",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8994",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8ab8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8bcc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800f3390",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800f33a8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800f33e0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800f3f24",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800f4244",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800f4630",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800f4644",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "283c618560e27518cea38f965b33c8b6afcf76ae",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-03T14:16:47",
+    "message": "Finish matching zPendulum",
+    "differences": [
+      {
+        "addr": "0x800a8888",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8994",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8ab8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8bcc",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "40b00ee087fa2be33299c6315ec5a7873e3526af",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-03T14:16:11",
+    "message": "Add some missing function declarations",
+    "differences": [
+      {
+        "addr": "0x800a8888",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x800a8994",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x800a8ab8",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x800a8bcc",
+        "new": 0,
+        "old": 100
+      }
+    ]
+  },
+  {
+    "id": "4707a890a15399ddb7af3110dd0527941d8db867",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-03T09:02:10",
+    "message": "zBusStop_Update matching now",
+    "differences": [
+      {
+        "addr": "0x8012d9a8",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "d6c11ca13125b11aca732f04e945df1381fe2c4d",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-02T21:13:08",
+    "message": "Fix incorrect buttons parameter for menu fmvs",
+    "differences": [
+      {
+        "addr": "0x800a6180",
+        "new": 81.08108,
+        "old": 77.2973
+      }
+    ]
+  },
+  {
+    "id": "61f1fe21da7fbdae6a05a324794f1f408ed6d6ff",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-02T20:50:04",
+    "message": "zParCmd equivalent (#286)",
+    "differences": [
+      {
+        "addr": "0x800a7d84",
+        "new": 85.71429,
+        "old": 0
+      },
+      {
+        "addr": "0x800a7e2c",
+        "new": 69.230774,
+        "old": 0
+      },
+      {
+        "addr": "0x800a7efc",
+        "new": 51.219513,
+        "old": 0
+      },
+      {
+        "addr": "0x800a7fa4",
+        "new": 66.32653,
+        "old": 0
+      },
+      {
+        "addr": "0x800a812c",
+        "new": 79.12088,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8298",
+        "new": 94.565216,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8408",
+        "new": 35.294117,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8518",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800a8630",
+        "new": 52.25225,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "188cae51b4d32ff3cc4845b58f39bf3da58d1c65",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-02T20:46:57",
+    "message": "start decompiling zNPCGoalRobo, Fodder code",
+    "differences": [
+      {
+        "addr": "0x800da554",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800da588",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800dacf4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800dbe34",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800dc9e0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ddf84",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800e0a28",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800e19c0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec714",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec738",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec740",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec748",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec764",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec780",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec790",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec798",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec7fc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec810",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec828",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec87c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec880",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec8a0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec8c8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec8cc",
+        "new": 5.555556,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec914",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec918",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec924",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec92c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec930",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec9a8",
+        "new": 33.333336,
+        "old": 0
+      },
+      {
+        "addr": "0x800ec9c0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800eca20",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800eca84",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800eca88",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ecac8",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "678b0b64063a61656ca53b58b69810765ef75e2d",
+    "email": "luke.street@encounterpc.com",
+    "time": "2024-07-02T20:30:58",
+    "message": "Use patched mwcc compiler 2.0p1",
+    "differences": [
+      {
+        "addr": "0x8000e9f4",
+        "new": 100,
+        "old": 87.09677
+      },
+      {
+        "addr": "0x8001fdbc",
+        "new": 100,
+        "old": 80
+      },
+      {
+        "addr": "0x8004e57c",
+        "new": 100,
+        "old": 79.06977
+      },
+      {
+        "addr": "0x8004e7e8",
+        "new": 93.95349,
+        "old": 59.53488
+      },
+      {
+        "addr": "0x8009a2c0",
+        "new": 100,
+        "old": 88.2353
+      },
+      {
+        "addr": "0x800a6180",
+        "new": 87.83784,
+        "old": 81.08108
+      },
+      {
+        "addr": "0x800a7e2c",
+        "new": 100,
+        "old": 69.230774
+      },
+      {
+        "addr": "0x800a7efc",
+        "new": 100,
+        "old": 51.219513
+      },
+      {
+        "addr": "0x800a7fa4",
+        "new": 56.122444,
+        "old": 66.32653
+      },
+      {
+        "addr": "0x800a812c",
+        "new": 96.7033,
+        "old": 79.12088
+      },
+      {
+        "addr": "0x800a8408",
+        "new": 88.2353,
+        "old": 35.294117
+      },
+      {
+        "addr": "0x800a8630",
+        "new": 78.37838,
+        "old": 52.25225
+      },
+      {
+        "addr": "0x800ad598",
+        "new": 84.61539,
+        "old": 76.92308
+      },
+      {
+        "addr": "0x800b96b8",
+        "new": 100,
+        "old": 88.2353
+      },
+      {
+        "addr": "0x800b9d18",
+        "new": 100,
+        "old": 90.196075
+      },
+      {
+        "addr": "0x800ba6b0",
+        "new": 91.01124,
+        "old": 89.88764
+      },
+      {
+        "addr": "0x8010c8f8",
+        "new": 72.22222,
+        "old": 69.44444
+      },
+      {
+        "addr": "0x8017047c",
+        "new": 100,
+        "old": 91.935486
+      },
+      {
+        "addr": "0x80170680",
+        "new": 93.877556,
+        "old": 67.34694
+      },
+      {
+        "addr": "0x80170808",
+        "new": 93.396225,
+        "old": 85.84906
+      },
+      {
+        "addr": "0x801709b0",
+        "new": 100,
+        "old": 91.01124
+      },
+      {
+        "addr": "0x80170b14",
+        "new": 100,
+        "old": 91.01124
+      },
+      {
+        "addr": "0x80170c78",
+        "new": 80.524345,
+        "old": 57.677902
+      },
+      {
+        "addr": "0x801710a4",
+        "new": 65.08875,
+        "old": 58.57988
+      },
+      {
+        "addr": "0x801713cc",
+        "new": 100,
+        "old": 80
+      },
+      {
+        "addr": "0x80171484",
+        "new": 100,
+        "old": 78.807945
+      },
+      {
+        "addr": "0x801716e0",
+        "new": 100,
+        "old": 40
+      },
+      {
+        "addr": "0x801717d0",
+        "new": 100,
+        "old": 92
+      },
+      {
+        "addr": "0x801719c4",
+        "new": 94.59459,
+        "old": 72.07207
+      },
+      {
+        "addr": "0x80172054",
+        "new": 100,
+        "old": 92.45283
+      },
+      {
+        "addr": "0x801721e4",
+        "new": 97.45763,
+        "old": 86.440674
+      }
+    ]
+  },
+  {
+    "id": "9131feea4b2e566d521878434677c0f53e74114b",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-07-01T23:01:43",
+    "message": "zUI close to equivalent (#285)",
+    "differences": [
+      {
+        "addr": "0x800b96b8",
+        "new": 88.2353,
+        "old": 100
+      },
+      {
+        "addr": "0x800b98ac",
+        "new": 69.76744,
+        "old": 0
+      },
+      {
+        "addr": "0x800b9d18",
+        "new": 90.196075,
+        "old": 100
+      },
+      {
+        "addr": "0x800b9ff8",
+        "new": 91.30435,
+        "old": 0
+      },
+      {
+        "addr": "0x800ba054",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800ba6b0",
+        "new": 89.88764,
+        "old": 0
+      },
+      {
+        "addr": "0x800ba814",
+        "new": 86.666664,
+        "old": 0
+      },
+      {
+        "addr": "0x800bb000",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800bb460",
+        "new": 83.870964,
+        "old": 0
+      },
+      {
+        "addr": "0x800bb4dc",
+        "new": 55.094994,
+        "old": 0
+      },
+      {
+        "addr": "0x800bbf44",
+        "new": 94.117645,
+        "old": 0
+      },
+      {
+        "addr": "0x800bc0d8",
+        "new": 96.47059,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "b64e2c52836cd3b84aa0a9e8d8cacc2d60ba6663",
+    "email": "32021834\u002Bseilweiss@users.noreply.github.com",
+    "time": "2024-07-01T17:18:26",
+    "message": "Remove ASSIGNMENT_OPERATOR macro (#284)",
+    "differences": [
+      {
+        "addr": "0x80020bc8",
+        "new": 57.894737,
+        "old": 100
+      },
+      {
+        "addr": "0x80039318",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x8005043c",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x80058bf0",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x800b9654",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x800c082c",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x8010f018",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x8013ba08",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8013bb70",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "b20a50b35a7b9213cf04bacaa81ecc26960e9c4d",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-06-30T09:43:30",
+    "message": "Finish matching xIni (#283)",
+    "differences": [
+      {
+        "addr": "0x80030640",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800306cc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800309f0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80030a10",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80030a60",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "756994093997a38f0a87b83fd84e3dd638d29b5d",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-29T03:54:47",
+    "message": "fixup some zGameExtras stuff",
+    "differences": [
+      {
+        "addr": "0x80099d3c",
+        "new": 87.93104,
+        "old": 86.206894
+      }
+    ]
+  },
+  {
+    "id": "6a31e38cb63d9821ac3ea27ff3cf02b46ef3f705",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-28T10:10:44",
+    "message": "zGameExtras 100% equivalent (#282)",
+    "differences": [
+      {
+        "addr": "0x80099b0c",
+        "new": 33.333336,
+        "old": 0
+      },
+      {
+        "addr": "0x80099d3c",
+        "new": 86.206894,
+        "old": 0
+      },
+      {
+        "addr": "0x80099f2c",
+        "new": 97.333336,
+        "old": 0
+      },
+      {
+        "addr": "0x8009a2c0",
+        "new": 88.2353,
+        "old": 100
+      },
+      {
+        "addr": "0x8009a380",
+        "new": 87.80488,
+        "old": 0
+      },
+      {
+        "addr": "0x8009a4b0",
+        "new": 95.74468,
+        "old": 0
+      },
+      {
+        "addr": "0x8009a5ac",
+        "new": 97.05882,
+        "old": 0
+      },
+      {
+        "addr": "0x8009a810",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "606117aae6e8568d3fcf5ae766b9d6454b87de50",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-27T19:47:54",
+    "message": "zMenu 100% Equivalent (#279)",
+    "differences": [
+      {
+        "addr": "0x800a6180",
+        "new": 77.2973,
+        "old": 0
+      },
+      {
+        "addr": "0x800a6ba4",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "6fea7653818d14e63d1bec7d19cfa3cbe7398dba",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-27T19:46:46",
+    "message": "zParPTank nearly equivalent. (#280)",
+    "differences": [
+      {
+        "addr": "0x8017047c",
+        "new": 91.935486,
+        "old": 0
+      },
+      {
+        "addr": "0x8017066c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80170680",
+        "new": 67.34694,
+        "old": 0
+      },
+      {
+        "addr": "0x80170808",
+        "new": 85.84906,
+        "old": 0
+      },
+      {
+        "addr": "0x801709b0",
+        "new": 91.01124,
+        "old": 0
+      },
+      {
+        "addr": "0x80170b14",
+        "new": 91.01124,
+        "old": 0
+      },
+      {
+        "addr": "0x80170c78",
+        "new": 57.677902,
+        "old": 0
+      },
+      {
+        "addr": "0x801710a4",
+        "new": 58.57988,
+        "old": 0
+      },
+      {
+        "addr": "0x80171348",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801713b8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801713cc",
+        "new": 80,
+        "old": 0
+      },
+      {
+        "addr": "0x801713f4",
+        "new": 91.66667,
+        "old": 0
+      },
+      {
+        "addr": "0x80171484",
+        "new": 78.807945,
+        "old": 0
+      },
+      {
+        "addr": "0x801716e0",
+        "new": 40,
+        "old": 0
+      },
+      {
+        "addr": "0x801717d0",
+        "new": 92,
+        "old": 0
+      },
+      {
+        "addr": "0x801719c4",
+        "new": 72.07207,
+        "old": 0
+      },
+      {
+        "addr": "0x80171b80",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80171ba0",
+        "new": 60.975613,
+        "old": 0
+      },
+      {
+        "addr": "0x80171c44",
+        "new": 64.28571,
+        "old": 0
+      },
+      {
+        "addr": "0x80171c7c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80171c80",
+        "new": 93.333336,
+        "old": 0
+      },
+      {
+        "addr": "0x80171d34",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80171dd4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80171ea4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80171fac",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80171fd0",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "89958ffe404957b32b782ff7864cb06a2db728dc",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-06-27T05:27:03",
+    "message": "Finish matching xSurface",
+    "differences": [
+      {
+        "addr": "0x8004d054",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8004d0cc",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8004d148",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8004d1c0",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "ff79744a3db65cb0a03e9e98f4ec86fd4b4a009f",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-06-25T08:41:04",
+    "message": "Finish decompiling zTaxi \u0026 mark it as equivalent (#278)",
+    "differences": [
+      {
+        "addr": "0x80172054",
+        "new": 92.45283,
+        "old": 0
+      },
+      {
+        "addr": "0x80172128",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x801721e4",
+        "new": 86.440674,
+        "old": 0
+      },
+      {
+        "addr": "0x80172594",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80172634",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "2a373feaa1edb0202a5c834e21669456fd070b8e",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-06-24T09:52:08",
+    "message": "decomp tikiDyingCB, float issues",
+    "differences": [
+      {
+        "addr": "0x8010c8f8",
+        "new": 69.44444,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "e23d1a3c28f519b708d13c8f0f2f853a0e8c8b49",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-24T09:21:54",
+    "message": "zAnimList 100% Equivalent (#275)",
+    "differences": [
+      {
+        "addr": "0x8004e7e8",
+        "new": 59.53488,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "bf8ae516ef2eddfa4d106158ee899e9aa41a3b1f",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-24T09:10:55",
+    "message": "zSaveLoad 100% Equivalent (#276)",
+    "differences": [
+      {
+        "addr": "0x800ad328",
+        "new": 48.71795,
+        "old": 0
+      },
+      {
+        "addr": "0x800ad598",
+        "new": 76.92308,
+        "old": 0
+      },
+      {
+        "addr": "0x800ad654",
+        "new": 79.31035,
+        "old": 0
+      },
+      {
+        "addr": "0x800aec98",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800af30c",
+        "new": 97.923874,
+        "old": 0
+      },
+      {
+        "addr": "0x800afb84",
+        "new": 98.92473,
+        "old": 0
+      },
+      {
+        "addr": "0x800afe6c",
+        "new": 97.61904,
+        "old": 0
+      },
+      {
+        "addr": "0x800b023c",
+        "new": 98.97436,
+        "old": 0
+      },
+      {
+        "addr": "0x800b0548",
+        "new": 92.45283,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "bbb1ce2b6b423f74ac929e36a19ad83bdb9f355d",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-23T19:35:36",
+    "message": "Decomp zActionLine data",
+    "differences": [
+      {
+        "addr": "0x8004e510",
+        "new": 81.48148,
+        "old": 0
+      },
+      {
+        "addr": "0x8004e57c",
+        "new": 79.06977,
+        "old": 100
+      }
+    ]
+  },
+  {
+    "id": "dbf834afee283ebe3fa107f13b707fadd941ffca",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-23T11:12:54",
+    "message": "Reformat all files (#273)",
+    "differences": [
+      {
+        "addr": "0x801095ec",
+        "new": 0,
+        "old": 100
+      }
+    ]
+  },
+  {
+    "id": "63bae718b52e9d6a12c4488f48fe9ef1ec229a8c",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-23T11:06:32",
+    "message": "xClimate.cpp 100% Equivalent (maybe) (#271)",
+    "differences": [
+      {
+        "addr": "0x8000e96c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x8000e9f4",
+        "new": 87.09677,
+        "old": 100
+      },
+      {
+        "addr": "0x8000f00c",
+        "new": 100,
+        "old": 80
+      }
+    ]
+  },
+  {
+    "id": "159a53e76f1697cbb0f665f7eef3639316ee3757",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-06-22T20:52:59",
+    "message": "100% OK zNPCTiki_InitStacking",
+    "differences": [
+      {
+        "addr": "0x801095ec",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "766d79fe6b75d0dfeb93504befc83c2eae114c4b",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-22T19:45:34",
+    "message": "Revert \u0022Switch to linker 1.3.2\u0022",
+    "differences": [
+      {
+        "addr": "0x80007814",
+        "new": 100,
+        "old": 40
+      },
+      {
+        "addr": "0x8000a5d0",
+        "new": 100,
+        "old": 83.33333
+      },
+      {
+        "addr": "0x8000a690",
+        "new": 100,
+        "old": 30.769232
+      },
+      {
+        "addr": "0x8000ace8",
+        "new": 100,
+        "old": 91.489365
+      },
+      {
+        "addr": "0x8000ae14",
+        "new": 100,
+        "old": 84
+      },
+      {
+        "addr": "0x8000af70",
+        "new": 100,
+        "old": 61.538464
+      },
+      {
+        "addr": "0x8000afd8",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8000b03c",
+        "new": 100,
+        "old": 23.809525
+      },
+      {
+        "addr": "0x8000b090",
+        "new": 100,
+        "old": 10
+      },
+      {
+        "addr": "0x8000b0b8",
+        "new": 100,
+        "old": 23.076923
+      },
+      {
+        "addr": "0x8000b120",
+        "new": 100,
+        "old": 75
+      },
+      {
+        "addr": "0x8000b1cc",
+        "new": 100,
+        "old": 76
+      },
+      {
+        "addr": "0x8000b230",
+        "new": 100,
+        "old": 23.076923
+      },
+      {
+        "addr": "0x8000b264",
+        "new": 100,
+        "old": 42.857143
+      },
+      {
+        "addr": "0x8000b280",
+        "new": 100,
+        "old": 44.444447
+      },
+      {
+        "addr": "0x8000b56c",
+        "new": 100,
+        "old": 73.91304
+      },
+      {
+        "addr": "0x8000b5c8",
+        "new": 100,
+        "old": 28
+      },
+      {
+        "addr": "0x8000e510",
+        "new": 100,
+        "old": 80
+      },
+      {
+        "addr": "0x8000e580",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8000e5e4",
+        "new": 100,
+        "old": 85.71429
+      },
+      {
+        "addr": "0x8000e650",
+        "new": 100,
+        "old": 37.5
+      },
+      {
+        "addr": "0x8000e690",
+        "new": 100,
+        "old": 23.076923
+      },
+      {
+        "addr": "0x8000e6c4",
+        "new": 100,
+        "old": 10
+      },
+      {
+        "addr": "0x8000e6ec",
+        "new": 100,
+        "old": 44.444447
+      },
+      {
+        "addr": "0x8000e754",
+        "new": 100,
+        "old": 23.076923
+      },
+      {
+        "addr": "0x80015140",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x800188e0",
+        "new": 100,
+        "old": 92
+      },
+      {
+        "addr": "0x8001b808",
+        "new": 100,
+        "old": 80
+      },
+      {
+        "addr": "0x8001b854",
+        "new": 100,
+        "old": 33.333336
+      },
+      {
+        "addr": "0x8001b878",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8001b8dc",
+        "new": 100,
+        "old": 66.66667
+      },
+      {
+        "addr": "0x8001b960",
+        "new": 100,
+        "old": 23.076923
+      },
+      {
+        "addr": "0x8001f1f8",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8001ffb0",
+        "new": 100,
+        "old": 84.78261
+      },
+      {
+        "addr": "0x800209f4",
+        "new": 100,
+        "old": 92.30769
+      },
+      {
+        "addr": "0x80020bc8",
+        "new": 100,
+        "old": 21.052631
+      },
+      {
+        "addr": "0x800213b0",
+        "new": 100,
+        "old": 90.909096
+      },
+      {
+        "addr": "0x800214e4",
+        "new": 100,
+        "old": 77.77778
+      },
+      {
+        "addr": "0x80021afc",
+        "new": 52.173912,
+        "old": 47.826088
+      },
+      {
+        "addr": "0x80021c10",
+        "new": 100,
+        "old": 89.189186
+      },
+      {
+        "addr": "0x80022498",
+        "new": 100,
+        "old": 75
+      },
+      {
+        "addr": "0x800227dc",
+        "new": 100,
+        "old": 22.64151
+      },
+      {
+        "addr": "0x80022d2c",
+        "new": 100,
+        "old": 91.66667
+      },
+      {
+        "addr": "0x80022f64",
+        "new": 100,
+        "old": 22.580645
+      },
+      {
+        "addr": "0x80023778",
+        "new": 100,
+        "old": 40
+      },
+      {
+        "addr": "0x80023af8",
+        "new": 100,
+        "old": 93.67088
+      },
+      {
+        "addr": "0x80023c34",
+        "new": 100,
+        "old": 81.818184
+      },
+      {
+        "addr": "0x80023dac",
+        "new": 100,
+        "old": 81.818184
+      },
+      {
+        "addr": "0x80023f24",
+        "new": 100,
+        "old": 81.818184
+      },
+      {
+        "addr": "0x8002409c",
+        "new": 100,
+        "old": 81.818184
+      },
+      {
+        "addr": "0x8002422c",
+        "new": 100,
+        "old": 93.44263
+      },
+      {
+        "addr": "0x80024348",
+        "new": 100,
+        "old": 93.44263
+      },
+      {
+        "addr": "0x80024464",
+        "new": 100,
+        "old": 93.44263
+      },
+      {
+        "addr": "0x80024580",
+        "new": 100,
+        "old": 93.44263
+      },
+      {
+        "addr": "0x8002469c",
+        "new": 100,
+        "old": 93.44263
+      },
+      {
+        "addr": "0x800247b8",
+        "new": 100,
+        "old": 93.44263
+      },
+      {
+        "addr": "0x800248d4",
+        "new": 100,
+        "old": 93.44263
+      },
+      {
+        "addr": "0x80024a64",
+        "new": 100,
+        "old": 43.47826
+      },
+      {
+        "addr": "0x80024c58",
+        "new": 100,
+        "old": 93.548386
+      },
+      {
+        "addr": "0x80024d0c",
+        "new": 100,
+        "old": 93.44263
+      },
+      {
+        "addr": "0x80024e38",
+        "new": 100,
+        "old": 94.28571
+      },
+      {
+        "addr": "0x80024f88",
+        "new": 100,
+        "old": 94.28571
+      },
+      {
+        "addr": "0x800250b0",
+        "new": 93.93939,
+        "old": 87.878784
+      },
+      {
+        "addr": "0x800254e4",
+        "new": 100,
+        "old": 92.5
+      },
+      {
+        "addr": "0x800257f8",
+        "new": 100,
+        "old": 40
+      },
+      {
+        "addr": "0x800258a8",
+        "new": 100,
+        "old": 81.25
+      },
+      {
+        "addr": "0x80025968",
+        "new": 100,
+        "old": 81.25
+      },
+      {
+        "addr": "0x80025a50",
+        "new": 100,
+        "old": 88.88889
+      },
+      {
+        "addr": "0x80025cc0",
+        "new": 100,
+        "old": 36.363636
+      },
+      {
+        "addr": "0x800260a0",
+        "new": 100,
+        "old": 77.46479
+      },
+      {
+        "addr": "0x800262a4",
+        "new": 63.636364,
+        "old": 0
+      },
+      {
+        "addr": "0x80033b24",
+        "new": 100,
+        "old": 36.363636
+      },
+      {
+        "addr": "0x800383c4",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80039318",
+        "new": 100,
+        "old": 28.57143
+      },
+      {
+        "addr": "0x8003c588",
+        "new": 100,
+        "old": 50
+      },
+      {
+        "addr": "0x80041810",
+        "new": 100,
+        "old": 20.930233
+      },
+      {
+        "addr": "0x800418bc",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8005043c",
+        "new": 100,
+        "old": 30.303032
+      },
+      {
+        "addr": "0x80052ab8",
+        "new": 100,
+        "old": 33.333336
+      },
+      {
+        "addr": "0x80056490",
+        "new": 100,
+        "old": 77.77778
+      },
+      {
+        "addr": "0x80058bf0",
+        "new": 100,
+        "old": 44.444447
+      },
+      {
+        "addr": "0x8006003c",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80062768",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x800649a8",
+        "new": 100,
+        "old": 54.545456
+      },
+      {
+        "addr": "0x80066128",
+        "new": 100,
+        "old": 29.411766
+      },
+      {
+        "addr": "0x8006616c",
+        "new": 100,
+        "old": 90.909096
+      },
+      {
+        "addr": "0x80082b00",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80092694",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x800926f8",
+        "new": 100,
+        "old": 80
+      },
+      {
+        "addr": "0x80097380",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x800b0b24",
+        "new": 100,
+        "old": 86.95652
+      },
+      {
+        "addr": "0x800b5c34",
+        "new": 100,
+        "old": 77.77778
+      },
+      {
+        "addr": "0x800b5c58",
+        "new": 100,
+        "old": 77.77778
+      },
+      {
+        "addr": "0x800b9654",
+        "new": 100,
+        "old": 72
+      },
+      {
+        "addr": "0x800bc52c",
+        "new": 100,
+        "old": 63.636364
+      },
+      {
+        "addr": "0x800c082c",
+        "new": 100,
+        "old": 40
+      },
+      {
+        "addr": "0x800c2dd4",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x800c4f1c",
+        "new": 100,
+        "old": 91.30435
+      },
+      {
+        "addr": "0x800c5154",
+        "new": 100,
+        "old": 74.19355
+      },
+      {
+        "addr": "0x800c5318",
+        "new": 100,
+        "old": 63.15789
+      },
+      {
+        "addr": "0x800c53b0",
+        "new": 100,
+        "old": 45.72025
+      },
+      {
+        "addr": "0x800c5c44",
+        "new": 100,
+        "old": 79.22078
+      },
+      {
+        "addr": "0x800c6228",
+        "new": 100,
+        "old": 89.28571
+      },
+      {
+        "addr": "0x800d8ff4",
+        "new": 100,
+        "old": 57.894737
+      },
+      {
+        "addr": "0x800ecb98",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x800f466c",
+        "new": 100,
+        "old": 63.636364
+      },
+      {
+        "addr": "0x80102ba0",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8010773c",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80109410",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8010ea94",
+        "new": 100,
+        "old": 77.77778
+      },
+      {
+        "addr": "0x8010f018",
+        "new": 100,
+        "old": 42.857143
+      },
+      {
+        "addr": "0x8011630c",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8011a8dc",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80121da8",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x801225d8",
+        "new": 100,
+        "old": 74.46808
+      },
+      {
+        "addr": "0x8012635c",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80129f50",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x801343e0",
+        "new": 100,
+        "old": 95.454544
+      },
+      {
+        "addr": "0x8013a538",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80146590",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8015fefc",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80168a2c",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x8017c014",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80190f1c",
+        "new": 100,
+        "old": 52
+      },
+      {
+        "addr": "0x80195340",
+        "new": 100,
+        "old": 52
+      }
+    ]
+  },
+  {
+    "id": "f9feef7db562b342f82954887c13f9872a9e4d73",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-06-22T08:05:12",
+    "message": "Finish matching iTime",
+    "differences": [
+      {
+        "addr": "0x800d4980",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "3185e06425a86814c35cc36536a4488c1578e486",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-06-22T08:00:20",
+    "message": "Move some iSystem functions from iTime",
+    "differences": [
+      {
+        "addr": "0x800d44f0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d451c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d4548",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d4574",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "6b4c102ed46dd039fcd6c03766aeb985d6e5a7dc",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-22T01:27:11",
+    "message": "Reapply \u0022Try wine in CI instead of Wibo\u0022",
+    "differences": [
+      {
+        "addr": "0x80053438",
+        "new": 100,
+        "old": 79.06977
+      }
+    ]
+  },
+  {
+    "id": "31f3daa910b85447f69f3b8cb28aed44493a7050",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-06-22T00:24:55",
+    "message": "OK zNPCTiki::Damage",
+    "differences": [
+      {
+        "addr": "0x80053438",
+        "new": 79.06977,
+        "old": 100
+      },
+      {
+        "addr": "0x8010a530",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
+    "id": "203bdd7f06cf516aeac946e17c8e6dc63abe2029",
+    "email": "sebastiancasper3@gmail.com",
+    "time": "2024-06-22T00:09:01",
+    "message": "Switch to linker 1.3.2",
+    "differences": [
+      {
+        "addr": "0x80007814",
+        "new": 40,
+        "old": 100
+      },
+      {
+        "addr": "0x8000a5d0",
+        "new": 83.33333,
+        "old": 100
+      },
+      {
+        "addr": "0x8000a690",
+        "new": 30.769232,
+        "old": 100
+      },
+      {
+        "addr": "0x8000ace8",
+        "new": 91.489365,
+        "old": 100
+      },
+      {
+        "addr": "0x8000ae14",
+        "new": 84,
+        "old": 100
+      },
+      {
+        "addr": "0x8000af70",
+        "new": 61.538464,
+        "old": 100
+      },
+      {
+        "addr": "0x8000afd8",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b03c",
+        "new": 23.809525,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b090",
+        "new": 10,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b0b8",
+        "new": 23.076923,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b120",
+        "new": 75,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b1cc",
+        "new": 76,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b230",
+        "new": 23.076923,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b264",
+        "new": 42.857143,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b280",
+        "new": 44.444447,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b56c",
+        "new": 73.91304,
+        "old": 100
+      },
+      {
+        "addr": "0x8000b5c8",
+        "new": 28,
+        "old": 100
+      },
+      {
+        "addr": "0x8000e510",
+        "new": 80,
+        "old": 100
+      },
+      {
+        "addr": "0x8000e580",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8000e5e4",
+        "new": 85.71429,
+        "old": 100
+      },
+      {
+        "addr": "0x8000e650",
+        "new": 37.5,
+        "old": 100
+      },
+      {
+        "addr": "0x8000e690",
+        "new": 23.076923,
+        "old": 100
+      },
+      {
+        "addr": "0x8000e6c4",
+        "new": 10,
+        "old": 100
+      },
+      {
+        "addr": "0x8000e6ec",
+        "new": 44.444447,
+        "old": 100
+      },
+      {
+        "addr": "0x8000e754",
+        "new": 23.076923,
+        "old": 100
+      },
+      {
+        "addr": "0x80015140",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x800188e0",
+        "new": 92,
+        "old": 100
+      },
+      {
+        "addr": "0x8001b808",
+        "new": 80,
+        "old": 100
+      },
+      {
+        "addr": "0x8001b854",
+        "new": 33.333336,
+        "old": 100
+      },
+      {
+        "addr": "0x8001b878",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8001b8dc",
+        "new": 66.66667,
+        "old": 100
+      },
+      {
+        "addr": "0x8001b960",
+        "new": 23.076923,
+        "old": 100
+      },
+      {
+        "addr": "0x8001f1f8",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8001ffb0",
+        "new": 84.78261,
+        "old": 100
+      },
+      {
+        "addr": "0x800209f4",
+        "new": 92.30769,
+        "old": 100
+      },
+      {
+        "addr": "0x80020bc8",
+        "new": 21.052631,
+        "old": 100
+      },
+      {
+        "addr": "0x800213b0",
+        "new": 90.909096,
+        "old": 100
+      },
+      {
+        "addr": "0x800214e4",
+        "new": 77.77778,
+        "old": 100
+      },
+      {
+        "addr": "0x80021afc",
+        "new": 47.826088,
+        "old": 52.173912
+      },
+      {
+        "addr": "0x80021c10",
+        "new": 89.189186,
+        "old": 100
+      },
+      {
+        "addr": "0x80022498",
+        "new": 75,
+        "old": 100
+      },
+      {
+        "addr": "0x800227dc",
+        "new": 22.64151,
+        "old": 100
+      },
+      {
+        "addr": "0x80022d2c",
+        "new": 91.66667,
+        "old": 100
+      },
+      {
+        "addr": "0x80022f64",
+        "new": 22.580645,
+        "old": 100
+      },
+      {
+        "addr": "0x80023778",
+        "new": 40,
+        "old": 100
+      },
+      {
+        "addr": "0x80023af8",
+        "new": 93.67088,
+        "old": 100
+      },
+      {
+        "addr": "0x80023c34",
+        "new": 81.818184,
+        "old": 100
+      },
+      {
+        "addr": "0x80023dac",
+        "new": 81.818184,
+        "old": 100
+      },
+      {
+        "addr": "0x80023f24",
+        "new": 81.818184,
+        "old": 100
+      },
+      {
+        "addr": "0x8002409c",
+        "new": 81.818184,
+        "old": 100
+      },
+      {
+        "addr": "0x8002422c",
+        "new": 93.44263,
+        "old": 100
+      },
+      {
+        "addr": "0x80024348",
+        "new": 93.44263,
+        "old": 100
+      },
+      {
+        "addr": "0x80024464",
+        "new": 93.44263,
+        "old": 100
+      },
+      {
+        "addr": "0x80024580",
+        "new": 93.44263,
+        "old": 100
+      },
+      {
+        "addr": "0x8002469c",
+        "new": 93.44263,
+        "old": 100
+      },
+      {
+        "addr": "0x800247b8",
+        "new": 93.44263,
+        "old": 100
+      },
+      {
+        "addr": "0x800248d4",
+        "new": 93.44263,
+        "old": 100
+      },
+      {
+        "addr": "0x80024a64",
+        "new": 43.47826,
+        "old": 100
+      },
+      {
+        "addr": "0x80024c58",
+        "new": 93.548386,
+        "old": 100
+      },
+      {
+        "addr": "0x80024d0c",
+        "new": 93.44263,
+        "old": 100
+      },
+      {
+        "addr": "0x80024e38",
+        "new": 94.28571,
+        "old": 100
+      },
+      {
+        "addr": "0x80024f88",
+        "new": 94.28571,
+        "old": 100
+      },
+      {
+        "addr": "0x800250b0",
+        "new": 87.878784,
+        "old": 93.93939
+      },
+      {
+        "addr": "0x800254e4",
+        "new": 92.5,
+        "old": 100
+      },
+      {
+        "addr": "0x800257f8",
+        "new": 40,
+        "old": 100
+      },
+      {
+        "addr": "0x800258a8",
+        "new": 81.25,
+        "old": 100
+      },
+      {
+        "addr": "0x80025968",
+        "new": 81.25,
+        "old": 100
+      },
+      {
+        "addr": "0x80025a50",
+        "new": 88.88889,
+        "old": 100
+      },
+      {
+        "addr": "0x80025cc0",
+        "new": 36.363636,
+        "old": 100
+      },
+      {
+        "addr": "0x800260a0",
+        "new": 77.46479,
+        "old": 100
+      },
+      {
+        "addr": "0x800262a4",
+        "new": 0,
+        "old": 63.636364
+      },
+      {
+        "addr": "0x80033b24",
+        "new": 36.363636,
+        "old": 100
+      },
+      {
+        "addr": "0x800383c4",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80039318",
+        "new": 28.57143,
+        "old": 100
+      },
+      {
+        "addr": "0x8003c588",
+        "new": 50,
+        "old": 100
+      },
+      {
+        "addr": "0x80041810",
+        "new": 20.930233,
+        "old": 100
+      },
+      {
+        "addr": "0x800418bc",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8005043c",
+        "new": 30.303032,
+        "old": 100
+      },
+      {
+        "addr": "0x80052ab8",
+        "new": 33.333336,
+        "old": 100
+      },
+      {
+        "addr": "0x80056490",
+        "new": 77.77778,
+        "old": 100
+      },
+      {
+        "addr": "0x80058bf0",
+        "new": 44.444447,
+        "old": 100
+      },
+      {
+        "addr": "0x8006003c",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80062768",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x800649a8",
+        "new": 54.545456,
+        "old": 100
+      },
+      {
+        "addr": "0x80066128",
+        "new": 29.411766,
+        "old": 100
+      },
+      {
+        "addr": "0x8006616c",
+        "new": 90.909096,
+        "old": 100
+      },
+      {
+        "addr": "0x80082b00",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80092694",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x800926f8",
+        "new": 80,
+        "old": 100
+      },
+      {
+        "addr": "0x80097380",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x800b0b24",
+        "new": 86.95652,
+        "old": 100
+      },
+      {
+        "addr": "0x800b5c34",
+        "new": 77.77778,
+        "old": 100
+      },
+      {
+        "addr": "0x800b5c58",
+        "new": 77.77778,
+        "old": 100
+      },
+      {
+        "addr": "0x800b9654",
+        "new": 72,
+        "old": 100
+      },
+      {
+        "addr": "0x800bc52c",
+        "new": 63.636364,
+        "old": 100
+      },
+      {
+        "addr": "0x800c082c",
+        "new": 40,
+        "old": 100
+      },
+      {
+        "addr": "0x800c2dd4",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x800c4f1c",
+        "new": 91.30435,
+        "old": 100
+      },
+      {
+        "addr": "0x800c5154",
+        "new": 74.19355,
+        "old": 100
+      },
+      {
+        "addr": "0x800c5318",
+        "new": 63.15789,
+        "old": 100
+      },
+      {
+        "addr": "0x800c53b0",
+        "new": 45.72025,
+        "old": 100
+      },
+      {
+        "addr": "0x800c5c44",
+        "new": 79.22078,
+        "old": 100
+      },
+      {
+        "addr": "0x800c6228",
+        "new": 89.28571,
+        "old": 100
+      },
+      {
+        "addr": "0x800d8ff4",
+        "new": 57.894737,
+        "old": 100
+      },
+      {
+        "addr": "0x800ecb98",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x800f466c",
+        "new": 63.636364,
+        "old": 100
+      },
+      {
+        "addr": "0x80102ba0",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8010773c",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80109410",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8010ea94",
+        "new": 77.77778,
+        "old": 100
+      },
+      {
+        "addr": "0x8010f018",
+        "new": 42.857143,
+        "old": 100
+      },
+      {
+        "addr": "0x8011630c",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8011a8dc",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80121da8",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x801225d8",
+        "new": 74.46808,
+        "old": 100
+      },
+      {
+        "addr": "0x8012635c",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80129f50",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x801343e0",
+        "new": 95.454544,
+        "old": 100
+      },
+      {
+        "addr": "0x8013a538",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80146590",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8015fefc",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80168a2c",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x8017c014",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80190f1c",
+        "new": 52,
+        "old": 100
+      },
+      {
+        "addr": "0x80195340",
+        "new": 52,
+        "old": 100
+      }
+    ]
+  }
+]

@@ -32,6 +32,11 @@ function App() {
               <UnstyledButton onClick={() => navigate("/functions")}>
                 Functions
               </UnstyledButton>
+              {/*
+              <UnstyledButton onClick={() => navigate("/contributors")}>
+                Contributors
+              </UnstyledButton>
+              */}
             </Group>
             <Group gap={"lg"}>
               <Tooltip label="Source Code on GitHub">
