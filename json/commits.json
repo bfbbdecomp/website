@@ -1,5 +1,153 @@
 [
   {
+    "id": "607f4b66f64529ff53335cd5c4daf5dbfe3fea25",
+    "email": "doodrabbit@hotmail.com",
+    "time": "2024-07-23T17:44:25",
+    "message": "Start decompiling zNPCGoalStd (#334)",
+    "differences": [
+      {
+        "addr": "0x800d56f8",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d571c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5758",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5780",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5a30",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5c0c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5c6c",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5cc0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5ce4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5de4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5e70",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5f58",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d5fb4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d6010",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d6104",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d6274",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d62d0",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d6348",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d6408",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d6488",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d6664",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d6738",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d7394",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d7438",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d8fa4",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x800d8ff4",
+        "new": 0,
+        "old": 100
+      },
+      {
+        "addr": "0x800d9040",
+        "new": 0,
+        "old": 95.83333
+      },
+      {
+        "addr": "0x800d9134",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
     "id": "c84b0b3133df4ee3e4537d0cc8b2e26509c128e6",
     "email": "doodrabbit@hotmail.com",
     "time": "2024-07-21T09:04:53",
