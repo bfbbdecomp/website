@@ -1,5 +1,53 @@
 [
   {
+    "id": "2798d36dd1dde25378e0b89b179eb172b36baa60",
+    "email": "5638426\u002Bmattbruv@users.noreply.github.com",
+    "time": "2024-07-31T19:52:42",
+    "message": "patrick boss progress",
+    "differences": [
+      {
+        "addr": "0x80160144",
+        "new": 100,
+        "old": 0
+      },
+      {
+        "addr": "0x80160a18",
+        "new": 61.417324,
+        "old": 0.78740156
+      },
+      {
+        "addr": "0x80160c7c",
+        "new": 85.6833,
+        "old": 77.87418
+      },
+      {
+        "addr": "0x801615cc",
+        "new": 76.408455,
+        "old": 73.591545
+      },
+      {
+        "addr": "0x80163d9c",
+        "new": 95.12195,
+        "old": 0.81300807
+      },
+      {
+        "addr": "0x80165ca0",
+        "new": 99.33111,
+        "old": 98.66221
+      },
+      {
+        "addr": "0x80166940",
+        "new": 99.17355,
+        "old": 98.34711
+      },
+      {
+        "addr": "0x80166b9c",
+        "new": 100,
+        "old": 0
+      }
+    ]
+  },
+  {
     "id": "607f4b66f64529ff53335cd5c4daf5dbfe3fea25",
     "email": "doodrabbit@hotmail.com",
     "time": "2024-07-23T17:44:25",

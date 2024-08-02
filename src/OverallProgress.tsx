@@ -101,7 +101,7 @@ export function OverallProgress() {
       <Stack gap={"md"}>
         <div>
           <h1>
-            Battle for Bikini Bottom is {prettyPercent(total_percent)}{" "}
+            Battle for Bikini Bottom is {prettyPercent(fuzzy_percent)}{" "}
             decompiled
           </h1>
           <ProgressBar {...progressBar} />
