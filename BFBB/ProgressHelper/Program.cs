@@ -137,7 +137,7 @@ if (differences.Count != 0)
             var diffDir = diffPercent > 0 ? "+" : "-";
             var total = diff.NewItem.FuzzyMatchPercent;
             var linesOfCode = Math.Round(diffPercent * diff.NewItem.Size / 100);
-            var msg = $"`{name}` --> `({diffDir}{diffPercent:F2}%, {linesOfCode:N0})` --> `{total:F2}%`";
+            var msg = $"`{name} -> ({diffDir}{diffPercent:F2}%, {linesOfCode:N0}) -> {total:F2}%`";
 
             if (total == 100)
             {
@@ -155,7 +155,22 @@ if (differences.Count != 0)
     }
 
     //messages.Add("```");
-
     var message = string.Join(Environment.NewLine, messages);
     await client.SendMessageAsync(message);
+
+    // send a special message if we hit a new milestone
+    var fuzzNew = Math.Floor(report.FuzzyMatchPercent);
+    var fuzzOld = Math.Floor(previousReport.FuzzyMatchPercent);
+    if (!fuzzNew.Equals(fuzzOld))
+    {
+        await client.SendMessageAsync($":champagne_glass: **We just hit {fuzzNew}% Fuzzy Match!** :tada:");
+    }
+
+    // send a special message if we hit a new milestone
+    var perfectNew = Math.Floor(report.MatchedCodePercent);
+    var perfectOld = Math.Floor(previousReport.MatchedCodePercent);
+    if (!fuzzNew.Equals(fuzzOld))
+    {
+        await client.SendMessageAsync($":champagne_glass: **We just hit {perfectNew}% Perfect Match!** :tada:");
+    }
 }
