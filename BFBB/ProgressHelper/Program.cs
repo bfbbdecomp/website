@@ -92,85 +92,79 @@ if (differences.Count != 0)
         File.WriteAllText(commitCachePath, JsonHelper.Serialize(commits));
     }
 
-    // TODO: discord update
-    foreach (var diff in differences)
-    {
-        Console.WriteLine(diff.NewItem.Name);
-    }
-
-    Console.WriteLine(report.FuzzyMatchPercent);
-    Console.WriteLine(previousReport.FuzzyMatchPercent);
-    Console.WriteLine(progressCommitData);
-
     var webhook = Environment.GetEnvironmentVariable("DISCORD_WEBHOOK");
-    var client = new DiscordWebhookClient(webhook);
 
-    var user = users.FirstOrDefault(x => x.Emails.Any(e => e.ToLower() == progressCommitData.Email.ToLower()));
-
-    List<string> messages = [];
-
-    var fuzzyDiff = report.FuzzyMatchPercent - previousReport.FuzzyMatchPercent;
-
-    if (fuzzyDiff != 0)
+    if (webhook != null)
     {
-        var sign = fuzzyDiff > 0 ? "+" : "-";
-        var addedCode = fuzzyDiff * report.TotalCode / 100;
-        var totalCode = report.FuzzyMatchPercent * report.TotalCode / 100;
-        messages.Add(
-            $"BFBB is [**{report.FuzzyMatchPercent:F2}%**](<https://bfbbdecomp.github.io/bfbb/>) decompiled. `({sign}{fuzzyDiff:F2}% {sign}{addedCode:N0}), {totalCode:N0} / {report.TotalCode:N0}`");
-        messages.Add("");
-    }
+        var client = new DiscordWebhookClient(webhook);
 
-    var commitLink =
-        $"[{progressCommitData.Id.Substring(0, 7)}](<https://github.com/bfbbdecomp/bfbb/commit/{progressCommitData.Id}>)";
-    messages.Add(user != null
-        ? $"<@{user.Discord}> just contributed the following in {commitLink}:"
-        : $"Someone just contributed the following in {commitLink}:");
+        var user = users.FirstOrDefault(x => x.Emails.Any(e => e.ToLower() == progressCommitData.Email.ToLower()));
 
-    //messages.Add("```");
-    var adds = differences
-        .OrderByDescending(x => x.NewItem.FuzzyMatchPercent - x.OldItem.FuzzyMatchPercent)
-        .Where(diff => diff.NewItem.DemangledName != null).Select(diff =>
+        List<string> messages = [];
+
+        var fuzzyDiff = report.FuzzyMatchPercent - previousReport.FuzzyMatchPercent;
+
+        if (fuzzyDiff != 0)
         {
-            var name = diff.NewItem.DemangledName!.Split("(")[0];
-            var diffPercent = diff.NewItem.FuzzyMatchPercent - diff.OldItem.FuzzyMatchPercent;
-            var diffDir = diffPercent > 0 ? "+" : "-";
-            var total = diff.NewItem.FuzzyMatchPercent;
-            var linesOfCode = Math.Round(diffPercent * diff.NewItem.Size / 100);
-            var msg = $"`{name} -> ({diffDir}{diffPercent:F2}%, {linesOfCode:N0}) -> {total:F2}%`";
+            var sign = fuzzyDiff > 0 ? "+" : "-";
+            var addedCode = fuzzyDiff * report.TotalCode / 100;
+            var totalCode = report.FuzzyMatchPercent * report.TotalCode / 100;
+            messages.Add(
+                $"BFBB is [**{report.FuzzyMatchPercent:F2}%**](<https://bfbbdecomp.github.io/bfbb/>) decompiled. `({sign}{fuzzyDiff:F2}% {sign}{addedCode:N0}), {totalCode:N0} / {report.TotalCode:N0}`");
+            messages.Add("");
+        }
 
-            if (total == 100)
+        var commitLink =
+            $"[{progressCommitData.Id.Substring(0, 7)}](<https://github.com/bfbbdecomp/bfbb/commit/{progressCommitData.Id}>)";
+        messages.Add(user != null
+            ? $"<@{user.Discord}> just contributed the following in {commitLink}:"
+            : $"Someone just contributed the following in {commitLink}:");
+
+        //messages.Add("```");
+        var adds = differences
+            .OrderByDescending(x => x.NewItem.FuzzyMatchPercent - x.OldItem.FuzzyMatchPercent)
+            .Where(diff => diff.NewItem.DemangledName != null).Select(diff =>
             {
-                msg += " :white_check_mark:";
-            }
+                var name = diff.NewItem.DemangledName!.Split("(")[0];
+                var diffPercent = diff.NewItem.FuzzyMatchPercent - diff.OldItem.FuzzyMatchPercent;
+                var diffDir = diffPercent > 0 ? "+" : "-";
+                var total = diff.NewItem.FuzzyMatchPercent;
+                var linesOfCode = Math.Round(diffPercent * diff.NewItem.Size / 100);
+                var msg = $"`{name} -> ({diffDir}{diffPercent:F2}%, {linesOfCode:N0}) -> {total:F2}%`";
 
-            return msg;
-        }).ToList();
+                if (total == 100)
+                {
+                    msg += " :white_check_mark:";
+                }
 
-    messages.AddRange(adds.Take(20));
+                return msg;
+            }).ToList();
 
-    if (adds.Count > 20)
-    {
-        messages.Add($"and {adds.Count} more...");
-    }
+        messages.AddRange(adds.Take(20));
 
-    //messages.Add("```");
-    var message = string.Join(Environment.NewLine, messages);
-    await client.SendMessageAsync(message);
+        if (adds.Count > 20)
+        {
+            messages.Add($"and {adds.Count} more...");
+        }
 
-    // send a special message if we hit a new milestone
-    var fuzzNew = Math.Floor(report.FuzzyMatchPercent);
-    var fuzzOld = Math.Floor(previousReport.FuzzyMatchPercent);
-    if (!fuzzNew.Equals(fuzzOld))
-    {
-        await client.SendMessageAsync($":champagne_glass: **We just hit {fuzzNew}% Fuzzy Match!** :tada:");
-    }
+        //messages.Add("```");
+        var message = string.Join(Environment.NewLine, messages);
+        await client.SendMessageAsync(message);
 
-    // send a special message if we hit a new milestone
-    var perfectNew = Math.Floor(report.MatchedCodePercent);
-    var perfectOld = Math.Floor(previousReport.MatchedCodePercent);
-    if (!fuzzNew.Equals(fuzzOld))
-    {
-        await client.SendMessageAsync($":champagne_glass: **We just hit {perfectNew}% Perfect Match!** :tada:");
+        // send a special message if we hit a new milestone
+        var fuzzNew = Math.Floor(report.FuzzyMatchPercent);
+        var fuzzOld = Math.Floor(previousReport.FuzzyMatchPercent);
+        if (!fuzzNew.Equals(fuzzOld))
+        {
+            await client.SendMessageAsync($":champagne_glass: **We just hit {fuzzNew}% Fuzzy Match!** :tada:");
+        }
+
+        // send a special message if we hit a new milestone
+        var perfectNew = Math.Floor(report.MatchedCodePercent);
+        var perfectOld = Math.Floor(previousReport.MatchedCodePercent);
+        if (!fuzzNew.Equals(fuzzOld))
+        {
+            await client.SendMessageAsync($":champagne_glass: **We just hit {perfectNew}% Perfect Match!** :tada:");
+        }
     }
 }
