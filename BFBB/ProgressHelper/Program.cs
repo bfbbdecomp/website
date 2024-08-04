@@ -122,7 +122,7 @@ if (differences.Count != 0)
 
         //messages.Add("```");
         var adds = differences
-            .OrderByDescending(x => x.NewItem.FuzzyMatchPercent - x.OldItem.FuzzyMatchPercent)
+            .OrderByDescending(x => (x.NewItem.FuzzyMatchPercent - x.OldItem.FuzzyMatchPercent) * x.NewItem.Size)
             .Where(diff => diff.NewItem.DemangledName != null).Select(diff =>
             {
                 var name = diff.NewItem.DemangledName!.Split("(")[0];
@@ -130,7 +130,7 @@ if (differences.Count != 0)
                 var diffDir = diffPercent > 0 ? "+" : "";
                 var total = diff.NewItem.FuzzyMatchPercent;
                 var linesOfCode = Math.Round(diffPercent * diff.NewItem.Size / 100);
-                var msg = $"`{name} -> ({diffDir}{diffPercent:F2}%, {linesOfCode:N0}) -> {total:F2}%`";
+                var msg = $"`{name} -> ({diffDir}{diffPercent:F2}%, {diffDir}{linesOfCode:N0}) -> {total:F2}%`";
 
                 if (total == 100)
                 {
