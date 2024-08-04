@@ -106,7 +106,7 @@ if (differences.Count != 0)
 
         if (fuzzyDiff != 0)
         {
-            var sign = fuzzyDiff > 0 ? "+" : "-";
+            var sign = fuzzyDiff > 0 ? "+" : "";
             var addedCode = fuzzyDiff * report.TotalCode / 100;
             var totalCode = report.FuzzyMatchPercent * report.TotalCode / 100;
             messages.Add(
@@ -127,7 +127,7 @@ if (differences.Count != 0)
             {
                 var name = diff.NewItem.DemangledName!.Split("(")[0];
                 var diffPercent = diff.NewItem.FuzzyMatchPercent - diff.OldItem.FuzzyMatchPercent;
-                var diffDir = diffPercent > 0 ? "+" : "-";
+                var diffDir = diffPercent > 0 ? "+" : "";
                 var total = diff.NewItem.FuzzyMatchPercent;
                 var linesOfCode = Math.Round(diffPercent * diff.NewItem.Size / 100);
                 var msg = $"`{name} -> ({diffDir}{diffPercent:F2}%, {linesOfCode:N0}) -> {total:F2}%`";
