@@ -17,7 +17,7 @@
     "@mantine/hooks": "^7.11.0",
     "@mantine/notifications": "^7.11.1",
     "@tabler/icons-react": "^3.7.0",
-    "apexcharts": "^3.49.1",
+    "apexcharts": "^4.4.0",
     "chroma-js": "^2.4.2",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.11",
