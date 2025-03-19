@@ -1,12 +1,12 @@
 import { ActionIcon, Anchor, Pagination, Text, Tooltip } from "@mantine/core";
-import { GameFunction } from "./progress";
+import { ReportItem } from "./progress";
 import { ProgressBar, ProgressBarProps } from "./ProgressBar";
 import { prettyPercent } from "./helpers";
 import { useEffect, useState } from "react";
-import { IconAdjustments, IconClipboardCopy } from "@tabler/icons-react";
+import { IconClipboardCopy } from "@tabler/icons-react";
 import { notifications } from "@mantine/notifications";
 
-export type FileFunction = GameFunction & { path: string };
+export type FileFunction = ReportItem & { path: string };
 
 export const FileName = (path: string): string => {
   return path.split("/").slice(-1)[0];
@@ -64,7 +64,7 @@ const FunctionInfo = (fn: FileFunction) => {
         <Anchor href={GithubLink(fn.path)} target="_blank">
           {FileName(fn.path)}
         </Anchor>{" "}
-        / {fn.address} / size: {fn.size} / labels: {fn.labels}
+        / {fn.address ?? "?"} / size: {fn.size} / labels: {fn.labels}
       </Text>
       <ProgressBar {...progress} />
     </div>

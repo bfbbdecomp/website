@@ -19,9 +19,9 @@ export const GameFunctions: FileFunction[] = ProgressReport.units.flatMap((x) =>
 );
 
 const FileNames = [...new Set(GameFunctions.map((x) => FileName(x.path)))];
-const Opcodes = [...new Set(GameFunctions.flatMap((x) => x.opcodes))].sort(
-  (a, b) => a.localeCompare(b)
-);
+const Opcodes = [...new Set(GameFunctions.flatMap((x) => x.opcodes))]
+  .filter((x) => x !== undefined)
+  .sort((a, b) => a.localeCompare(b));
 
 enum FnSort {
   Size = "Size",
@@ -36,7 +36,7 @@ const sortFunctions: Record<
   (a: FileFunction, b: FileFunction) => number
 > = {
   [FnSort.Address]: (a, b) => Number(a.address) - Number(b.address),
-  [FnSort.Labels]: (a, b) => b.labels - a.labels,
+  [FnSort.Labels]: (a, b) => (b.labels ?? 0) - (a.labels ?? 0),
   [FnSort.Matched]: (a, b) => b.fuzzy_match_percent - a.fuzzy_match_percent,
   [FnSort.Name]: (a, b) => a.name.localeCompare(b.name),
   [FnSort.Size]: (a, b) => b.size - a.size,
@@ -76,7 +76,7 @@ export function Functions() {
     .filter((x) => !fileFilter.length || fileFilter.includes(FileName(x.path)))
     .filter(
       (x) =>
-        !opcodeFilter.length || x.opcodes.some((o) => opcodeFilter.includes(o))
+        !opcodeFilter.length || x.opcodes?.some((o) => opcodeFilter.includes(o))
     );
   const items = sortFn
     ? filteredItems.sort(sortFunctions[sortFn])
