@@ -13,9 +13,10 @@ public class DiffHelper
     {
         var differing = newItems.Join(
                 oldItems,
-                newItem => newItem.Address,
-                oldItem => oldItem.Address,
+                n => (n.Name, n.DemangledName, n.Size, n.Address),
+                o => (o.Name, o.DemangledName, o.Size, o.Address),
                 (newItem, oldItem) => (newItem, oldItem))
+            .Where(pair => !string.IsNullOrEmpty(pair.newItem.DemangledName))
             .Where(pair => !pair.newItem.FuzzyMatchPercent.Equals(pair.oldItem.FuzzyMatchPercent))
             .Select(x => new DiffPair(x.newItem, x.oldItem))
             .ToList();
