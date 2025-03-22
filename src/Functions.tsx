@@ -14,8 +14,8 @@ import {
 import { FileFunction, FileName, FunctionList } from "./FunctionList";
 import { prettyPercent } from "./helpers";
 
-export const GameFunctions: FileFunction[] = ProgressReport.units.flatMap((x) =>
-  x.functions.map((fn) => ({ ...fn, path: x.name }))
+export const GameFunctions: FileFunction[] = ProgressReport.units.flatMap(
+  (x) => x.functions?.map((fn) => ({ ...fn, path: x.name })) ?? []
 );
 
 const FileNames = [...new Set(GameFunctions.map((x) => FileName(x.path)))];
@@ -35,11 +35,12 @@ const sortFunctions: Record<
   FnSort,
   (a: FileFunction, b: FileFunction) => number
 > = {
-  [FnSort.Address]: (a, b) => Number(a.address) - Number(b.address),
+  [FnSort.Address]: (a, b) =>
+    Number(a.metadata?.virtual_address) - Number(b.metadata?.virtual_address),
   [FnSort.Labels]: (a, b) => (b.labels ?? 0) - (a.labels ?? 0),
   [FnSort.Matched]: (a, b) => b.fuzzy_match_percent - a.fuzzy_match_percent,
   [FnSort.Name]: (a, b) => a.name.localeCompare(b.name),
-  [FnSort.Size]: (a, b) => b.size - a.size,
+  [FnSort.Size]: (a, b) => Number(b.size) - Number(a.size),
 };
 
 type Stat = {
@@ -71,7 +72,8 @@ export function Functions() {
       !searchText ||
       x.name.toLowerCase().includes(search) ||
       x.path.toLowerCase().includes(search) ||
-      (x.demangled_name && x.demangled_name.toLowerCase().includes(search))
+      (x.metadata?.demangled_name &&
+        x.metadata?.demangled_name.toLowerCase().includes(search))
   )
     .filter((x) => !fileFilter.length || fileFilter.includes(FileName(x.path)))
     .filter(
@@ -84,13 +86,14 @@ export function Functions() {
 
   const sum = (xs: number[]) => xs.reduce((tot, a) => tot + a, 0);
 
-  const selectionCodeSize = sum(items.map((x) => x.size));
+  const selectionCodeSize = sum(items.map((x) => Number(x.size)));
   const fuzzyPercent =
-    sum(items.map((x) => x.fuzzy_match_percent * x.size)) / selectionCodeSize;
+    sum(items.map((x) => x.fuzzy_match_percent * Number(x.size))) /
+    selectionCodeSize;
   const fuzzyCode = (fuzzyPercent * selectionCodeSize) / 100;
 
   const percentageOfGameCode =
-    (selectionCodeSize / ProgressReport.total_code) * 100;
+    (selectionCodeSize / Number(ProgressReport.total_code)) * 100;
 
   const matchingFns = items.filter((x) => x.fuzzy_match_percent === 100);
   const totalFns = items.length;

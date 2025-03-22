@@ -23,8 +23,8 @@ foreach (var (newCommit, oldCommit) in pairs)
 
     var differences = DiffHelper
         .GetReportDifferences(newReport, oldReport)
-        .OrderBy(x => x.NewItem.Address)
-        .Select(x => new Difference(x.NewItem.Address, x.NewItem.FuzzyMatchPercent, x.OldItem.FuzzyMatchPercent))
+        .Select(x => new Difference(x.NewItem.Metadata.DemangledName, x.NewItem.FuzzyMatchPercent,
+            x.OldItem.FuzzyMatchPercent))
         .ToList();
 
     if (differences.Count > 0)

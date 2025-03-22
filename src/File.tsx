@@ -1,19 +1,30 @@
-import { Unit } from "./progress";
+import { ReportUnit } from "./progress";
 import { Anchor, Group, Stack, Text } from "@mantine/core";
 import { ProgressBar, ProgressBarProps } from "./ProgressBar";
 import { FunctionList, GithubLink } from "./FunctionList";
 import { GameFunctions } from "./Functions";
 
 type SourceFileInfoProps = {
-  unit: Unit;
+  unit: ReportUnit;
 };
 
 export function SourceFileInfo({ unit }: SourceFileInfoProps) {
-  const perfectMatch = (unit.matched_code / unit.total_code) * 100;
-  const fuzzyMatch = unit.fuzzy_match_percent;
+  if (
+    !unit.measures.matched_code ||
+    !unit.measures.total_code ||
+    !unit.measures.matched_data
+  )
+    return;
+  const perfectMatch =
+    (Number.parseInt(unit.measures.matched_code) /
+      Number.parseInt(unit.measures.total_code)) *
+    100;
+  const fuzzyMatch = unit.measures.fuzzy_match_percent;
 
-  const dataMatch = unit.total_data
-    ? (unit.matched_data / unit.total_data) * 100
+  const dataMatch = unit.measures.total_data
+    ? (Number.parseInt(unit.measures.matched_data) /
+        Number.parseInt(unit.measures.total_data)) *
+      100
     : 100;
 
   const fns = GameFunctions.filter((x) => x.path === unit.name);

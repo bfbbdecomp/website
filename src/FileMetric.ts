@@ -1,10 +1,10 @@
 import chroma from "chroma-js";
-import { Unit } from "./progress";
+import { ReportUnit } from "./progress";
 
 export type FileMetricData = {
   description: string;
-  value: (unit: Unit) => number;
-  percentage?: (unit: Unit, units: Unit[]) => number;
+  value: (unit: ReportUnit) => number;
+  percentage?: (unit: ReportUnit, units: ReportUnit[]) => number;
   gradient: chroma.Scale;
 };
 
@@ -15,7 +15,7 @@ export enum FileMetric {
   AvgFunctionSize = "avgFnSize",
   CodeSize = "size",
   FunctionCount = "total-functions",
-  Complete = "complete",
+  //Complete = "complete",
   TotalData = "total-data",
   MatchedDataPercent = "matched-data-percent",
 }
@@ -26,43 +26,55 @@ const max = (arr: number[]) => Math.max(...arr);
 export const metricData: Record<FileMetric, FileMetricData> = {
   [FileMetric.FuzzyPercent]: {
     description: "Fuzzy Match %",
-    value: (unit) => unit.fuzzy_match_percent,
+    value: (unit) => unit.measures.fuzzy_match_percent,
     gradient: chroma.scale(["red", "lime"]),
   },
   [FileMetric.MatchedPercent]: {
     description: "Perfect Match %",
     value: (unit) =>
-      unit.total_code ? (unit.matched_code / unit.total_code) * 100 : 100,
+      unit.measures.total_code
+        ? (Number(unit.measures.matched_code) /
+            Number(unit.measures.total_code)) *
+          100
+        : 100,
     gradient: chroma.scale(["red", "lime"]),
   },
   [FileMetric.MatchedCode]: {
     description: "Perfect Match Size",
-    value: (unit) => unit.matched_code,
+    value: (unit) => Number(unit.measures.matched_code),
     percentage: (unit, units) =>
-      (unit.matched_code / max(units.flatMap((x) => x.matched_code))) * 100,
+      (Number(unit.measures.matched_code) /
+        max(units.flatMap((x) => Number(x.measures.matched_code)))) *
+      100,
     gradient: chroma.scale(["lightgray", "darkgreen"]),
   },
   [FileMetric.CodeSize]: {
     description: "Code Size",
-    value: (unit) => unit.total_code,
+    value: (unit) => Number(unit.measures.total_code),
     percentage: (unit, units) =>
-      (unit.total_code / max(units.flatMap((x) => x.total_code))) * 100,
+      (Number(unit.measures.total_code) /
+        max(units.flatMap((x) => Number(x.measures.total_code)))) *
+      100,
     gradient: chroma.scale(["pink", "darkblue"]),
   },
   [FileMetric.AvgFunctionSize]: {
     description: "Average Function Size",
     value: (unit) =>
-      unit.total_functions
-        ? Math.floor(unit.total_code / unit.total_functions)
+      unit.measures.total_functions
+        ? Math.floor(
+            Number(unit.measures.total_code) / unit.measures.total_functions
+          )
         : 0,
     percentage: (unit, units) =>
       // yeah, this is kind of ugly, but we have to keep from dividing against 0
-      unit.total_functions
-        ? (unit.total_code /
-            unit.total_functions /
+      unit.measures.total_functions
+        ? (Number(unit.measures.total_code) /
+            unit.measures.total_functions /
             max(
               units.flatMap((x) =>
-                x.total_functions ? x.total_code / x.total_functions : 0
+                x.measures.total_functions
+                  ? Number(x.measures.total_code) / x.measures.total_functions
+                  : 0
               )
             )) *
           100
@@ -72,28 +84,36 @@ export const metricData: Record<FileMetric, FileMetricData> = {
   },
   [FileMetric.FunctionCount]: {
     description: "Function Count",
-    value: (unit) => unit.functions.length,
+    value: (unit) => unit.functions?.length ?? 0,
     percentage: (unit, units) =>
-      (unit.functions.length / max(units.flatMap((x) => x.functions.length))) *
-      100,
+      (unit.functions?.length ??
+        0 / max(units.flatMap((x) => x.functions?.length ?? 1))) * 100,
     gradient: chroma.scale(["pink", "black"]),
   },
   [FileMetric.TotalData]: {
     description: "Total Data",
-    value: (unit) => unit.total_data,
+    value: (unit) => Number(unit.measures.total_data),
     percentage: (unit, units) =>
-      (unit.total_data / max(units.flatMap((x) => x.total_data))) * 100,
+      (Number(unit.measures.total_data) /
+        max(units.flatMap((x) => Number(x.measures.total_data)))) *
+      100,
     gradient: chroma.scale(["lightgray", "maroon"]),
   },
   [FileMetric.MatchedDataPercent]: {
     description: "Matched Data %",
     value: (unit) =>
-      unit.total_data ? (unit.matched_data / unit.total_data) * 100 : 100,
+      unit.measures.total_data
+        ? (Number(unit.measures.matched_data) /
+            Number(unit.measures.total_data)) *
+          100
+        : 100,
     gradient: chroma.scale(["lightgray", "maroon"]),
   },
+  /*
   [FileMetric.Complete]: {
     description: "Completed",
     value: (unit) => (unit.complete ? 100 : 0),
     gradient: chroma.scale(["red", "lime"]),
   },
+  */
 };

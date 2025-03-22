@@ -1,4 +1,4 @@
-import { Unit } from "./progress";
+import { ReportUnit } from "./progress";
 import "./css/heatmap.css";
 import { Tooltip, Text } from "@mantine/core";
 import { prettyPercent } from "./helpers";
@@ -6,8 +6,8 @@ import { FileMetricData } from "./FileMetric";
 
 type HeatmapProps = {
   folderName: string;
-  filteredUnits: Unit[];
-  allUnits: Unit[];
+  filteredUnits: ReportUnit[];
+  allUnits: ReportUnit[];
   onClick: (name: string) => void;
   metric: FileMetricData;
 };

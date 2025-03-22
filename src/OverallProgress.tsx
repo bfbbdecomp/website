@@ -6,7 +6,7 @@ import {
   TextInput,
   ProgressSection,
 } from "@mantine/core";
-import { ProgressReport, Unit } from "./progress";
+import { ProgressReport, ReportUnit } from "./progress";
 import { prettyPercent } from "./helpers";
 import { ProgressBar, ProgressBarProps } from "./ProgressBar";
 import { FileHeatmap } from "./FileHeatmap";
@@ -19,7 +19,9 @@ import { FileMetric, metricData } from "./FileMetric";
 export function OverallProgress() {
   const total_percent = ProgressReport.matched_code_percent;
   const fuzzy_percent = ProgressReport.fuzzy_match_percent;
-  const [unit, setUnit] = useState<Unit | undefined>(ProgressReport.units[0]);
+  const [unit, setUnit] = useState<ReportUnit | undefined>(
+    ProgressReport.units[0]
+  );
   const [sortMetric, setSortMetric] = useState<FileMetric | null>(null);
   const [highlightMetric, setHighlightMetric] = useState<FileMetric | null>(
     FileMetric.FuzzyPercent
@@ -67,7 +69,7 @@ export function OverallProgress() {
     setUnit(unit);
   };
 
-  function getUnits(units: Unit[]): Unit[] {
+  function getUnits(units: ReportUnit[]): ReportUnit[] {
     // Filter units by filename
     const fileFiltered = !fileFilter
       ? units
@@ -80,11 +82,11 @@ export function OverallProgress() {
       ? fileFiltered
       : fileFiltered.filter((u) =>
           u.functions
-            .flatMap((fn) => fn)
+            ?.flatMap((fn) => fn)
             .some(
               (fn) =>
                 fn.name.toLowerCase().includes(functionFilter.toLowerCase()) ||
-                fn.demangled_name
+                fn.metadata?.demangled_name
                   ?.toLowerCase()
                   .includes(functionFilter.toLowerCase())
             )

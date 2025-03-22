@@ -25,11 +25,13 @@ public abstract class JsonHelper
 
     public static Report ReadReport(string path)
     {
-        var report = Deserialize<Report>(File.ReadAllText(path));
+        var report = Deserialize<Objdiff.Report>(File.ReadAllText(path));
 
-        return new Report(Units: report.Units
-            .Where(unit => unit.Name
-                .Contains("/sb/", StringComparison.CurrentCultureIgnoreCase)
-            ).ToList());
+        // We only care about SpongeBob code
+        report.Units = report.Units
+            .Where(unit => unit.Name.Contains("/sb/", StringComparison.CurrentCultureIgnoreCase))
+            .ToList();
+
+        return new Report(report.Units, report.Version, report.Categories);
     }
 }
