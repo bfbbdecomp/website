@@ -82,9 +82,9 @@ if (differences.Count != 0)
     // Don't crash workflow if we can't send this
     try
     {
-        //if (webhook != null)
+        if (webhook != null)
         {
-            //var client = new DiscordWebhookClient(webhook);
+            var client = new DiscordWebhookClient(webhook);
 
             var user = users.FirstOrDefault(x => x.Emails.Any(e => e.ToLower() == progressCommitData.Email.ToLower()));
 
@@ -137,14 +137,14 @@ if (differences.Count != 0)
             }
 
             var message = string.Join(Environment.NewLine, messages);
-            //await client.SendMessageAsync(message);
+            await client.SendMessageAsync(message);
 
             // send a special message if we hit a new milestone
             var fuzzNew = Math.Floor(report.FuzzyMatchPercent);
             var fuzzOld = Math.Floor(previousReport.FuzzyMatchPercent);
             if (!fuzzNew.Equals(fuzzOld))
             {
-                //await client.SendMessageAsync($":champagne_glass: **We just hit {fuzzNew}% Fuzzy Match!** :tada:");
+                await client.SendMessageAsync($":champagne_glass: **We just hit {fuzzNew}% Fuzzy Match!** :tada:");
             }
 
             // send a special message if we hit a new milestone
@@ -152,7 +152,7 @@ if (differences.Count != 0)
             var perfectOld = Math.Floor(previousReport.MatchedCodePercent);
             if (!perfectNew.Equals(perfectOld))
             {
-                // await client.SendMessageAsync($":champagne_glass: **We just hit {perfectNew}% Perfect Match!** :tada:");
+                await client.SendMessageAsync($":champagne_glass: **We just hit {perfectNew}% Perfect Match!** :tada:");
             }
         }
     }
