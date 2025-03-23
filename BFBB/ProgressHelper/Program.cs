@@ -137,7 +137,45 @@ if (differences.Count != 0)
             }
 
             var message = string.Join(Environment.NewLine, messages);
-            await client.SendMessageAsync(message);
+            var quip = "";
+
+            try
+            {
+                quip = (await Gemini.PromptGemini(message)).Replace("[USER]", $"<@{user.Discord}>");
+            }
+            catch
+            {
+                // ignored
+            }
+
+            if (quip.Length > 0)
+            {
+                var updateWithQuip = message + Environment.NewLine + Environment.NewLine + quip;
+                try
+                {
+                    await client.SendMessageAsync(updateWithQuip);
+                }
+                catch
+                {
+                    // Couldn't send update with quip, probably because too long
+                    // try original message and quip separately
+                    await client.SendMessageAsync(message);
+                    try
+                    {
+                        await client.SendMessageAsync(quip);
+                    }
+                    catch
+                    {
+                        // ignored
+                    }
+                }
+            }
+            else
+            {
+                // No quip, just send message
+                await client.SendMessageAsync(message);
+            }
+
 
             // send a special message if we hit a new milestone
             var fuzzNew = Math.Floor(report.FuzzyMatchPercent);
