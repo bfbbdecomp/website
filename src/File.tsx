@@ -9,22 +9,18 @@ type SourceFileInfoProps = {
 };
 
 export function SourceFileInfo({ unit }: SourceFileInfoProps) {
-  if (
-    !unit.measures.matched_code ||
-    !unit.measures.total_code ||
-    !unit.measures.matched_data
-  )
-    return;
-  const perfectMatch =
-    (Number.parseInt(unit.measures.matched_code) /
-      Number.parseInt(unit.measures.total_code)) *
-    100;
+  const num = (thing: string | undefined) =>
+    thing ? Number(thing) : undefined;
+  const matched_code = num(unit.measures.matched_code);
+  const total_code = num(unit.measures.total_code);
+  const matched_data = num(unit.measures.matched_data);
+  const total_data = num(unit.measures.total_data);
+
+  const perfectMatch = ((matched_code ?? 1) / (total_code ?? 1)) * 100;
   const fuzzyMatch = unit.measures.fuzzy_match_percent;
 
   const dataMatch = unit.measures.total_data
-    ? (Number.parseInt(unit.measures.matched_data) /
-        Number.parseInt(unit.measures.total_data)) *
-      100
+    ? ((matched_data ?? 1) / (total_data ?? 1)) * 100
     : 100;
 
   const fns = GameFunctions.filter((x) => x.path === unit.name);
