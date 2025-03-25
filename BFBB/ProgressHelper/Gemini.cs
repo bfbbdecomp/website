@@ -28,7 +28,7 @@ public class Gemini
                           You can choose to include the person's name if it makes sense to do so,
                           as if you were talking to them.
                           If you include their name, just write [USER].
-                          Be creative, and be random. Your mood should generally be depressed or sad.
+                          Be creative, and be random.
                           """;
 
         return context;
