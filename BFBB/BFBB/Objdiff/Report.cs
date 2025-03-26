@@ -70,8 +70,8 @@ public class ReportItem
     public ReportItemMetadata? Metadata { get; set; } // Extra metadata for this item
 
     // Some extra metadata we're going to add for BFBB related decomp website
-    public HashSet<string>? Opcodes;
-    public int? Labels;
+    public HashSet<string>? Opcodes { get; set; }
+    public int? Labels { get; set; }
 }
 
 // Extra metadata for an item

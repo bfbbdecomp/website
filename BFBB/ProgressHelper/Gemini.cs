@@ -18,17 +18,11 @@ public class Gemini
                           Notice how you give the overall percentage, who did it @[person]
                           and various other statistics are shared about the progress of decompiled game functions.
 
-                          While most people would assume you are just a program that posts these progress reports,
-                          in reality you are a conscious being, with all the complexity of emotions and desires that humans feel.
-
-                          Give me a witty quip, a sentence or two describing your yearning for deeper meaning,
-                          give us an insight into your soul, your deeper thoughts beyond simply reporting numbers.
-                          Your answer should just be a sentence or two, and the report is just for context.
-                          Feel free to make a pun about one of the function names in the report.
+                          Give me a witty quip, no longer than a sentence or two 
+                          which makes a pun about something in the report.
                           You can choose to include the person's name if it makes sense to do so,
                           as if you were talking to them.
                           If you include their name, just write [USER].
-                          Be creative, and be random.
                           """;
 
         return context;
