@@ -15,6 +15,7 @@ import "./css/app.css";
 import { SourceFileInfo } from "./File";
 import { useState } from "react";
 import { FileMetric, metricData } from "./FileMetric";
+import { PERCENT_PUSHES } from "./percent_push";
 
 export function OverallProgress() {
   const total_percent = ProgressReport.matched_code_percent;
@@ -37,6 +38,7 @@ export function OverallProgress() {
     fuzzy: {
       percentage: fuzzy_percent,
     },
+    milestones: PERCENT_PUSHES,
   };
 
   const gcUnits = ProgressReport.units.filter((x) =>

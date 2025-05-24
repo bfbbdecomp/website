@@ -1,6 +1,7 @@
 import {
   AppShell,
   Group,
+  Indicator,
   NavLink,
   Tooltip,
   UnstyledButton,
@@ -13,9 +14,12 @@ import {
   IconBrandGithubFilled,
   IconGitCherryPick,
 } from "@tabler/icons-react";
+import { PERCENT_PUSHES } from "./percent_push";
 
 function App() {
   const navigate = useNavigate();
+
+  const push = PERCENT_PUSHES.at(-1)!;
 
   return (
     <AppShell header={{ height: 60 }} padding="md">
@@ -31,6 +35,17 @@ function App() {
               </UnstyledButton>
               <UnstyledButton onClick={() => navigate("/functions")}>
                 Functions
+              </UnstyledButton>
+              <UnstyledButton onClick={() => navigate("/contributors")}>
+                <Indicator
+                  autoContrast
+                  color={push.bg_color}
+                  inline
+                  label={push.milestone + "%!"}
+                  size={16}
+                >
+                  Contributors
+                </Indicator>
               </UnstyledButton>
               {/*
               <UnstyledButton onClick={() => navigate("/contributors")}>
