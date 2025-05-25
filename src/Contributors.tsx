@@ -58,7 +58,7 @@ export function Contributors() {
                       )
                       .map((c) => {
                         const avatar_src =
-                          "bfbb/contributors/" + c.github_username + ".png";
+                          "contributors/" + c.github_username + ".png";
 
                         return (
                           <Grid.Col key={c.github_username} span="content">
