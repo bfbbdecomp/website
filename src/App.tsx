@@ -19,7 +19,7 @@ import { PERCENT_PUSHES } from "./percent_push";
 function App() {
   const navigate = useNavigate();
 
-  const push = PERCENT_PUSHES.at(-1)!;
+  const push = PERCENT_PUSHES.filter((x) => x.date_reached).at(-1)!;
 
   return (
     <AppShell header={{ height: 60 }} padding="md">

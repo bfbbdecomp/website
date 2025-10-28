@@ -14,9 +14,9 @@ import { IconCalendarEvent, IconCheck, IconGitFork } from "@tabler/icons-react";
 import { PERCENT_PUSHES } from "./percent_push";
 
 export function Contributors() {
-  const pushes = PERCENT_PUSHES;
+  const pushes = PERCENT_PUSHES.filter((x) => x.date_reached);
   // open the latest milestone
-  const open = PERCENT_PUSHES.at(-1)!.milestone;
+  const open = pushes.at(-1)!.milestone;
 
   return (
     <Container id="main" size={"lg"}>
@@ -43,7 +43,7 @@ export function Contributors() {
                     color="dimmed"
                     style={{ whiteSpace: "nowrap" }}
                   >
-                    Reached {push.date_reached.toDateString()}
+                    Reached {push.date_reached!.toDateString()}
                   </Text>
                   <IconCheck size={16} stroke={2} color="green" />
                 </Group>

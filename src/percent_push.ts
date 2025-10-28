@@ -4,7 +4,7 @@ export type Contributor = {
 
 export type PercentPush = {
   milestone: number;
-  date_reached: Date;
+  date_reached?: Date;
   bg_color: string;
   text_color: string;
   contributors: Contributor[];
@@ -45,5 +45,44 @@ export const PERCENT_PUSHES: PercentPush[] = [
         github_username: "velkog",
       },
     ],
+  },
+  {
+    milestone: 50,
+    bg_color: "#f1c40f",
+    text_color: "black",
+    date_reached: new Date(2025, 9, 28), // month is zero index based, nice meme
+    contributors: [
+      {
+        github_username: "JoshSanch",
+      },
+      {
+        github_username: "SquareMan",
+      },
+      {
+        github_username: "daft7",
+      },
+      {
+        github_username: "escape209",
+      },
+      {
+        github_username: "LivewireCB",
+      },
+      {
+        github_username: "LSLees1347",
+      },
+      {
+        github_username: "bluisblu",
+      },
+      {
+        github_username: "mattbruv",
+      },
+    ],
+  },
+  {
+    milestone: 60,
+    bg_color: "gray",
+    text_color: "black",
+    // date_reached: new Date(2025, 9, 28), // month is zero index based, nice meme
+    contributors: [],
   },
 ];

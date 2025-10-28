@@ -53,15 +53,17 @@ export function ProgressBar(props: ProgressBarProps) {
       {/* Milestone lines */}
       {milestones &&
         milestones.map((push) => {
-          const tip =
-            push.milestone +
-            "% Milestone Reached on " +
-            push.date_reached.toDateString() +
-            "! 🏆";
+          const tip = push.date_reached
+            ? push.milestone +
+              "% Milestone Reached on " +
+              push.date_reached.toDateString() +
+              "! 🏆"
+            : push.milestone + "% Milestone Push In Progress!";
           return (
             <Tooltip
               style={{ "--tooltip-color": push.text_color }}
               color={push.bg_color}
+              key={push.milestone}
               label={tip}
             >
               <div
