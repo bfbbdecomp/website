@@ -80,6 +80,38 @@ export const PERCENT_PUSHES: PercentPush[] = [
   },
   {
     milestone: 60,
+    bg_color: "#f1c40f",
+    text_color: "black",
+    date_reached: new Date(2025, 10, 29), // month is zero index based, nice meme
+    contributors: [
+      {
+        github_username: "bluisblu",
+      },
+      {
+        github_username: "seilweiss",
+      },
+      {
+        github_username: "JoshSanch",
+      },
+      {
+        github_username: "LivewireCB",
+      },
+      {
+        github_username: "daft7",
+      },
+      {
+        github_username: "LSLees1347",
+      },
+      {
+        github_username: "escape209",
+      },
+      {
+        github_username: "energydrink02",
+      },
+    ],
+  },
+  {
+    milestone: 70,
     bg_color: "gray",
     text_color: "black",
     // date_reached: new Date(2025, 9, 28), // month is zero index based, nice meme
