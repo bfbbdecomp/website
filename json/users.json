@@ -1,145 +1,113 @@
 [
-    {
-        "github": "seilweiss",
-        "discord": 415262949993873408,
-        "emails": [
-            "32021834+seilweiss@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "mattbruv",
-        "discord": 355879962202341376,
-        "emails": [
-            "5638426+mattbruv@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "tgsm",
-        "discord": 421885391843491850,
-        "emails": [
-            "doodrabbit@hotmail.com"
-        ]
-    },
-    {
-        "github": "TotallyNotMichael-GH",
-        "discord": 353690406518521870,
-        "emails": [
-            "iamtotallynotmichael@gmail.com"
-        ]
-    },
-    {
-        "github": "encounter",
-        "discord": 130490603749376000,
-        "emails": [
-            "luke.street@encounterpc.com"
-        ]
-    },
-    {
-        "github": "SquareMan",
-        "discord": 200342701147684864,
-        "emails": [
-            "sebastiancasper3@gmail.com"
-        ]
-    },
-    {
-        "github": "escape209",
-        "discord": 221979533623033857,
-        "emails": [
-            "agtescape@gmail.com"
-        ]
-    },
-    {
-        "github": "JoshSanch",
-        "discord": 146442813331079169,
-        "emails": [
-            "joshuaesanch@gmail.com"
-        ]
-    },
-    {
-        "github": "daft7",
-        "discord": 206276132893360139,
-        "emails": [
-            "tylerpasut@gmail.com",
-            "83897243+daft7@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "joeyballentine",
-        "discord": 66238401078112256,
-        "emails": [
-            "joeyjballentine@gmail.com",
-            "34788790+joeyballentine@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "LivewireCB",
-        "discord": 425463956539310081,
-        "emails": [
-            "cmiller8285@gmail.com",
-            "therealnucka@gmail.com"
-        ]
-    },
-    {
-        "github": "RejectSanity",
-        "discord": 1189745357496795277,
-        "emails": [
-            "175969931+RejectSanity@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "velkog",
-        "discord": 515771516844244994,
-        "emails": [
-            "60084050+velkog@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "stravant",
-        "discord": 204817007575564288,
-        "emails": [
-            "stravant@gmail.com"
-        ]
-    },
-    {
-        "github": "energydrink02",
-        "discord": 1119963415486660690,
-        "emails": [
-            "136357605+energydrink02@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "0x5abe",
-        "discord": 171841747402489856,
-        "emails": [
-            "95201472+0x5abe@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "bluisblu",
-        "discord": 157907433623257088,
-        "emails": [
-            "53455507+bluisblu@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "Louis Stockdale-Lees",
-        "discord": 462302888090271744,
-        "emails": [
-            "157380500+LSLees1347@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "AARJL",
-        "discord": 262138979980279808,
-        "emails": [
-            "108267112+AARJL@users.noreply.github.com"
-        ]
-    },
-    {
-        "github": "aokennard",
-        "discord": 138847404467159040,
-        "emails": [
-            "aokennard@gmail.com"
-        ]
-    }
+  {
+    "github": "seilc",
+    "discord": 415262949993873408,
+    "emails": ["32021834+seilweiss@users.noreply.github.com"]
+  },
+  {
+    "github": "mattbruv",
+    "discord": 355879962202341376,
+    "emails": ["5638426+mattbruv@users.noreply.github.com"]
+  },
+  {
+    "github": "tgsm",
+    "discord": 421885391843491850,
+    "emails": ["doodrabbit@hotmail.com"]
+  },
+  {
+    "github": "TotallyNotMichael-GH",
+    "discord": 353690406518521870,
+    "emails": ["iamtotallynotmichael@gmail.com"]
+  },
+  {
+    "github": "encounter",
+    "discord": 130490603749376000,
+    "emails": ["luke.street@encounterpc.com"]
+  },
+  {
+    "github": "SquareMan",
+    "discord": 200342701147684864,
+    "emails": ["sebastiancasper3@gmail.com"]
+  },
+  {
+    "github": "escape209",
+    "discord": 221979533623033857,
+    "emails": ["agtescape@gmail.com"]
+  },
+  {
+    "github": "JoshSanch",
+    "discord": 146442813331079169,
+    "emails": ["joshuaesanch@gmail.com"]
+  },
+  {
+    "github": "daft7",
+    "discord": 206276132893360139,
+    "emails": [
+      "tylerpasut@gmail.com",
+      "83897243+daft7@users.noreply.github.com"
+    ]
+  },
+  {
+    "github": "joeyballentine",
+    "discord": 66238401078112256,
+    "emails": [
+      "joeyjballentine@gmail.com",
+      "34788790+joeyballentine@users.noreply.github.com"
+    ]
+  },
+  {
+    "github": "LivewireCB",
+    "discord": 425463956539310081,
+    "emails": ["cmiller8285@gmail.com", "therealnucka@gmail.com"]
+  },
+  {
+    "github": "RejectSanity",
+    "discord": 1189745357496795277,
+    "emails": ["175969931+RejectSanity@users.noreply.github.com"]
+  },
+  {
+    "github": "velkog",
+    "discord": 515771516844244994,
+    "emails": ["60084050+velkog@users.noreply.github.com"]
+  },
+  {
+    "github": "stravant",
+    "discord": 204817007575564288,
+    "emails": ["stravant@gmail.com"]
+  },
+  {
+    "github": "energydrink02",
+    "discord": 1119963415486660690,
+    "emails": ["136357605+energydrink02@users.noreply.github.com"]
+  },
+  {
+    "github": "0x5abe",
+    "discord": 171841747402489856,
+    "emails": ["95201472+0x5abe@users.noreply.github.com"]
+  },
+  {
+    "github": "bluisblu",
+    "discord": 157907433623257088,
+    "emails": ["53455507+bluisblu@users.noreply.github.com"]
+  },
+  {
+    "github": "LSLees",
+    "discord": 462302888090271744,
+    "emails": ["157380500+LSLees1347@users.noreply.github.com"]
+  },
+  {
+    "github": "AARJL",
+    "discord": 262138979980279808,
+    "emails": ["108267112+AARJL@users.noreply.github.com"]
+  },
+  {
+    "github": "aokennard",
+    "discord": 138847404467159040,
+    "emails": ["aokennard@gmail.com"]
+  },
+  {
+    "github": "SamuraiOndo",
+    "discord": 318200424442101772,
+    "emails": ["82741743+SamuraiOndo@users.noreply.github.com"]
+  }
 ]

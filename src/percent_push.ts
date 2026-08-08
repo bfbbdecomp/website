@@ -13,7 +13,7 @@ export type PercentPush = {
 export const PERCENT_PUSHES: PercentPush[] = [
   {
     milestone: 40,
-    bg_color: "#ffb303",
+    bg_color: "#f1c40f",
     text_color: "black",
     date_reached: new Date(2025, 4, 15), // month is zero index based, nice meme
     contributors: [
@@ -68,7 +68,7 @@ export const PERCENT_PUSHES: PercentPush[] = [
         github_username: "LivewireCB",
       },
       {
-        github_username: "LSLees1347",
+        github_username: "LSLees",
       },
       {
         github_username: "bluisblu",
@@ -88,7 +88,7 @@ export const PERCENT_PUSHES: PercentPush[] = [
         github_username: "bluisblu",
       },
       {
-        github_username: "seilweiss",
+        github_username: "seilc",
       },
       {
         github_username: "JoshSanch",
@@ -100,7 +100,7 @@ export const PERCENT_PUSHES: PercentPush[] = [
         github_username: "daft7",
       },
       {
-        github_username: "LSLees1347",
+        github_username: "LSLees",
       },
       {
         github_username: "escape209",
@@ -112,6 +112,56 @@ export const PERCENT_PUSHES: PercentPush[] = [
   },
   {
     milestone: 70,
+    bg_color: "#f1c40f",
+    text_color: "black",
+    date_reached: new Date(2026, 7, 7), // month is zero index based, nice meme
+    contributors: [
+      {
+        github_username: "AARJL",
+      },
+      {
+        github_username: "bluisblu",
+      },
+      {
+        github_username: "aokennard",
+      },
+      {
+        github_username: "LivewireCB",
+      },
+      {
+        github_username: "daft7",
+      },
+      {
+        github_username: "joeyballentine",
+      },
+      {
+        github_username: "escape209",
+      },
+      {
+        github_username: "JoshSanch",
+      },
+      {
+        github_username: "energydrink02",
+      },
+      {
+        github_username: "LSLees",
+      },
+      {
+        github_username: "mattbruv",
+      },
+      {
+        github_username: "seilc",
+      },
+      {
+        github_username: "SquareMan",
+      },
+      {
+        github_username: "SamuraiOndo",
+      },
+    ],
+  },
+  {
+    milestone: 80,
     bg_color: "gray",
     text_color: "black",
     // date_reached: new Date(2025, 9, 28), // month is zero index based, nice meme
