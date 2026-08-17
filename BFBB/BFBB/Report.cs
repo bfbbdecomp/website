@@ -13,8 +13,8 @@ public record Report(
         .Select(x => long.Parse(x.Measures.TotalCode!)).Sum();
 
     public long TotalData => Units
-        .Where(x => x.Measures.TotalCode != null)
-        .Select(x => long.Parse(x.Measures.TotalCode!)).Sum();
+        .Where(x => x.Measures.TotalData != null)
+        .Select(x => long.Parse(x.Measures.TotalData!)).Sum();
 
     public long TotalFunctions => Units.Select(x => (long)x.Measures.TotalFunctions).Sum();
 
